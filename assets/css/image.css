@@ -2,7 +2,7 @@
     margin: 0 auto;
     position: relative; /* 定义一个相对定位的容器 */
     width: 65%; /* 根据需求调整宽度 */
-    height: 500px; /* 根据需求调整高度 */
+    height: 450px; /* 根据需求调整高度 */
     background-image: url('../banner-bg.jpg'); /* 设置背景图像 */
     background-size: cover; /* 覆盖整个容器 */
     background-position: center; /* 中心对齐背景图像 */
@@ -16,7 +16,7 @@
     position: absolute; /* 绝对定位，相对于其最近的相对定位的祖先元素 */
     top: 40%; /* 将图像垂直居中 */
     left: 50%; /* 将图像水平居中 */
-    transform: translate(-50%, -50%) scale(0.4); /* 移动图像的中心到容器的中心并缩放 */
+    transform: translate(-50%, -50%) scale(0.3); /* 移动图像的中心到容器的中心并缩放 */
     display: block; /* 将图片显示为块级元素，确保transform正确应用 */
 }
 
