@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Zolly: Zoom Focal Length Correctly<br>for
+    Perspective-Distorted Human<br>Mesh
+    Reconstruction (ICCV2023 oral)">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zolly: Zoom Focal Length Correctly<br>for
+    Perspective-Distorted Human<br>Mesh
+    Reconstruction</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/bulma.min.css">
+  <link rel="stylesheet" href="../..//css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../..//css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../..//css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../..//css/index.css">
+  <link rel="icon" href="../../images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../../js/fontawesome.all.min.js"></script>
+  <script src="../..//js/bulma-carousel.min.js"></script>
+  <script src="../../js/bulma-slider.min.js"></script>
+  <script src="../../js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://keunhong.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Related Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://caizhongang.github.io/projects/HuMMan/">
+              HuMMan
+            </a>
+            <a class="navbar-item" href="https://yongtaoge.github.io/projects/humanwild/">
+              HumanWild
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-3 publication-title">Zolly: Zoom Focal Length Correctly for
+              </br>Perspective-Distorted Human Mesh
+              Reconstruction</br>(ICCV2023 Oral, top 1.8%)</h1>
+            <div class="is-size-5 publication-authors">
+
+              <span class="author-block">
+                <a href="https://wenjiawang0312.github.io/">Wenjia Wang</a><sup>1,3</sup>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://yongtaoge.github.io/">Yongtao Ge</a><sup>2</sup>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=TOZ9wR4AAAAJ&hl=en">Haiyi Mei</a><sup>4</sup>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://caizhongang.github.io/">Zhongang Cai</a><sup>3,4</sup>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <br> <span class="author-block">
+                Qingping Sun</a><sup>4</sup>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                Yanjun Wang</a><sup>4</sup>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://cshen.github.io/">Chunhua Shen</a><sup>5</sup>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="http://yanglei.me/">Lei Yang</a><sup>3,4&dagger;</sup>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://i.cs.hku.hk/~taku/">Taku Komura</a><sup>1</sup>
+              </span>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+
+
+            <div class="is-size-6 publication-authors">
+              <!-- style="display: block; margin: auto; width: 100%; text-align: center;font-size:1.5em;"> -->
+              <span class="author-block"><sup>1</sup>The University of Hong Kong</span> &nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block"><sup>2</sup>The University of Adelaide</span> &nbsp;&nbsp;&nbsp;&nbsp;
+
+              <br />
+              <span class="author-block"><sup>3</sup>Shanghai AI Laboratory</span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block"><sup>4</sup>SenseTime Research</span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block"><sup>5</sup>Zhejiang University</span>
+            </div>
+            <p style="font-size: 9pt;">(&dagger;:corresponding author. <br>This work is partially done during Wenjia
+              Wang's Internship at Shanghai
+              AI
+              Laboratory.)</p>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Zolly_Zoom_Focal_Length_Correctly_for_Perspective-Distorted_Human_Mesh_Reconstruction_ICCV_2023_paper.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Wang_Zolly_Zoom_Focal_ICCV_2023_supplemental.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supp</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2303.13796" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="zolly_poster_compressed.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Poster</span>
+                  </a>
+                </span>
+                <!-- <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/WenjiaWang0312/Zolly"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://connecthkuhk-my.sharepoint.com/:f:/g/personal/wwj2022_connect_hku_hk/EjwloRJZtVBBrgliQ76EP6YBMtVQ5G_D4TPo2n18CAwOyw"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="zolly_teaser.png" width="80%" alt="Your Image" style="display: block; margin: auto;">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              As it is hard to calibrate single-view RGB images in the wild, existing 3D human mesh
+              reconstruction (3DHMR) methods either use a
+              constant large focal length or estimate one based on the background environment context, which can not
+              tackle the problem of the torso,
+              limb, hand or face distortion caused by perspective camera projection when the camera is close to the
+              human body. The naive focal length
+              assumptions can harm this task with the incorrectly formulated projection matrices.
+            </p>
+            <p>To solve this, we
+              propose Zolly, the first 3DHMR
+              method focusing on perspective-distorted images. Our approach begins with analysing the reason for
+              perspective distortion, which we
+              find is mainly caused by the relative location of the human body to the camera center. We propose a new
+              camera model and a novel 2D
+              representation, termed distortion image, which describes the 2D dense distortion scale of the human
+              body. We then estimate the distance
+              from distortion scale features rather than environment context features. Afterwards, We integrate the
+              distortion feature with image
+              features to reconstruct the body mesh. To formulate the correct projection matrix and locate the human
+              body position, we simultaneously
+              use perspective and weak-perspective projection loss. Since existing datasets could not handle this
+              task, we propose the first synthetic
+              dataset PDHuman and extend two real-world datasets tailored for this task, all containing
+              perspective-distorted human images. Extensive
+              experiments show that Zolly outperforms existing state-of-the-art methods on both perspective-distorted
+              datasets and the standard benchmark (3DPW).
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="Acknowledge">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3">Acknowledge</h2>
+      PDHuman dataset is rendered based on the pipeline of <a href="https://github.com/openxrlab/xrfeitoria"
+        target="_blank" rel="noopener noreferrer">XRFeitoria</a>.
+    </div>
+
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{wang2023zolly,
+  author    = {Wang, Wenjia and Ge, Yongtao and Mei, Haiyi and Cai, Zhongang and Sun, Qingping and Wang, Yanjun and Shen, Chunhua and Yang, Lei and Komura, Taku},
+  title     = {Zolly: Zoom Focal Length Correctly for Perspective-Distorted Human Mesh Reconstruction},
+  journal   = {ICCV},
+  year      = {2023},
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This page is built based on <a href="https://github.com/nerfies/nerfies.github.io">nerfies webpage</a>.
+              Thanks for
+              the original authors' kind sharing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
