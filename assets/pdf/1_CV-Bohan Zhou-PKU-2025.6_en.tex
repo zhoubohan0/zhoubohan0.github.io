@@ -1,0 +1,211 @@
+% Welcome to the simple Undergraduate Complexity Research CV-resume template!
+% Please delete any sections that do not apply to your past experiences. We do not expect that applicants will have itmes for all of the sections included here. You can also rename or revise sections to best fit with your personal accomplishments.
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\input{glyphtounicode}
+
+\usepackage{baskervillef}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\setlength{\footskip}{10pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% \addtolength{\oddsidemargin}{0.0in}
+% \addtolength{\evensidemargin}{0.0in}
+% \addtolength{\textwidth}{0.0in}
+% \addtolength{\topmargin}{0.2in}
+% \addtolength{\textheight}{0.0in}
+\usepackage[margin=0.6in, top=0.5in, bottom=0.5in]{geometry}
+
+
+
+\urlstyle{same}
+
+%\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \it\vspace{3pt}
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-10pt}
+}
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+
+
+
+\begin{document}
+
+
+\begin{center}
+    {\LARGE Bohan Zhou} \\[5pt]
+    Tel: \large{+86 15797895657 \quad |  \quad Email: \href{mailto:your.email@example.com}{zhoubh@stu.pku.edu.cn}}
+\end{center}
+
+
+
+%-----------EDUCATION-----------
+% Please list your current institution first and then past schools in reverse chronology. No need for GPA, etc. You do not need to include high school but may do so if there are accomplishments you would like to highlight.
+\section*{EDUCATION}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Peking University, School of Computer Science}{Beijing, China}
+    {Master's in Computer Applied Technology \quad (GPA: 3.88 / 4.0)}{Sep. 2023 – Jul. 2026}
+    \vspace{0.2cm}
+  \resumeSubheading
+    {Nankai University}{Tianjin, China}
+    {Bachelor's in Intelligent Science and Technology \quad (GPA: 3.95 / 4.0, Rank: 2/98)}{Sep. 2019 – Jul. 2023}
+
+\resumeSubHeadingListEnd
+
+
+\section*{PUBLICATIONS}
+
+\resumeSubHeadingListStart
+\begin{itemize}
+\item[\textbf{[1]}] \textbf{Zhou B}, Zhang Z, Wang J, et al. NOLO: Navigate Only Look Once. \textit{IROS 2025 Oral.}
+\item[\textbf{[2]}] \textbf{Zhou B}, Li K, Jiang J, et al. Learning from visual observation via offline pretrained state-to-go transformer. \textit{NeurIPS 2023}.
+\item[\textbf{[3]}] \textbf{Zhou B}, Zhan Y, Zhang Z, et al. MEgoHand: Multimodal Egocentric Hand-Object Interaction Motion Generation. \textit{NeurIPS 2025 (Under Review).}
+\item[\textbf{[4]}] \textbf{Zhou B}, Yuan H, Fu Y, et al. Learning diverse bimanual dexterous manipulation skills from human demonstrations. \textit{NeurIPS 2025 (Under Review).}
+\item[\textbf{[5]}] Yuan H, \textbf{Zhou B}, Fu Y, et al. Cross-embodiment dexterous grasping with reinforcement learning. \textit{ICLR 2025}.
+\item[\textbf{[6]}] Zheng S, \textbf{Zhou B}, Feng Y, et al. Unicode: Learning a unified codebook for multimodal large language models. \textit{ECCV 2024}.
+\item[\textbf{[7]}] Luo H, \textbf{Zhou B}, Lu Z. Pre-trained Visual Dynamics Representations for Efficient Policy Learning. \textit{ECCV 2024}.
+\item[\textbf{[8]}] Tan W, Zhang W, Xu X, Xia H, Ding Z, Li B, \textbf{Zhou B}, et al. Cradle: Empowering foundation agents towards general computer control. \textit{ICML 2025}.
+\item[\textbf{[9]}] Hu Z, Yang Y, Zhai X, Yang D, \textbf{Zhou B}, et al. GFIE: A Dataset and Baseline for Gaze-Following from 2D to 3D in Indoor Environments. \textit{CVPR 2023}.
+\item[\textbf{[10]}] Hu Z, Zhao K, \textbf{Zhou B}, et al. Gaze target estimation inspired by interactive attention. \textit{TCSVT 2022}.
+\item[\textbf{[11]}] Yuan H, Bai Y, Fu Y, \textbf{Zhou B}, et al. Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills. \textit{CORL 2025 (Under Review).}
+\end{itemize}
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+
+\section{INTERNSHIP EXPERIENCE}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+    {Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills}{}{Beijing Academy of Artificial Intelligence, Embodied AI}{Oct. 2024 -- Feb. 2025}
+    \vspace{0.1cm}
+    \resumeItemListStart
+        \resumeItem{\textbf{A hierarchical robot agent framework} for efficient long-horizon humanoid robot control: \textbf{Top-level} black-box large multi-modal model (LMM, like GPT-4v) for task understanding + decomposition; \textbf{Mid-level} fintuned LMM for navigation planning; \textbf{Low-level} skill libraries for dexterous manipulation.}
+        \resumeItem{\textbf{A VLM + rule based hybrid connector}: bridged high-level language plans with low-level motor skills, enabling coordinated locomotion, navigation and dexterous manipulation.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Cradle: Empowering Foundation Agents towards General Computer Control}{}{Beijing Academy of Artificial Intelligence, Generalist Agents}{Oct. 2023 -- Feb. 2024}
+    \vspace{0.1cm}
+    \resumeItemListStart
+        \resumeItem{\textbf{General computer control}: Pioneered a universal interface for agents to interact with any software using screenshots as input and keyboard/mouse actions as output, standardizing cross-environment interaction.}
+        \resumeItem{\textbf{A LMM-powered Cradle framework}: integrated six core modules (Information Gathering, Self-Reflection, Task Inference, Skill Curation, Action Planning, and Memory) to automate task planning and execution via generating keyboard/mouse codes without built-in APIs.}
+        \resumeItem{\textbf{Robust validation}: adaptable across \textbf{4 games} (Red Dead Redemption 2, Cities: Skylines, Stardew Valley and Dealer’s Life 2), \textbf{5 software tools} (Chrome, Outlook, Feishu, Meitu and CapCut), and \textbf{OSWorld}.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{RESEARCH EXPERIENCE}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+    {MEgoHand: Multimodal Egocentric Hand-Object Interaction Motion Generation}{}{BeingBeyond, Embodied AI}{Mar. 2025 -- May. 2025}
+    \vspace{0.1cm}
+    \resumeItemListStart
+        \resumeItem{\textbf{Large-Scale Dataset}:      
+        Curated \textbf{3.35M} hand-object interaction  samples, \textbf{1.2K} objects, \textbf{24K} trajectories
+        (10-15x prior datasets) via proposed inverse MANO retargeting and virtual RGB-D rendering.}
+        \resumeItem{
+        \textbf{Multimodal Perception \& Spatial Understanding}: Based on \textbf{Eagle-2}, MEgoHand additionally incorporates \textbf{Unidepth-v2} for metric depth estimation.}
+        \resumeItem{\textbf{Smooth Motion Generation}: \textbf{DiT}-based motion generator supervises future hand motion via Flow Matching. \textbf{Temporal orthogonal filtering} is designed to decode smooth pose sequence.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {BiDexHD: Learning Diverse Bimanual Dexterous Manipulation Skills from Human Demonstrations}{}{Beijing Academy of Artificial Intelligence, Embodied AI}{\hspace{-1.8cm}Jun. 2024 -- Sep. 2024}
+    \vspace{0.1cm}
+    \resumeItemListStart
+        \resumeItem{\textbf{BiDexHD Framework}: Developed a unified framework for learning diverse bimanual skills from human demonstrations, unifying \textbf{task construction from HOI datasets} and \textbf{teacher-student policy learning} for scalable vision-based bimanual dexterous skills. To avoid task-specific reward engineering, a two-stage reward function is generally designed.}
+        \resumeItem{\textbf{Zero-shot adaptability}: Achieved \textbf{74.59\%} task fulfillment on trained tasks and \textbf{51.07\%} on unseen tasks in the TACO benchmark (141 tasks), with \textbf{80.49\%}/\textbf{65.99\%} on ARCTIC.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {NOLO: Navigate Only Look Once}{}{Beijing Academy of Artificial Intelligence, Embodied AI}{\hspace{1.3cm}Feb. 2024 -- May. 2024}
+    \vspace{0.1cm}
+    \resumeItemListStart
+        \resumeItem{\textbf{Video Navigation}: Introduced a novel task requiring agents to finish image navigation using only a single \textbf{30-second} context video and real-time egocentric images.}
+        \resumeItem{\textbf{NOLO Method}: Enhanced offline reinforcement learning by integrating \textbf{GMflow} via pseudo-action labeling and a \textbf{temporal coherence} loss.}
+        \resumeItem{\textbf{Simulation and Real World Evaluation}: Demonstrated success in RoboTHOR and Habitat simulation and validated \textbf{real-world deployment on a Unitree Go2} robot in a maze environment.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {STG: Learning from Visual Observation via Offline Pretrained State-to-Go Transformer}{}{Beijing Academy of Artificial Intelligence, Generalist Agents}{Sep. 2022 -- May. 2023}
+    \vspace{0.1cm}
+    \resumeItemListStart
+        \resumeItem{\textbf{Two-stage framework to learn from pixels}: upstream offline pretrained State-to-Go Transformer on visual observations to guide \textbf{reward-free} online reinforcement learning downstream.}
+        \resumeItem{\textbf{Joint Representation Learning}: Co-optimized a discriminator and temporal distance regressor in an \textbf{adversarial} manner to align latent embeddings temporally.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Human Intent Analysis in Indoor Environments for Service Robots}{Advisor: Prof. Jingtai Liu}
+    {Tianjin Key Laboratory of Intelligent Robotics}{Mar. 2021 -- Aug. 2022}
+    \vspace{0.1cm}
+    \resumeItemListStart
+        \resumeItem{\textbf{Human Intent Analysis Pipeline}: Involved semi-automatic dataset construction and gaze direction/target estimation for human intention understanding and forcasting, achieving \textbf{3\textsuperscript{rd} prize} .}
+        \resumeItem{\textbf{GFIE [CVPR 2023]}: Created multi-sensor gaze data collection system (Kinect + laser rangefinder) with novel algorithm for unbiased 2D/3D gaze target annotation via laser spot localization.}
+        \resumeItem{\textbf{VSG-IA [TCSVT 2022]}: Proposed graph attention network for automatic gaze behavior detection and human-scene interaction analysis.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Awards \& Honors} 
+\resumeSubHeadingListStart
+
+\resumeSubheading
+    {Outstanding Graduates in Nankai University}{}{Nankai University, China}{Jun. 2023}
+\resumeSubheading
+    {Tianjin Municipal People's Government Scholarship (Top 2\%)}{}{Tianjin, China}{Nov. 2021}
+\resumeSubheading
+    {$2^{nd}$ Prize, National College Student Mathematical Modeling Competition}{}{Chinese Society for Industrial and Applied Mathematics}{Oct. 2021}
+\resumeSubheading
+    {Honorable Mention, American College Mathematical Contest in Modeling}{}{COMAP}{May. 2021}
+\resumeSubheading
+    {Gongneng Scholarship of Nankai University (Top 5\%)}{}{Nankai University, China}{Dec. 2020, Dec. 2022}
+
+\resumeSubHeadingListEnd
+
+\end{document}
