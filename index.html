@@ -43,6 +43,26 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
     <style>
+        #navbar {
+            min-height: 56px;
+        }
+
+        .cv-downloads {
+            position: absolute;
+            top: 28px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        @media (max-width: 575.98px) {
+            #navbar .contact-icon,
+            .cv-downloads {
+                font-size: 24px;
+            }
+        }
+
         .iframe-container {
             display: flex;
             /* 使用 Flexbox */
@@ -73,6 +93,14 @@
                     <i class="fab fa-weixin fa-1x" style="color: #09b83e;"></i>
                 </a>
             </span>
+            <span class="cv-downloads">
+                <a href="assets/pdf/cv_en_latest.pdf" target="_blank" rel="noopener noreferrer" class="float-right ml-2" title="Download CV (English)" aria-label="Download CV (English)">
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                </a>
+                <a href="assets/pdf/cv_zh_latest.pdf" target="_blank" rel="noopener noreferrer" class="float-right" title="下载中文简历" aria-label="下载中文简历">
+                    <i class="fas fa-file-pdf text-danger" aria-hidden="true"></i>
+                </a>
+            </span>
             <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse"
                     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation"><span class="sr-only">Toggle navigation</span> <span
@@ -83,8 +111,6 @@
                 <ul class="navbar-nav ml-auto flex-nowrap">
                     <li class="nav-item active"><a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a></li>
                     <li class="nav-item "><a class="nav-link" href="publications/">Publications</a></li>
-                    <li class="nav-item "><a class="nav-link" href="projects/">Projects</a></li>
-                    <li class="nav-item "><a class="nav-link" href="cv/">CV</a></li>
                 </ul>
             </div>
         </div>
