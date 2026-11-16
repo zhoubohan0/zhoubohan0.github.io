@@ -11,8 +11,8 @@
     <title>Bohan Zhou | 周伯涵</title>
     <meta name="author" content="Bohan Zhou"/>
     <meta name="description"
-          content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "/>
-    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"/>
+          content="Bohan Zhou (周伯涵), Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong. Research in embodied intelligence and foundation models."/>
+    <meta name="keywords" content="Bohan Zhou, 周伯涵, CUHK, embodied intelligence, foundation models, robotics, reinforcement learning"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
     <!-- 整体对齐 -->
@@ -36,7 +36,7 @@
           id="highlight_theme_light"/>
     <link rel="shortcut icon" href="assets/img/favicon.png"/>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="canonical" href="https://wenjiawang0312.github.io/">
+    <link rel="canonical" href="https://zhoubohan0.github.io/">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/image.css">
@@ -63,6 +63,36 @@
             }
         }
 
+        .Internship .preview img {
+            width: auto;
+            height: auto;
+            max-width: min(100%, 160px);
+            max-height: 100px;
+        }
+
+        .Internship .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .Internship .title > span {
+            color: inherit;
+        }
+
+        .internship-name {
+            min-width: 0;
+        }
+
+        .internship-dates {
+            flex-shrink: 0;
+            margin-left: auto;
+            font-size: 1rem;
+            white-space: nowrap;
+            text-align: right;
+        }
+
         .iframe-container {
             display: flex;
             /* 使用 Flexbox */
@@ -81,7 +111,7 @@
     <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
             <span class="contact-icon text-center" style="line-height: 1em;">
-                <a href="mailto:zhoubh@stu.pku.edu.cn"><i class="fa fa-envelope-square gm-icon"></i></a>
+                <a href="mailto:zhoubh@link.cuhk.edu.hk"><i class="fa fa-envelope-square gm-icon"></i></a>
                 <a href="https://scholar.google.com/citations?user=eHPk1wwAAAAJ" target="_blank" title="Google Scholar" rel="noopener noreferrer">
                     <i class="ai ai-google-scholar-square gs-icon"></i>
                 </a>
@@ -132,10 +162,10 @@
         <article>
             <div class="profile float-right"></div>
             <div class="clearfix">
-                <p>🐧I'm currently a master student (Sep 2023 - Jun 2026) in the School of Computer Science of PKU,
-                    supervised by <a href="https://z0ngqing.github.io/" target="_blank"> Zongqing Lu</a>.
-                    My current research focuses on reinforcement learning, multimodal learning, robotics and generalizable agent.
-                    Feel free to drop me a email to discuss or share wonderful ideas!
+                <p>I'm currently a Ph.D. student (2026 - 2030) in the Department of Computer Science and Engineering at The Chinese University of Hong Kong (CUHK), supervised by <a href="https://www.cse.cuhk.edu.hk/~jcheng/" target="_blank" rel="noopener noreferrer">James Cheng</a>.
+                    My current research focuses on embodied intelligence and foundation models, with interests in multimodal learning, reinforcement learning and generalizable agents.
+                    Previously, I received my master's degree from Peking University (2023 - 2026), supervised by <a href="https://z0ngqing.github.io/" target="_blank" rel="noopener noreferrer">Zongqing Lu</a>, and my bachelor's degree from Nankai University (2019 - 2023), supervised by <a href="https://ai.nankai.edu.cn/info/1033/2794.htm" target="_blank" rel="noopener noreferrer">Jingtai Liu</a>.
+                    Feel free to drop me an email to discuss or share wonderful ideas!
                 </p>
             </div><br>
 
@@ -170,7 +200,40 @@
 
             <div class="news">
                 <h2>🆕 News</h2>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 60vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
+                    <table class="table table-sm table-borderless">
+                        <tr>
+                            <th scope="row">Nov 13, 2026</th>
+                            <td><b style="font-weight: bold !important;">AtmosBench / PhysicalSDC</b> is accepted by KDD 2027, focusing on physics-aligned atmospheric backscatter retrieval from spaceborne lidar! ✨
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-responsive" style="max-width: 100vw;">
+                    <table class="table table-sm table-borderless">
+                        <tr>
+                            <th scope="row">Oct 14, 2026</th>
+                            <td><b style="font-weight: bold !important;">GroundingPI</b> reached <a href="https://huggingface.co/papers/2609.39601">Hugging Face Daily Papers #1</a>, focusing on grounding for physical intelligence! ✨</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- <div class="table-responsive" style="max-width: 100vw;">
+                    <table class="table table-sm table-borderless">
+                        <tr>
+                            <th scope="row">Aug 2026</th>
+                            <td>I joined <b style="font-weight: bold !important;">The Chinese University of Hong Kong</b> as a Ph.D. student in Computer Science and Engineering, working on embodied intelligence and foundation models! 🎓</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-responsive" style="max-width: 100vw;">
+                    <table class="table table-sm table-borderless">
+                        <tr>
+                            <th scope="row">Jul 2026</th>
+                            <td>I received my master's degree from <b style="font-weight: bold !important;">Peking University</b> and was awarded <b style="font-weight: bold !important;">Beijing Outstanding Graduate</b>! 🎓</td>
+                        </tr>
+                    </table>
+                </div> -->
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Jan 13, 2026</th>
@@ -179,7 +242,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 100vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Nov 08, 2025</th>
@@ -188,7 +251,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 100vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Sep 19, 2025</th>
@@ -197,7 +260,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 100vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Jun 16, 2025</th>
@@ -206,7 +269,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 100vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">May 01, 2025</th>
@@ -215,7 +278,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 60vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Jan 22, 2025</th>
@@ -224,7 +287,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 60vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Jan 20, 2025</th>
@@ -233,7 +296,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 60vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Jul 01, 2024</th>
@@ -242,7 +305,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 60vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Jul 01, 2024</th>
@@ -251,7 +314,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 60vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Sep 22, 2023</th>
@@ -260,7 +323,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="table-responsive" style="max-height: 15vw; max-width: 60vw;">
+                <div class="table-responsive" style="max-width: 100vw;">
                     <table class="table table-sm table-borderless">
                         <tr>
                             <th scope="row">Mar 04, 2023</th>
@@ -273,11 +336,89 @@
 
             <div class="publications">
                 <h2>📄 Main Publications</h2>
+                <h3>Preprints &amp; Under Review</h3>
                 <ol class="bibliography">
                     <li>
                         <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/RoboAware.png" alt="RoboAware: state-locked counterfactual search, execution-aware Q-learning and closed-loop deployment"></div>
+                            <div id="roboaware" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes</h5>
+                                <div class="author"><b style="font-weight: bold !important;">Bohan Zhou</b>, et al. (2026)</div>
+                                <div class="links"><a href="https://arxiv.org/pdf/2610.11480" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper"></a> <a href="https://zhoubohan0.github.io/RoboAware/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Website-blue?style=for-the-badge&amp;logo=react&amp;color=007BFF&amp;logoColor=white" alt="Website"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/FETCH.png" alt="FETCH overview: evidence distillation, FETCH-7B and FETCH-Bench"></div>
+                            <div id="fetch" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">FETCH: Frame-grounded Evidence Topology for Embodied Spatial Planning with the Counterfactual Hypothesis</h5>
+                                <div class="author"><b style="font-weight: bold !important;">Bohan Zhou</b>, et al. (2026)</div>
+                                <div class="links"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/GroundingPI.png" alt="GroundingPI research preview"></div>
+                            <div id="groundingpi" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives</h5>
+                                <div class="author">Qize Yu, ..., <b style="font-weight: bold !important;">Bohan Zhou</b>, et al. (2026)</div>
+                                <div class="links"><a href="https://arxiv.org/pdf/2609.39601" target="_blank" rel="noopener noreferrer" title="Read the GroundingPI paper (PDF)"><img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper"></a> <a href="https://github.com/groundingpi/GroundingPI" target="_blank" rel="noopener noreferrer" title="GroundingPI official code"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"></a> <a href="https://groundingpi.github.io/" target="_blank" rel="noopener noreferrer" title="GroundingPI project website"><img src="https://img.shields.io/badge/Website-blue?style=for-the-badge&amp;logo=react&amp;color=007BFF&amp;logoColor=white" alt="Website"></a> <a href="https://huggingface.co/GroundingPI/GroundingPI/resolve/aca9bde34a146cf0510e7f8732d4766169105194/assets/demo.mp4" target="_blank" rel="noopener noreferrer" title="Watch the GroundingPI demo video"><img src="https://img.shields.io/badge/Video-green?style=for-the-badge&amp;logo=youtube&amp;color=FF0000&amp;logoColor=white" alt="Video"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/Being-0.png" alt="Being-0 research preview"></div>
+                            <div id="being-0" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills</h5>
+                                <div class="author">Haoqi Yuan, Yu Bai, Yuhui Fu, <b style="font-weight: bold !important;">Bohan Zhou</b>, Yicheng Feng, Xinrun Xu, Yi Zhan, Börje F. Karlsson, <a href="https://z0ngqing.github.io/">Zongqing Lu</a> (2025)</div>
+                                <div class="links"><a href="https://arxiv.org/abs/2503.12533" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper"></a> <a href="https://beingbeyond.github.io/Being-0/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Website-blue?style=for-the-badge&amp;logo=react&amp;color=007BFF&amp;logoColor=white" alt="Website"></a> <a href="https://github.com/beingbeyond/Being-0" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"></a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:5wy5egSvANwJ:scholar.google.com"><img src="https://img.shields.io/badge/Bibtex-green?style=for-the-badge&amp;logo=firebase&amp;color=4F805D&amp;logoColor=white" alt="BibTeX"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <h3>Published &amp; Accepted Papers</h3>
+                <ol class="bibliography">
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/AtmosBench.png" alt="Atmospheric backscatter retrieval comparison with PhysicalSDC and baseline methods"></div>
+                            <div id="atmosbench" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">The Floor Is Not the Limit: Recovering Atmospheric Backscatter from Spaceborne Lidar via Physics-Aligned Encoding</h5>
+                                <div class="author">
+                                    Tianchi Xu, Yuanpeng He, Jintao Xu, Kang He, Linyu Li, Huanyao Zhang, Dongming Jin, <b style="font-weight: bold !important;">Bohan Zhou</b>, Wenpin Jiao, Zhi Jin
+                                </div>
+                                <div class="periodical"> <b style="font-weight: bold !important;">KDD 2027</b>
+                                </div>
+                                <div class="links">
+                                    <a href="https://openreview.net/pdf?id=5b9wzLyUdE" target="_blank" rel="noopener noreferrer" aria-label="Read the AtmosBench and PhysicalSDC paper">
+                                        <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/AffordanceVLA.png" alt="AffordanceVLA overview: progressive data curriculum, model architecture and evaluation"></div>
+                            <div id="affordancevla" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding</h5>
+                                <div class="author">Qize Yu, ..., <b style="font-weight: bold !important;">Bohan Zhou</b>, et al.</div>
+                                <div class="periodical"><b style="font-weight: bold !important;">ECCV 2026 Workshop</b></div>
+                                <div class="links"><a href="https://arxiv.org/pdf/2606.06155" target="_blank" rel="noopener noreferrer" title="Read the AffordanceVLA paper (PDF)"><img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper"></a> <a href="https://github.com/Skywalker-yqz/AffordanceVLA" target="_blank" rel="noopener noreferrer" title="AffordanceVLA official code"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"></a> <a href="https://skywalker-yqz.github.io/AffordanceVLA/" target="_blank" rel="noopener noreferrer" title="AffordanceVLA project website"><img src="https://img.shields.io/badge/Website-blue?style=for-the-badge&amp;logo=react&amp;color=007BFF&amp;logoColor=white" alt="Website"></a> <a href="https://skywalker-yqz.github.io/AffordanceVLA/#demos" target="_blank" rel="noopener noreferrer" title="Watch all 12 AffordanceVLA robot demonstrations"><img src="https://img.shields.io/badge/Video-green?style=for-the-badge&amp;logo=youtube&amp;color=FF0000&amp;logoColor=white" alt="Video"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/DARA.jpg"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="dara" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">DARA: Few-shot Budget Allocation in Online Advertising via In-Context Decision Making with RL-Finetuned LLMs</h5>
                                 <div class="author">
                                     Mingxuan Song, Yusen Huo, <b style="font-weight: bold !important;">Bohan Zhou</b>, Shenglin Yin, Zhen Xiao*, Jieyi Long, Zhilin Zhang, Chuan Yu*
@@ -308,7 +449,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/BidexHD.jpg"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="bidexhd" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Learning Diverse Bimanual Dexterous Manipulation Skills from Human Demonstrations</h5>
                                 <div class="author">
                                     <b style="font-weight: bold !important;">Bohan Zhou</b>, Haoqi Yuan, Yuhui Fu, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
@@ -343,7 +484,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/MEgoHand.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="megohand" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">MEgoHand: Multimodal Egocentric Hand-Object Interaction Motion Generation</h5>
                                 <div class="author">
                                     <b style="font-weight: bold !important;">Bohan Zhou<span>*</span></b>, Yi Zhan<span>*</span>, Zhongbin Zhang, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
@@ -378,7 +519,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/NOLO.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="nolo" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">NOLO: Navigate Only Look Once</h5>
                                 <div class="author">
                                     <b style="font-weight: bold !important;">Bohan Zhou</b>, Zhongbin Zhang, Jiangxing Wang, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
@@ -424,7 +565,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/Cradle2.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="cradle" class="col-sm-8">
                                     <h5 class="title mb-0" style="color: #2D52A3;">Cradle: Empowering Foundation Agents towards General Computer Control</h5>
                                 <div class="author">
                                     Weihao Tan, Wentao Zhang, Xinrun Xu, Haochong Xia, Ziluo Ding, Boyu Li, <b style="font-weight: bold !important;">Bohan Zhou</b>, Junpeng Yue, Jiechuan Jiang, Yewen Li, Ruyi An, Molei Qin, Chuqiao Zong, Longtao Zheng, YuJie Wu, Xiaoqiang Chai, Yifei Bi, Tianbao Xie, Pengjie Gu, Xiyun Li, Ceyao Zhang, Long Tian, Chaojie Wang, Xinrun Wang, Börje F. Karlsson, Bo An, Shuicheng Yan, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
@@ -455,7 +596,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/CrossDex.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="crossdex" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Cross-Embodiment Dexterous Grasping with Reinforcement Learning</h5>
                                 <div class="author">
                                     Haoqi Yuan, <b style="font-weight: bold !important;">Bohan Zhou</b>, Yuhui Fu, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
@@ -483,7 +624,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/AERO.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="aero" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">AERO: Enhancing Sharding Blockchain via Deep Reinforcement Learning for Account Migration</h5>
                                 <div class="author">
                                     Mingxuan Song, Pengze Li, <b style="font-weight: bold !important;">Bohan Zhou</b>, Shenglin Yin, Zhen Xiao, Jieyi Long
@@ -508,7 +649,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/Unicode.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="unicode" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">UniCode: Learning a Unified Codebook for Multimodal Large Language Models</h5>
                                 <div class="author">
                                     Sipeng Zheng, <b style="font-weight: bold !important;">Bohan Zhou</b>, Yicheng Feng, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
@@ -518,9 +659,6 @@
                                 <div class="links">
                                     <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01331.pdf">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
-                                    </a>
-                                    <a href="">
-                                        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white">
                                     </a>
                                     <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:t6IATNCyx_8J:scholar.google.com">
                                         <img src="https://img.shields.io/badge/Bibtex-green?style=for-the-badge&logo=firebase&color=4F805D&logoColor=white">
@@ -533,7 +671,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/I2A.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="pvdr" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Pre-trained Visual Dynamics Representations for Efficient Policy Learning</h5>
                                 <div class="author">
                                     Hao Luo, <b style="font-weight: bold !important;">Bohan Zhou</b>, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
@@ -543,9 +681,6 @@
                                 <div class="links">
                                     <a href="https://arxiv.org/pdf/2411.03169">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
-                                    </a>
-                                    <a href="">
-                                        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white">
                                     </a>
                                     <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:qMYhZAqLSEEJ:scholar.google.com">
                                         <img src="https://img.shields.io/badge/Bibtex-green?style=for-the-badge&logo=firebase&color=4F805D&logoColor=white">
@@ -558,12 +693,12 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/Cradle.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="cradle-v1" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Towards General Computer Control: A Multi Modal Agent For Red Dead Redemption II As A Case Study</h5>
                                 <div class="author">
                                     Weihao Tan, Ziluo Ding, Wentao Zhang, Boyu Li, <b style="font-weight: bold !important;">Bohan Zhou</b>, Junpeng Yue, Haochong Xia, Jiechuan Jiang, Longtao Zheng, Xinrun Xu, Yifei Bi, Pengjie Gu, Xinrun Wang, Börje F. Karlsson, Bo An, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
                                 </div>
-                                <div class="periodical"> <b style="font-weight: bold !important;">ICLR 2024 Workshop</b>
+                                <div class="periodical"> <b style="font-weight: bold !important;">ICLR / NeurIPS 2024 Workshop</b>
                                 </div>
                                 <div class="links">
                                     <a href="https://arxiv.org/pdf/2403.03186.pdf">
@@ -589,7 +724,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/STG.jpg"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="stg" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Learning from Visual Observation via Offline Pretrained State-to-Go Transformer</h5>
                                 <div class="author">
                                     <b style="font-weight: bold !important;">Bohan Zhou</b>,
@@ -621,7 +756,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/GFIE.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="gfie" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">GFIE: A Dataset and Baseline for Gaze-Following from 2D to 3D in Indoor Environments</h5>
                                 <div class="author">
                                     Zhengxi Hu, Yuxue Yang, Xiaolin Zhai, Dingye Yang, <b style="font-weight: bold !important;">Bohan Zhou</b>, Jingtai Liu
@@ -632,7 +767,7 @@
                                     <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
                                     </a>
-                                    <a href="https://https://github.com/nkuhzx/GFIE">
+                                    <a href="https://github.com/nkuhzx/GFIE">
                                         <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white">
                                     </a>
                                     <a href="https://sites.google.com/view/gfie">
@@ -649,7 +784,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/VSG-IA.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="vsg-ia" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Gaze Target Estimation Inspired by Interactive Attention</h5>
                                 <div class="author">
                                     Zhengxi Hu , Kunxu Zhao , <b style="font-weight: bold !important;">Bohan Zhou</b>, Hang Guo , Shichao Wu , Yuxue Yang, Jingtai Liu
@@ -677,45 +812,55 @@
             <div class="Internship">
                 <h2>💼 Internship Experience</h2>
                 <br>
-                <!-- Beijing Academy of Artificial Intelligence (BAAI) - Multimodal Interaction Research Center -->
-                <!-- Research Intern (2023 - 2025). -->
                 <div class="row">
-                    <div class="col-sm-2 preview"><img class="preview rounded" width="100%" src="assets/organizations/baai-text.png"></div>
-                    <div id="wang2023zolly" class="col-sm-8">
-                        <h5 class="title mb-0" style="color: #b65555;">Beijing Academy of Artificial Intelligence (BAAI) - Multimodal Interaction Research Center</h5>
-                        <div class="author">
-                            Research Intern (2022.12 - 2025.04).
-                        </div>
+                    <!-- Full logo copied from the user-provided Knowin technical report asset; no cropping. -->
+                    <div class="col-sm-2 preview"><img class="preview rounded" width="100%" src="assets/organizations/knowin.png" alt="KnowinAI logo"></div>
+                    <div id="knowinai" class="col-sm-8">
+                        <h5 class="title mb-0" style="color: #b65555;"><span class="internship-name">KnowinAI</span><span class="internship-dates">2026.03 - 2026.08</span></h5>
+                        <div class="author">Robot Deployment and Embodied Skill Coordination.</div>
+                        <p class="mb-0">Delivered Astra simulation/real-robot evaluations and dual-arm dexterous systems, integrating perception, control and hardware. Led <a href="https://zhoubohan0.github.io/RoboAware/"><b style="font-weight: bold !important;">RoboAware</b></a>, learning state-dependent coordination from same-state counterfactual branches with MCTS and Q-learning while keeping low-level executors frozen.</p>
                     </div>
                 </div>
                 <br>
-                <hr>
-                <br>
                 <div class="row">
-                    <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="assets/zbh-publications/Being-0.png"></div>
-                    <div id="wang2023zolly" class="col-sm-8">
-                        <h5 class="title mb-0" style="color: #2D52A3;">Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills</h5>
-                        <div class="author">
-                            Haoqi Yuan, Yu Bai, Yuhui Fu, <b style="font-weight: bold !important;">Bohan Zhou</b>, Yicheng Feng, Xinrun Xu, Yi Zhan, Börje F. Karlsson, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
-                        </div>
-                        <div class="periodical"> <b style="font-weight: bold !important;">Arxiv 2025</b>
-                        </div>
-                        <div class="links">
-                            <a href="https://arxiv.org/pdf/2503.12533">
-                                <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
-                            </a>
-                            <a href="https://github.com/beingbeyond/Being-0">
-                                <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white">
-                            </a>
-                            <a href="https://beingbeyond.github.io/Being-0">
-                                <img src="https://img.shields.io/badge/Website-blue?style=for-the-badge&logo=react&color=007BFF&logoColor=white">
-                            </a>
-                            <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:5wy5egSvANwJ:scholar.google.com">
-                                <img src="https://img.shields.io/badge/Bibtex-green?style=for-the-badge&logo=firebase&color=4F805D&logoColor=white">
-                            </a>
-                        </div>
+                    <!-- Logo source: User-provided MEgoHand poster asset: logo-BeingBeyond.png -->
+                    <div class="col-sm-2 preview"><img class="preview rounded" width="100%" src="assets/organizations/beingbeyond.png" alt="BeingBeyond logo"></div>
+                    <div id="beingbeyond" class="col-sm-8">
+                        <h5 class="title mb-0" style="color: #b65555;"><span class="internship-name">BeingBeyond</span><span class="internship-dates">2025.12 - 2026.02</span></h5>
+                        <div class="author">Embodied Foundation Models and Dexterous Systems.</div>
+                        <p class="mb-0">Contributed the human-video data pipeline for <a href="https://arxiv.org/abs/2507.15597"><b style="font-weight: bold !important;">Being-H0</b></a>, combining MEgoHand, TASTE-Rob and EgoDex for robot-policy transfer. Helped develop <a href="https://arxiv.org/abs/2606.06033"><b style="font-weight: bold !important;">RealDexUMI</b></a>, a wearable dexterous data-collection system with isomorphic control and integrated vision-tactile end effectors.</p>
                     </div>
                 </div>
+                <br>
+                <div class="row">
+                    <!-- Full user-provided Momenta image, relocated from Downloads; no cropping. -->
+                    <div class="col-sm-2 preview"><img class="preview rounded" width="100%" src="assets/organizations/momenta.jpg" alt="Momenta logo"></div>
+                    <div id="momenta" class="col-sm-8">
+                        <h5 class="title mb-0" style="color: #b65555;"><span class="internship-name">Momenta</span><span class="internship-dates">2025.08 - 2025.11</span></h5>
+                        <div class="author">M-star Talent Program.</div>
+                        <p class="mb-0">Built a scenario-mining and cleaning loop, raising intersection-action recognition from about 70% to 97% and reducing annotation costs by 51%–62%. Coordinated <b style="font-weight: bold !important;">R6 post-training at the 100-GPU scale</b> and led Flow Matching trajectory generation with FPO safety enhancement, with 30 km of IM LS6 road testing at &gt;10 Hz; the approach entered current products.</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <!-- Logo source: https://cvpr.thecvf.com/media/cvpr-2023/Slides/21544.pdf -->
+                    <div class="col-sm-2 preview"><img class="preview rounded" width="100%" src="assets/organizations/jd-explore.png" alt="JD Explore Academy logo"></div>
+                    <div id="jd" class="col-sm-8">
+                        <h5 class="title mb-0" style="color: #b65555;"><span class="internship-name">JD Explore Academy</span><span class="internship-dates">2025.05 - 2025.07</span></h5>
+                        <div class="author">TGT Talent Program.</div>
+                        <p class="mb-0">Helped build <b style="font-weight: bold !important;">EgoLive</b>: 1,680 hours, 65K episodes and 346 manipulation tasks in unconstrained real environments, with stereo RGB/IMU, hand reconstruction, 3D reconstruction and semantic annotation. Transferred MEgoHand pretraining to <b style="font-weight: bold !important;">VLA-H2</b> dexterous policies through object modeling, cross-embodiment retargeting and trajectory optimization.</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-2 preview"><img class="preview rounded" width="100%" src="assets/organizations/baai-text.png" alt="Beijing Academy of Artificial Intelligence (BAAI)"></div>
+                    <div id="baai" class="col-sm-8">
+                        <h5 class="title mb-0" style="color: #b65555;"><span class="internship-name">Beijing Academy of Artificial Intelligence (BAAI)</span><span class="internship-dates">2022.09 - 2025.04</span></h5>
+                        <div class="author">Research Intern · Generalist and Embodied Agents.</div>
+                        <p class="mb-0">Worked on video-driven policy learning, visual navigation and multimodal dexterous manipulation: <b style="font-weight: bold !important;">STG, NOLO, MEgoHand and BiDexHD</b>. Produced four first-author papers; STG, NOLO and MEgoHand were featured by Prof. Zongqing Lu at the <a href="https://www.bilibili.com/video/BV1YmsW6REQm/">BAAI Conference in three consecutive years, 2023–2025</a>.</p>
+                    </div>
+                </div>
+                <br>
             </div>
             <br>
 
@@ -723,29 +868,64 @@
                 <h2>🎓 Education</h2>
                 <br>
                 <div class="row">
-                    <div class="col-sm-2 preview"><img class="preview rounded" width="80%" src="assets/organizations/pku.png"></div>
-                    <div id="wang2023zolly" class="col-sm-8">
-                        <h5 class="title mb-0" style="color: #000000;"><a href="https://cs.pku.edu.cn/English/Home.htm" target="_blank">School of Computer Science</a>, Peking University</h5>
+                    <div class="col-sm-2 preview"><img class="preview rounded" width="80%" src="assets/organizations/cuhk.png" alt="The Chinese University of Hong Kong emblem"></div>
+                    <div id="cuhk-education" class="col-sm-8">
+                        <h5 class="title mb-0" style="color: #000000;">Department of Computer Science and Engineering, The Chinese University of Hong Kong</h5>
                         <div class="author">
-                            <b style="font-weight: bold !important;">M.E. of Applied Technology in Computer Science</b>, Peking University (2023.09 - 2026.06).
-                            <br>
-                            Advisor: Prof. <a href="https://z0ngqing.github.io/" target="_blank"><b style="font-weight: bold !important;">Zongqing Lu</b></a>.
+                            <b style="font-weight: bold !important;">Ph.D. in Computer Science and Engineering</b> (2026.08 - Present).<br>
+                            Research: embodied intelligence and foundation models.<br>
+                            Advisor: Prof. <a href="https://www.cse.cuhk.edu.hk/~jcheng/" target="_blank" rel="noopener noreferrer"><b style="font-weight: bold !important;">James Cheng</b></a>.
                         </div>
                     </div>
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-sm-2 preview"><img class="preview rounded" width="80%" src="assets/organizations/nku.jpeg"></div>
-                    <div id="wang2023zolly" class="col-sm-8">
-                        <h5 class="title mb-0" style="color: #000000;"><a href="https://www.nankai.edu.cn/English/Home.htm" target="_blank">School of Artificial Intelligence</a>, Nankai University</h5>
+                    <div class="col-sm-2 preview"><img class="preview rounded" width="80%" src="assets/organizations/pku.png" alt="Peking University"></div>
+                    <div id="pku-education" class="col-sm-8">
+                        <h5 class="title mb-0" style="color: #000000;">National Engineering Research Center of Visual Technology, Peking University</h5>
                         <div class="author">
-                            <b style="font-weight: bold !important;">B.E. of Intelligence Science and Technology</b>, Nankai University (2019.09 - 2023.06).
-                            <br>
-                            Advisor: Prof. <a href="https://ai.nankai.edu.cn/info/1033/2794.htm" target="_blank"><b style="font-weight: bold !important;">Jingtai Liu</b></a>.
+                            <b style="font-weight: bold !important;">Master's degree in Computer Applied Technology</b> (2023.09 - 2026.07).<br>
+                            GPA: <b style="font-weight: bold !important;">3.88/4.0</b>.<br>
+                            Research: multimodal learning, reinforcement learning and agents.<br>
+                            Advisor: Prof. <a href="https://z0ngqing.github.io/" target="_blank" rel="noopener noreferrer"><b style="font-weight: bold !important;">Zongqing Lu</b></a>.
                         </div>
                     </div>
                 </div>
                 <br>
+                <div class="row">
+                    <div class="col-sm-2 preview"><img class="preview rounded" width="80%" src="assets/organizations/nku.jpeg" alt="Nankai University"></div>
+                    <div id="nku-education" class="col-sm-8">
+                        <h5 class="title mb-0" style="color: #000000;">College of Artificial Intelligence, Nankai University</h5>
+                        <div class="author">
+                            <b style="font-weight: bold !important;">Bachelor's degree in Intelligent Science and Technology</b> (2019.09 - 2023.07).<br>
+                            GPA: <b style="font-weight: bold !important;">3.95/4.0</b>; rank: <b style="font-weight: bold !important;">2/98</b>. Recipient of seven undergraduate scholarships.<br>Advisor: Prof. <a href="https://ai.nankai.edu.cn/info/1033/2794.htm" target="_blank" rel="noopener noreferrer"><b style="font-weight: bold !important;">Jingtai Liu</b></a>.
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <br>
+            <div class="Honors">
+                <h2>🏆 Awards &amp; Honors</h2>
+                <ul>
+                    <li>3rd Prize, Gripper Track, the third X Square–Tsinghua Embodied AI Challenge.</li>
+                    <li>Beijing Outstanding Graduate, Peking University, 2026.</li>
+                    <li>National Scholarship; Outstanding Student Award, Peking University, 2025.</li>
+                    <li>Tianjin Municipal Outstanding Graduate, Nankai University, 2023.</li>
+                    <li>Tianjin Municipal People's Government Scholarship (top 2%), 2021.</li>
+                    <li>Gongneng Scholarship (top 5%), Nankai University, 2020 and 2022.</li>
+                    <li>2nd Prize, National College Student Mathematical Modeling Competition, 2021.</li>
+                    <li>Honorable Mention, American College Mathematical Contest in Modeling, 2021.</li>
+                </ul>
+            </div>
+            <br>
+            <div class="Skills">
+                <h2>🛠️ Skills</h2>
+                <ul>
+                    <li>PyTorch, distributed training at the 100-GPU scale, hands-on coding and AI-assisted development.</li>
+                    <li>Project planning, team coordination, technical communication and on-time delivery.</li>
+                    <li>English: CET-6 score 622; speaking grade A.</li>
+                </ul>
             </div>
             <br>
             <div class="Services">
@@ -772,22 +952,15 @@
 
             <div class="Friends">
                 <h2>👥 Co-authors & Buddies</h2>
-                Some of my co-authors:
-                <a href="https://www.songmingxuan.com" target="__blank">Mingxuan Song (Peking University)</a>, <a href="https://yhqpkueecs.github.io" target="__blank">Haoqi Yuan (Peking University)</a>.
-                <br>
-
-                Some of the buddies in our Lab:<!--<a href="https://hku-cg.github.io/"> Lab</a>: -->
-                <a href="https://z0ngqing.github.io/" target="_blank"> Zongqing Lu</a>.
-                <!-- <a href="https://carrie-lin.github.io/">Guying Lin</a>,-->
-                <!-- <a href="https://frank-zy-dou.github.io/">Zhiyang Dou</a>.-->
-                
-
+                <a href="https://www.songmingxuan.com" target="_blank" rel="noopener noreferrer">Mingxuan Song</a>,
+                <a href="https://yhqpkueecs.github.io" target="_blank" rel="noopener noreferrer">Haoqi Yuan</a>,
+                <a href="https://skywalker-yqz.github.io/" target="_blank" rel="noopener noreferrer">Qize Yu</a>.
             </div>
             <br>
 
             <div class="Location">
                 <h2>🌏 Location:</h2>
-                Peking University (PKU), Beijing
+                The Chinese University of Hong Kong (CUHK), Sha Tin, Hong Kong
                 <!--                    <div class="iframe-container">-->
                 <!--                        <iframe-->
                 <!--                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8660498837125!2d114.13283187529197!3d22.283063379698937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403ff85af39ecbb%3A0xea1597b626ef3c1e!2sChow%20Yei%20Ching%20Building%2C%20Pok%20Fu%20Lam%20Rd%2C%20Lung%20Fu%20Shan!5e0!3m2!1sen!2shk!4v1708320695144!5m2!1sen!2shk"-->
@@ -800,7 +973,7 @@
     </div>
 </div>
 <footer class="fixed-bottom">
-  <div class="container mt-0"> © Copyright 2024
+  <div class="container mt-0"> © Copyright 2026
       <script type="text/javascript"
               src="//rf.revolvermaps.com/0/0/3.js?i=5vy2m676rx4&amp;b=0&amp;s=22&amp;m=2&amp;cl=ffffff&amp;co=010020&amp;cd=aa0000&amp;v0=60&amp;v1=60&amp;r=1"
               async="async"></script>

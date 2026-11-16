@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Publications | Bohan Zhou | 周伯涵</title>
     <meta name="author" content="Bohan Zhou"/>
-    <meta name="description" content="<span>*</span> denotes equal contribution and joint lead authorship."/>
-    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"/>
+    <meta name="description" content="Publications and preprints by Bohan Zhou, Ph.D. student at The Chinese University of Hong Kong, on embodied intelligence, multimodal learning and foundation models."/>
+    <meta name="keywords" content="Bohan Zhou, 周伯涵, CUHK, embodied intelligence, foundation models, robotics, reinforcement learning"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
@@ -28,7 +28,7 @@
           id="highlight_theme_light"/>
     <link rel="shortcut icon" href="/assets/img/favicon.png"/>
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://wenjiawang0312.github.io/publications/">
+    <link rel="canonical" href="https://zhoubohan0.github.io/publications/">
 </head>
 
 <body class="fixed-top-nav ">
@@ -56,8 +56,7 @@
     <div class="post">
         <header class="post-header">
             <h1 class="post-title">📄Publications</h1>
-            <p class="post-description"><span>*</span> denotes equal contribution & joint lead authorship 
-                <!-- and &dagger; denotes corresponding author.</p> -->
+            <!-- <p class="post-description">Papers and preprints are grouped by year, with publication and review status shown for each entry.</p> -->
         </header>
         <article>
             <div class="publications">
@@ -65,14 +64,87 @@
                 <ol class="bibliography">
                     <li>
                         <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/AtmosBench.png" alt="Atmospheric backscatter retrieval comparison with PhysicalSDC and baseline methods"></div>
+                            <div id="atmosbench" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">The Floor Is Not the Limit: Recovering Atmospheric Backscatter from Spaceborne Lidar via Physics-Aligned Encoding</h5>
+                                <div class="author">
+                                    Tianchi Xu, Yuanpeng He, Jintao Xu, Kang He, Linyu Li, Huanyao Zhang, Dongming Jin, <b style="font-weight: bold !important;">Bohan Zhou</b>, Wenpin Jiao, Zhi Jin
+                                </div>
+                                <div class="periodical"> <b style="font-weight: bold !important;">KDD 2027</b>
+                                </div>
+                                <p class="mb-1">Retrieving atmospheric backscatter with a parameter-free encoding derived from the lidar attenuation relation, retaining recorded low-SNR measurements below the nominal noise floor. Introduces PhysicalSDC and the paired AtmosBench benchmark to evaluate retrieval while distinguishing low-SNR measurements from invalid cells.</p>
+                                <div class="links">
+                                    <a href="https://openreview.net/pdf?id=5b9wzLyUdE" target="_blank" rel="noopener noreferrer" aria-label="Read the AtmosBench and PhysicalSDC paper">
+                                        <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/RoboAware.png" alt="RoboAware: state-locked counterfactual search, execution-aware Q-learning and closed-loop deployment"></div>
+                            <div id="roboaware" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes</h5>
+                                <div class="author"><b style="font-weight: bold !important;">Bohan Zhou</b>, et al. (2026)</div>
+                                <div class="periodical"><b style="font-weight: bold !important;">Under Review · ICLR 2027 submission</b></div>
+                                <p class="mb-1">First author and project lead. Learning state-dependent coordination between modular skills and end-to-end policies from same-state counterfactual outcomes, with low-level executors frozen. Averaged 77.0% success across reported evaluation splits covering 100 tasks on three benchmarks, with zero-shot deployment on long-horizon real-robot tasks.</p>
+                                <div class="links"><a href="https://arxiv.org/pdf/2610.11480" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper"></a> <a href="https://zhoubohan0.github.io/RoboAware/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Website-blue?style=for-the-badge&amp;logo=react&amp;color=007BFF&amp;logoColor=white" alt="Website"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/FETCH.png" alt="FETCH overview: evidence distillation, FETCH-7B and FETCH-Bench"></div>
+                            <div id="fetch" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">FETCH: Frame-grounded Evidence Topology for Embodied Spatial Planning with the Counterfactual Hypothesis</h5>
+                                <div class="author"><b style="font-weight: bold !important;">Bohan Zhou</b>, et al. (2026)</div>
+                                <div class="periodical"><b style="font-weight: bold !important;">Under Review</b></div>
+                                <p class="mb-1">First author and project lead. Connecting reference-frame-grounded evidence to executable plans with counterfactual necessity checks. Typed multi-token prediction enables 3.78× faster decoding; the planner reaches 90% real-robot success on the evaluated table-clearing task with a fixed low-level executor.</p>
+                                <div class="links"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/GroundingPI.png" alt="GroundingPI research preview"></div>
+                            <div id="groundingpi" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives</h5>
+                                <div class="author">Qize Yu, ..., <b style="font-weight: bold !important;">Bohan Zhou</b>, et al. (2026)</div>
+                                <div class="periodical"><b style="font-weight: bold !important;">Under Review</b></div>
+                                <p class="mb-1">A 4B grounding model built on visual primitives, evaluated on 34 grounding benchmarks and downstream physical-intelligence tasks. Reached Hugging Face Daily Papers #1.</p>
+                                <div class="links"><a href="https://arxiv.org/pdf/2609.39601" target="_blank" rel="noopener noreferrer" title="Read the GroundingPI paper (PDF)"><img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper"></a> <a href="https://github.com/groundingpi/GroundingPI" target="_blank" rel="noopener noreferrer" title="GroundingPI official code"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"></a> <a href="https://groundingpi.github.io/" target="_blank" rel="noopener noreferrer" title="GroundingPI project website"><img src="https://img.shields.io/badge/Website-blue?style=for-the-badge&amp;logo=react&amp;color=007BFF&amp;logoColor=white" alt="Website"></a> <a href="https://huggingface.co/GroundingPI/GroundingPI/resolve/aca9bde34a146cf0510e7f8732d4766169105194/assets/demo.mp4" target="_blank" rel="noopener noreferrer" title="Watch the GroundingPI demo video"><img src="https://img.shields.io/badge/Video-green?style=for-the-badge&amp;logo=youtube&amp;color=FF0000&amp;logoColor=white" alt="Video"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/AffordanceVLA.png" alt="AffordanceVLA overview: progressive data curriculum, model architecture and evaluation"></div>
+                            <div id="affordancevla" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding</h5>
+                                <div class="author">Qize Yu, ..., <b style="font-weight: bold !important;">Bohan Zhou</b>, et al.</div>
+                                <div class="periodical"><b style="font-weight: bold !important;">ECCV 2026 Workshop</b></div>
+                                <p class="mb-1">Affordance-aware understanding for vision-language-action generation.</p>
+                                <div class="links"><a href="https://arxiv.org/pdf/2606.06155" target="_blank" rel="noopener noreferrer" title="Read the AffordanceVLA paper (PDF)"><img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper"></a> <a href="https://github.com/Skywalker-yqz/AffordanceVLA" target="_blank" rel="noopener noreferrer" title="AffordanceVLA official code"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"></a> <a href="https://skywalker-yqz.github.io/AffordanceVLA/" target="_blank" rel="noopener noreferrer" title="AffordanceVLA project website"><img src="https://img.shields.io/badge/Website-blue?style=for-the-badge&amp;logo=react&amp;color=007BFF&amp;logoColor=white" alt="Website"></a> <a href="https://skywalker-yqz.github.io/AffordanceVLA/#demos" target="_blank" rel="noopener noreferrer" title="Watch all 12 AffordanceVLA robot demonstrations"><img src="https://img.shields.io/badge/Video-green?style=for-the-badge&amp;logo=youtube&amp;color=FF0000&amp;logoColor=white" alt="Video"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/DARA.jpg"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="dara" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">DARA: Few-shot Budget Allocation in Online Advertising via In-Context Decision Making with RL-Finetuned LLMs</h5>
                                 <div class="author">
                                     Mingxuan Song, Yusen Huo, <b style="font-weight: bold !important;">Bohan Zhou</b>, Shenglin Yin, Zhen Xiao*, Jieyi Long, Zhilin Zhang, Chuan Yu*
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">WWW 2026 oral</b>
                                 </div>
+                                <p class="mb-1">Separating few-shot budget planning from feedback-driven numerical refinement with a dual-agent LLM framework. GRPO-Adaptive periodically refreshes the reference policy during RL post-training to improve allocation decisions under limited advertiser data.</p>
                                 <div class="links">
                                     <a href="https://arxiv.org/abs/2601.14711">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
@@ -86,28 +158,25 @@
                                     <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:YOkDOehqtUEJ:scholar.google.com">
                                         <img src="https://img.shields.io/badge/Bibtex-green?style=for-the-badge&logo=firebase&color=4F805D&logoColor=white">
                                     </a>
-                                    <a href="assets/ppt/DARA-poster.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open DARA poster in new tab">
+                                    <a href="../assets/ppt/DARA-poster.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open DARA poster in new tab">
                                         <img src="https://img.shields.io/badge/Poster-blue?style=for-the-badge&logo=GoogleSlides&color=2563EB&logoColor=white" alt="Poster - Microsoft PowerPoint">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </li>
-                </ol>
-            </div>
-            <div class="publications">
-                <h2 class="year">2025</h2>
-                <ol class="bibliography">
+                    <br>
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/BidexHD.jpg"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="bidexhd" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Learning Diverse Bimanual Dexterous Manipulation Skills from Human Demonstrations</h5>
                                 <div class="author">
                                     <b style="font-weight: bold !important;">Bohan Zhou</b>, Haoqi Yuan, Yuhui Fu, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">AAAI 2026 oral</b>
                                 </div>
+                                <p class="mb-1">Learning vision-based bimanual dexterous skills from human demonstrations with a shared reward design. Covers 141 tool-use tasks; unseen-task success reaches 51.07% on TACO and 65.99% on ARCTIC.</p>
                                 <div class="links">
                                     <a href="https://arxiv.org/pdf/2410.02477">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
@@ -124,24 +193,30 @@
                                     <a href="../assets/ppt/BiDexHD-PPT.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open BiDexHD PPT in new tab">
                                         <img src="https://img.shields.io/badge/Slides-blue?style=for-the-badge&logo=GoogleSlides&color=2563EB&logoColor=white" alt="PPT - Microsoft PowerPoint">
                                     </a>
-
+                                    <!-- <a href="https://www.bilibili.com/video/BV1uaCkBCEBZ?t=4.0" target="_blank" rel="noopener noreferrer" aria-label="Open Bilibili video in new tab">
+                                        <img src="https://img.shields.io/badge/Live-直播?style=for-the-badge&logo=bilibili&color=00A1D6&logoColor=white"
+                                            alt="Bilibili Live">
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <br>
+                </ol>
+                <h2 class="year">2025</h2>
+                <ol class="bibliography">
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/MEgoHand.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="megohand" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">MEgoHand: Multimodal Egocentric Hand-Object Interaction Motion Generation</h5>
                                 <div class="author">
                                     <b style="font-weight: bold !important;">Bohan Zhou<span>*</span></b>, Yi Zhan<span>*</span>, Zhongbin Zhang, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">NeurIPS 2025</b>
                                 </div>
+                                <p class="mb-1">Generating future human hand-object interaction motions from egocentric observations and language, with 3M+ training frames and generalization to unseen objects and across datasets.</p>
                                 <div class="links">
-                                    <a href="https://arxiv.org/abs/2505.16602">
+                                    <a href="https://arxiv.org/pdf/2505.16602">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
                                     </a>
                                     <a href="https://github.com/zhoubohan0/MEgoHand">
@@ -157,7 +232,7 @@
                                         <img src="https://img.shields.io/badge/Slides-blue?style=for-the-badge&logo=GoogleSlides&color=2563EB&logoColor=white" alt="PPT - Microsoft PowerPoint">
                                     </a>
                                     <a href="https://www.bilibili.com/video/BV1uaCkBCEBZ?t=4.0" target="_blank" rel="noopener noreferrer" aria-label="Open Bilibili video in new tab">
-                                        <img src="https://img.shields.io/badge/Live-直播?style=for-the-badge&logo=bilibili&color=00A1D6&logoColor=white" 
+                                        <img src="https://img.shields.io/badge/Live-直播?style=for-the-badge&logo=bilibili&color=00A1D6&logoColor=white"
                                             alt="Bilibili Live">
                                     </a>
                                 </div>
@@ -168,13 +243,14 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/NOLO.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="nolo" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">NOLO: Navigate Only Look Once</h5>
                                 <div class="author">
                                     <b style="font-weight: bold !important;">Bohan Zhou</b>, Zhongbin Zhang, Jiangxing Wang, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">IROS 2025 oral</b>
                                 </div>
+                                <p class="mb-1">One-shot, in-context image-goal navigation from a 30-second scene video and online RGB, without maps, depth, pose inputs or retraining; validated on a Unitree Go2.</p>
                                 <div class="links">
                                     <a href="https://arxiv.org/pdf/2408.01384">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
@@ -195,9 +271,17 @@
                                         <img src="https://img.shields.io/badge/Slides-blue?style=for-the-badge&logo=GoogleSlides&color=2563EB&logoColor=white" alt="PPT - Microsoft PowerPoint">
                                     </a>
                                     <a href="https://www.bilibili.com/video/BV14yCcBsErM?t=6.5" target="_blank" rel="noopener noreferrer" aria-label="Open Bilibili video in new tab">
-                                        <img src="https://img.shields.io/badge/Live-直播?style=for-the-badge&logo=bilibili&color=00A1D6&logoColor=white" 
+                                        <img src="https://img.shields.io/badge/Live-直播?style=for-the-badge&logo=bilibili&color=00A1D6&logoColor=white"
                                             alt="Bilibili Live">
                                     </a>
+                                    <!-- <iframe
+                                        src="https://player.bilibili.com/player.html?bvid=BV14yCcBsErM&t=6.5"
+                                        width="800"
+                                        height="450"
+                                        frameborder="0"
+                                        allowfullscreen
+                                        title="Bilibili Player">
+                                    </iframe> -->
                                 </div>
                             </div>
                         </div>
@@ -206,13 +290,14 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/Cradle2.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
-                                    <h5 class="title mb-0" style="color: #2D52A3;">Cradle: Empowering Foundation Agents towards General Computer Control (Cradle v2.0)</h5>
+                            <div id="cradle" class="col-sm-8">
+                                    <h5 class="title mb-0" style="color: #2D52A3;">Cradle: Empowering Foundation Agents towards General Computer Control</h5>
                                 <div class="author">
                                     Weihao Tan, Wentao Zhang, Xinrun Xu, Haochong Xia, Ziluo Ding, Boyu Li, <b style="font-weight: bold !important;">Bohan Zhou</b>, Junpeng Yue, Jiechuan Jiang, Yewen Li, Ruyi An, Molei Qin, Chuqiao Zong, Longtao Zheng, YuJie Wu, Xiaoqiang Chai, Yifei Bi, Tianbao Xie, Pengjie Gu, Xiyun Li, Ceyao Zhang, Long Tian, Chaojie Wang, Xinrun Wang, Börje F. Karlsson, Bo An, Shuicheng Yan, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">ICML 2025</b>
                                 </div>
+                                <p class="mb-1">General computer control through screenshots and keyboard/mouse actions. Contributed low-level interaction and an evolving skill library; demonstrated approximately 40-minute storyline missions in Red Dead Redemption 2.</p>
                                 <div class="links">
                                     <a href="https://arxiv.org/pdf/2403.03186.pdf">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
@@ -236,14 +321,28 @@
                     <br>
                     <li>
                         <div class="row">
+                            <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/Being-0.png" alt="Being-0 research preview"></div>
+                            <div id="being-0" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills</h5>
+                                <div class="author">Haoqi Yuan, Yu Bai, Yuhui Fu, <b style="font-weight: bold !important;">Bohan Zhou</b>, Yicheng Feng, Xinrun Xu, Yi Zhan, Börje F. Karlsson, <a href="https://z0ngqing.github.io/">Zongqing Lu</a> (2025)</div>
+                                <div class="periodical"><b style="font-weight: bold !important;">Under Review · arXiv 2025</b></div>
+                                <p class="mb-1">Hierarchical humanoid control combining vision-language planning, navigation and dexterous skills, with tens-of-meters navigation and coffee delivery on Unitree H1.</p>
+                                <div class="links"><a href="https://arxiv.org/abs/2503.12533" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&amp;logo=google-docs&amp;color=cc0000&amp;logoColor=white" alt="Paper"></a> <a href="https://beingbeyond.github.io/Being-0/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Website-blue?style=for-the-badge&amp;logo=react&amp;color=007BFF&amp;logoColor=white" alt="Website"></a> <a href="https://github.com/beingbeyond/Being-0" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"></a> <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:5wy5egSvANwJ:scholar.google.com"><img src="https://img.shields.io/badge/Bibtex-green?style=for-the-badge&amp;logo=firebase&amp;color=4F805D&amp;logoColor=white" alt="BibTeX"></a></div>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/CrossDex.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="crossdex" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Cross-Embodiment Dexterous Grasping with Reinforcement Learning</h5>
                                 <div class="author">
                                     Haoqi Yuan, <b style="font-weight: bold !important;">Bohan Zhou</b>, Yuhui Fu, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">ICLR 2025</b>
                                 </div>
+                                <p class="mb-1">Learning one vision-based grasping policy across dexterous hands through human eigengrasp actions, embodiment-specific retargeting and a shared fingertip/palm observation space. The learned policy transfers zero-shot to two unseen hand embodiments in simulation.</p>
                                 <div class="links">
                                     <a href="https://openreview.net/pdf?id=twIPSx9qHn">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
@@ -265,19 +364,23 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/AERO.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="aero" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">AERO: Enhancing Sharding Blockchain via Deep Reinforcement Learning for Account Migration</h5>
                                 <div class="author">
                                     Mingxuan Song, Pengze Li, <b style="font-weight: bold !important;">Bohan Zhou</b>, Shenglin Yin, Zhen Xiao, Jieyi Long
                                 </div>
-                                <div class="periodical"> <b style="font-weight: bold !important;">WWW 2025</b>
+                                <div class="periodical"> <b style="font-weight: bold !important;">WWW 2025 oral</b>
                                 </div>
+                                <p class="mb-1">Reducing account-migration complexity by grouping blockchain accounts by address prefix and learning group-level migration decisions with reinforcement learning. AEROChain integrates this policy into decentralized shard reconfiguration to reduce cross-shard transactions and balance workloads.</p>
                                 <div class="links">
                                     <a href="http://zhenxiao.com/papers/WWW_AERO_camera_ready.pdf">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
                                     </a>
                                     <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:s42PHRi1bRwJ:scholar.google.com">
                                         <img src="https://img.shields.io/badge/Bibtex-green?style=for-the-badge&logo=firebase&color=4F805D&logoColor=white">
+                                    </a>
+                                    <a href="https://www.youtube.com/watch?v=Oa4Ese8mMD0">
+                                        <img src="https://img.shields.io/badge/Main-green?style=for-the-badge&logo=youtube&color=FF0000&logoColor=white">
                                     </a>
                                 </div>
                             </div>
@@ -289,19 +392,17 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/Unicode.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="unicode" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">UniCode: Learning a Unified Codebook for Multimodal Large Language Models</h5>
                                 <div class="author">
                                     Sipeng Zheng, <b style="font-weight: bold !important;">Bohan Zhou</b>, Yicheng Feng, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">ECCV 2024</b>
                                 </div>
+                                <p class="mb-1">Learning a shared visual-text codebook through language-driven iterative training, enabling image generation beyond text-only vocabularies. In-context image decompression and stacked quantization support compact visual tokens for multimodal understanding and generation.</p>
                                 <div class="links">
                                     <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01331.pdf">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
-                                    </a>
-                                    <a href="">
-                                        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white">
                                     </a>
                                     <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:t6IATNCyx_8J:scholar.google.com">
                                         <img src="https://img.shields.io/badge/Bibtex-green?style=for-the-badge&logo=firebase&color=4F805D&logoColor=white">
@@ -314,19 +415,17 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/I2A.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="pvdr" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Pre-trained Visual Dynamics Representations for Efficient Policy Learning</h5>
                                 <div class="author">
                                     Hao Luo, <b style="font-weight: bold !important;">Bohan Zhou</b>, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">ECCV 2024</b>
                                 </div>
+                                <p class="mb-1">Pretraining visual dynamics from action-free video with a Transformer-based conditional VAE. Online adaptation aligns the learned dynamics with executable robot actions, addressing the domain gap between pretraining videos and downstream visual control.</p>
                                 <div class="links">
                                     <a href="https://arxiv.org/pdf/2411.03169">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
-                                    </a>
-                                    <a href="">
-                                        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white">
                                     </a>
                                     <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:qMYhZAqLSEEJ:scholar.google.com">
                                         <img src="https://img.shields.io/badge/Bibtex-green?style=for-the-badge&logo=firebase&color=4F805D&logoColor=white">
@@ -339,13 +438,14 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/Cradle.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
-                                <h5 class="title mb-0" style="color: #2D52A3;">Towards General Computer Control: A Multi Modal Agent For Red Dead Redemption II As A Case Study (Cradle v1.0)</h5>
+                            <div id="cradle-v1" class="col-sm-8">
+                                <h5 class="title mb-0" style="color: #2D52A3;">Towards General Computer Control: A Multi Modal Agent For Red Dead Redemption II As A Case Study</h5>
                                 <div class="author">
                                     Weihao Tan, Ziluo Ding, Wentao Zhang, Boyu Li, <b style="font-weight: bold !important;">Bohan Zhou</b>, Junpeng Yue, Haochong Xia, Jiechuan Jiang, Longtao Zheng, Xinrun Xu, Yifei Bi, Pengjie Gu, Xinrun Wang, Börje F. Karlsson, Bo An, <a href="https://z0ngqing.github.io/">Zongqing Lu</a>
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">ICLR / NeurIPS 2024 Workshop</b>
                                 </div>
+                                <p class="mb-1">Introducing General Computer Control through screenshot observations and keyboard/mouse actions, without game-specific control APIs. Combines self-reflection, task inference, skill curation and memory to complete storyline missions in Red Dead Redemption II.</p>
                                 <div class="links">
                                     <a href="https://arxiv.org/pdf/2403.03186.pdf">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
@@ -367,13 +467,12 @@
                         </div>
                     </li>
                 </ol>
-
                 <h2 class="year">2023</h2>
                 <ol class="bibliography">
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/STG.jpg"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="stg" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Learning from Visual Observation via Offline Pretrained State-to-Go Transformer</h5>
                                 <div class="author">
                                     <b style="font-weight: bold !important;">Bohan Zhou</b>,
@@ -381,6 +480,7 @@
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">NeurIPS 2023</b>
                                 </div>
+                                <p class="mb-1">Learning behavioral priors from offline video and converting them into intrinsic rewards for online reinforcement learning without environment rewards.</p>
                                 <div class="links">
                                     <a href="https://papers.nips.cc/paper_files/paper/2023/file/bb203e938836544655996d1bb94a0fd7-Paper-Conference.pdf">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
@@ -405,18 +505,19 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/GFIE.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="gfie" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">GFIE: A Dataset and Baseline for Gaze-Following from 2D to 3D in Indoor Environments</h5>
                                 <div class="author">
                                     Zhengxi Hu, Yuxue Yang, Xiaolin Zhai, Dingye Yang, <b style="font-weight: bold !important;">Bohan Zhou</b>, Jingtai Liu
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">CVPR 2023</b>
                                 </div>
+                                <p class="mb-1">Collecting 2D/3D gaze targets with Azure Kinect and a laser rangefinder, using laser-spot localization and removal to obtain labels without subjective annotation or wearable eye trackers. Introduces a stereo field-of-view baseline for indoor gaze following.</p>
                                 <div class="links">
                                     <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
                                     </a>
-                                    <a href="https://https://github.com/nkuhzx/GFIE">
+                                    <a href="https://github.com/nkuhzx/GFIE">
                                         <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white">
                                     </a>
                                     <a href="https://sites.google.com/view/gfie">
@@ -430,19 +531,19 @@
                         </div>
                     </li>
                 </ol>
-
                 <h2 class="year">2022</h2>
                 <ol class="bibliography">
                     <li>
                         <div class="row">
                             <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" width="100%" src="../assets/zbh-publications/VSG-IA.png"></div>
-                            <div id="wang2023zolly" class="col-sm-8">
+                            <div id="vsg-ia" class="col-sm-8">
                                 <h5 class="title mb-0" style="color: #2D52A3;">Gaze Target Estimation Inspired by Interactive Attention</h5>
                                 <div class="author">
                                     Zhengxi Hu , Kunxu Zhao , <b style="font-weight: bold !important;">Bohan Zhou</b>, Hang Guo , Shichao Wu , Yuxue Yang, Jingtai Liu
                                 </div>
                                 <div class="periodical"> <b style="font-weight: bold !important;">TCSVT 2022</b>
                                 </div>
+                                <p class="mb-1">Inferring human-object interaction probabilities with a visual-spatial graph attention network and converting them into an interactive attention map. A Transformer integrates scene and head features to localize gaze targets with this interaction cue.</p>
                                 <div class="links">
                                     <a href="https://ieeexplore.ieee.org/abstract/document/9828503">
                                         <img src="https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=google-docs&color=cc0000&logoColor=white">
@@ -463,7 +564,7 @@
     </div>
 </div>
 <footer class="fixed-bottom">
-  <div class="container mt-0"> © Copyright 2024
+  <div class="container mt-0"> © Copyright 2026
       <script type="text/javascript"
               src="//rf.revolvermaps.com/0/0/3.js?i=5vy2m676rx4&amp;b=0&amp;s=22&amp;m=2&amp;cl=ffffff&amp;co=010020&amp;cd=aa0000&amp;v0=60&amp;v1=60&amp;r=1"
               async="async"></script>
