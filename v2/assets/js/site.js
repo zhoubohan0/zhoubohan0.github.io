@@ -1,7 +1,10 @@
 import { initPublications } from './publications.js';
 import { initVisitorGlobe } from './visitor-globe.js';
+import { visitorConfig } from './visitor-config.js';
+import { initVisitTracking } from './visitor-tracker.js';
 
 const publications = initPublications();
+initVisitTracking(visitorConfig);
 initVisitorGlobe();
 // Configuration can update existing links, but never creates commented social entries.
 fetch(new URL('../../data/site.json', import.meta.url))

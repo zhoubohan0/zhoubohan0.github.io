@@ -1,0 +1,37 @@
+{
+  "account_id": "ff15ed09e88843a1640e7f28369d0dd9",
+  "plan_verified": "Workers Free",
+  "displayed_price": "US$0",
+  "plan_page": "https://dash.cloudflare.com/ff15ed09e88843a1640e7f28369d0dd9/workers/plans",
+  "verification": "Dashboard displayed Free / US$0 / Current plan before creating any cloud resources",
+  "paid_upgrades_enabled": false,
+  "free_quota_behavior": "Platform requests/queries fail at limits; no paid upgrade",
+  "application_daily_visit_limit": 5000,
+  "worker_name": "bohan-visitor-map",
+  "status": "deployed and verified",
+  "database_id": "25521d6d-1eed-4d77-aa77-1d38f1d7fe77",
+  "worker_url": "https://bohan-visitor-map.3459783348.workers.dev",
+  "version_id": "032b240e-d518-4119-9098-f7f7bf29a57b",
+  "oauth_permissions": [
+    "user:read",
+    "account:read",
+    "workers:write",
+    "workers_scripts:write",
+    "d1:write",
+    "offline_access"
+  ],
+  "credential_storage": "Encrypted Wrangler file with encryption key in macOS Keychain",
+  "http_checks": {
+    "health": 200,
+    "stats": 200,
+    "dry_run_visit": 200,
+    "localhost_visit": 403,
+    "production_preflight": 204
+  },
+  "verified_recorded_visits": 0,
+  "verified_recorded_events": 0,
+  "local_browser_reported_visits": 0,
+  "worker_tests_passed": 10,
+  "browser_checks_passed": 83,
+  "website_publication": "This visitor-tracking frontend change is local and has not been pushed to GitHub Pages."
+}

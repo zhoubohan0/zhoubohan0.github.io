@@ -11,6 +11,7 @@ let serial = 0;
 const pending = new Map();
 const browserErrors = [];
 const sessionErrors = new Map();
+const networkRequests = new Map();
 socket.addEventListener('message', event => {
   const message = JSON.parse(event.data);
   if (message.id && pending.has(message.id)) {
@@ -24,6 +25,7 @@ socket.addEventListener('message', event => {
     browserErrors.push(entry);
     sessionErrors.get(message.sessionId)?.push(entry);
   }
+  if (message.method === 'Network.requestWillBeSent') networkRequests.get(message.sessionId)?.push({ url: message.params.request.url, method: message.params.request.method });
 });
 function call(method, params = {}, sessionId) {
   return new Promise((resolve, reject) => {
@@ -40,7 +42,9 @@ async function newPage() {
   const { targetId } = await call('Target.createTarget', { url: 'about:blank', browserContextId: context.browserContextId });
   const { sessionId } = await call('Target.attachToTarget', { targetId, flatten: true });
   sessionErrors.set(sessionId, []);
+  networkRequests.set(sessionId, []);
   await call('Page.enable', {}, sessionId); await call('Runtime.enable', {}, sessionId);
+  await call('Network.enable', {}, sessionId);
   return sessionId;
 }
 async function evaluate(session, expression) {
@@ -161,9 +165,11 @@ try {
   await evaluate(page, 'document.getElementById("visitors").scrollIntoView({behavior:"instant"})');
   await waitFor(page, 'document.querySelector("#visitor-globe[data-initialized]")!==null');
   await pause(800);
-  assert(await evaluate(page, 'document.querySelector("#visitor-globe").dataset.statistics==="disconnected"&&document.querySelector(".visitor-globe-status").textContent==="Statistics not connected"'), 'Visitor map has no fabricated statistics');
+  await waitFor(page, 'document.querySelector("#visitor-globe").dataset.connection==="connected"');
+  assert(await evaluate(page, 'document.querySelector("#visitor-globe").dataset.statistics==="configured"&&/^\\d[\\d,]* visits?$/.test(document.querySelector(".visitor-globe-status").textContent)'), 'Visitor map displays a real connected statistics response');
   assert(await evaluate(page, '!document.querySelector("#visitor-globe").classList.contains("no-webgl")'), 'Visitor globe renders with WebGL');
-  assert(await evaluate(page, '!performance.getEntriesByType("resource").some(e=>e.name.includes("workers.dev"))'), 'No source-owner statistics requests');
+  assert(await evaluate(page, '!performance.getEntriesByType("resource").some(e=>e.name.includes("workers.dev")&&!e.name.startsWith("https://bohan-visitor-map.3459783348.workers.dev/"))'), 'Only the owned statistics endpoint is requested');
+  assert(!networkRequests.get(page).some(request=>request.method==='POST'&&request.url.endsWith('/visit')), 'Local browser preview never reports production visits');
   await evaluate(page, 'document.querySelector(".visitor-globe-toggle").click()');
   assert(await evaluate(page, 'document.querySelector(".visitor-globe-toggle").getAttribute("aria-expanded")==="true"&&!document.querySelector("#visitor-details").inert'), 'Visitor details expand');
   await evaluate(page, 'document.querySelector(".visitor-globe-canvas").focus()');

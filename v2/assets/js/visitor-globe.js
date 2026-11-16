@@ -231,7 +231,7 @@ export function initVisitorGlobe(config = visitorConfig) {
             return row;
           }));
           if (!locations.length) {
-            const row = document.createElement('li'); row.textContent = 'No visits yet'; countryList.append(row);
+            const row = document.createElement('li'); row.textContent = data.totalVisitors ? 'No location data available' : 'No visits yet'; countryList.append(row);
           }
           render({ markers });
         },

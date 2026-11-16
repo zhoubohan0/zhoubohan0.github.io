@@ -219,8 +219,11 @@ def validate(directory, repo=ROOT, default_version='v2'):
             check(path.exists(),'Missing CSS resource: '+value)
     check((out/'.nojekyll').is_file(),'Missing .nojekyll')
     visitor_config=(out/'v2/assets/js/visitor-config.js').read_text()
-    check("endpoint: ''" in visitor_config and "fallbackSnapshot: undefined" in visitor_config, 'Visitor statistics must stay disconnected')
-    check('workers.dev' not in visitor_config, 'Source-owner analytics endpoint copied')
+    deployment=json.loads((repo/'.github/visitor-worker/deployment-record.json').read_text())
+    check("endpoint: '"+deployment['worker_url']+"/stats'" in visitor_config, 'Unexpected statistics endpoint')
+    check("trackEndpoint: '"+deployment['worker_url']+"/visit'" in visitor_config, 'Unexpected tracking endpoint')
+    check("allowedHosts: ['zhoubohan0.github.io']" in visitor_config, 'Production hostname restriction missing')
+    check('fallbackSnapshot: undefined' in visitor_config and 'qize-visitor-map' not in visitor_config, 'Seeded or source-owner analytics data copied')
     if errors:
         raise AssertionError('\n'.join(errors))
     print('PASS: frozen v1/assets; 13 news; 19 papers/descriptions; 8 selected / 6 first-author; 10 active / 4 commented social links; Services, globe, CV and legacy URLs.')

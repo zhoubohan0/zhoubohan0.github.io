@@ -1,0 +1,18 @@
+{
+  "name": "bohan-visitor-map",
+  "main": "worker.mjs",
+  "account_id": "ff15ed09e88843a1640e7f28369d0dd9",
+  "compatibility_date": "2026-11-16",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {
+    "enabled": false
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bohan-visitor-map",
+      "database_id": "25521d6d-1eed-4d77-aa77-1d38f1d7fe77"
+    }
+  ]
+}
