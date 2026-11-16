@@ -119,17 +119,31 @@ def validate(directory, repo=ROOT, default_version='v2'):
         for original in content[key]:
             node = home.by_id(original['id'])
             expected = text(original['title']+' '+original['date']+' '+original['body']+' '+original['description'])
+            if original['id'] == 'pku-education':
+                expected = re.sub(r'(GPA:.*?)(Research:.*?)(Advisor:)', lambda m: m[2].strip()+' '+m[1].strip()+' '+m[3], expected)
             check(node is not None and node.text().removesuffix(' Read more') == expected, key+' content changed: '+original['id'])
-    for key,id in [('Honors','honors'),('Skills','skills'),('Services','services'),('Friends','friends'),('Location','location')]:
+    # User's browser review explicitly removed Skills and replaced Location with a globe.
+    check(home.by_id('skills') is None and home.by_id('location') is None, 'Removed sections returned')
+    check(home.by_id('visitors') is not None and home.by_id('visitor-globe') is not None, 'Visitor map missing')
+    check(home.by_id('news-toggle') is None, 'News must use scrolling, not an expand button')
+    check(len(home.by_class('service-row')) == 2, 'Expected two reference-style service cards')
+    cv = home.by_class('cv-links')
+    about_copy = home.by_class('about-copy')[0]
+    check(len(cv) == 1 and cv[0] in list(about_copy.walk()), 'CV links must be below the left biography')
+    for key,id in [('Honors','honors'),('Services','services')]:
         node = home.by_id(id)
         # Compare section contents after the heading, including all existing links/text.
         body = ' '.join(n.text() for n in node.children if isinstance(n,Node) and not n.has_class('section-heading'))
         check(body == text(content['extras'][key]), 'Section content changed: '+id)
+    original_friends=Document(content['extras']['Friends'])
+    expected_friends=[(n.text(),n.attrs['href']) for n in original_friends.root.walk() if n.tag=='a']
+    check([(n.text(),n.attrs['href']) for n in home.by_class('friend-link')]==expected_friends, 'Coauthor link labels or destinations changed')
     for doc,detail in [(home,False),(full,True)]:
         cards = doc.by_class('publication-card')
         check(len(cards)==19, 'Expected 19 publications')
         check(sum(n.attrs.get('data-selected')=='true' for n in cards)==8, 'Expected 8 selected publications')
         check({n.attrs['id'] for n in cards if n.attrs.get('data-selected')=='true'} == {'roboaware','fetch','groundingpi','bidexhd','megohand','nolo','cradle','stg'}, 'Selected membership changed')
+        check({n.attrs['id'] for n in cards if n.attrs.get('data-first-author')=='true'} == {'roboaware','fetch','bidexhd','megohand','nolo','stg'}, 'First-author membership changed')
         for original in content['papers']:
             card = doc.by_id(original['id'])
             check(card is not None, 'Missing paper: '+original['id'])
@@ -156,16 +170,22 @@ def validate(directory, repo=ROOT, default_version='v2'):
         year=group.find(lambda n:n.has_class('publication-group-title')).text()
         check([n.attrs['id'] for n in group.walk() if n.has_class('publication-card')]==[p['id'] for p in content['papers'] if p['year']==year], 'Publication year grouping changed')
     active=[n.attrs['data-social'] for n in home.root.walk() if 'data-social' in n.attrs]
-    check(set(active)=={'email','wechat','scholar','github','zhihu','xiaohongshu','openreview'}, 'Unexpected active social links')
+    check(active==['email','wechat','scholar','github','xiaohongshu','zhihu','openreview','linkedin','bilibili','douyin','huggingface'], 'Social links/order differ from user request')
     config=json.loads((out/'v2/data/site.json').read_text())
     for item in config['social']:
         link=home.root.find(lambda n:n.attrs.get('data-social')==item['id'])
         if item['url']:
             check(link is not None and link.attrs.get('href')==item['url'], 'Static/config social link mismatch: '+item['id'])
-    for id in ('x','instagram','huggingface','modelscope','douyin'):
+    for id in ('x','instagram','modelscope'):
         check(any('data-social="'+id+'"' in c for c in home.comments),'Missing commented social entry: '+id)
     for name in ['v2/index.html','v2/publications/index.html','v2/404.html','v1/index.html','v1/publications/index.html']:
         doc=Document((out/name).read_text())
+        if name.startswith('v2/'):
+            check(not doc.by_class('design-credit'), 'Removed footer credit returned')
+            nav=doc.by_id('nav-links')
+            targets=[n.attrs.get('href','').split('#')[-1] for n in nav.walk() if n.tag=='a']
+            check(targets==['about','news','publications','education','experience','honors','services','friends','visitors'],'Navigation does not match revised sections')
+            check(doc.by_class('site-logo')[0].attrs['src']=='/_common/branding/logo.svg','Incorrect personal logo')
         ids=[n.attrs['id'] for n in doc.root.walk() if 'id' in n.attrs]
         check(not [id for id,c in Counter(ids).items() if c>1], 'Duplicate IDs: '+name)
         for node in doc.root.walk():
@@ -189,9 +209,12 @@ def validate(directory, repo=ROOT, default_version='v2'):
             path=out/value.lstrip('/') if value.startswith('/') else css.parent/value
             check(path.exists(),'Missing CSS resource: '+value)
     check((out/'.nojekyll').is_file(),'Missing .nojekyll')
+    visitor_config=(out/'v2/assets/js/visitor-config.js').read_text()
+    check("endpoint: ''" in visitor_config and "fallbackSnapshot: undefined" in visitor_config, 'Visitor statistics must stay disconnected')
+    check('workers.dev' not in visitor_config, 'Source-owner analytics endpoint copied')
     if errors:
         raise AssertionError('\n'.join(errors))
-    print('PASS: 151 baseline files / 112 shared materials; 13 news; 19 papers and descriptions; 8 selected; 7 active and 5 commented social links; legacy URLs and CV export.')
+    print('PASS: frozen v1/assets; 13 news; 19 papers/descriptions; 8 selected / 6 first-author; 11 active / 3 commented social links; Services, globe, CV and legacy URLs.')
 
 
 if __name__=='__main__':

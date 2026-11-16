@@ -22,3 +22,10 @@
 - Final release evidence is in notes/qa/results.json and public-export-sha256.json. No acceptance assertion was removed or weakened; only legacy network-readiness timeout increased after observing unchanged CDN latency.
 - Website code is committed on codex/site-v2-common; CV patch is committed as 151bb7a on codex/cv-path-aware-sync in the independent CV checkout. Publish the latter first when deploying. No push/deployment performed. The independent untracked README remains untouched.
 - All authorized local implementation and acceptance milestones are complete.
+
+## Browser feedback revision
+- Applied all subsequent user comments: scrolling News; frameless education/experience logos; remove Skills; template Services cards; replace Location with interactive Visitor map; first-author accents independent of Selected; updated nav and personal SVG.
+- Moved both CV links below the left bio with opposite-end alignment. Added LinkedIn/Bilibili/Douyin/Hugging Face in supplied order; only X/Instagram/ModelScope remain commented. PKU GPA follows Research. Removed visible footer credit, retained source provenance in code/docs. Coauthors are explicit external-link cards.
+- Visitor statistics intentionally remain disconnected, as explicitly chosen by the user. No source-owner counters, snapshots, location adjustments or tracking endpoint were copied.
+- Six export/Git tests and revised static validation pass. A 69-check browser run passed including logo geometry, author highlighting/hover, CV and social layout, Services/cards and WebGL/drag/keyboard behavior. Original preview URL was updated in place so review can continue.
+- A final committed build and six-width browser verification are next.

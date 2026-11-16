@@ -1,6 +1,8 @@
 import { initPublications } from './publications.js';
+import { initVisitorGlobe } from './visitor-globe.js';
 
 const publications = initPublications();
+initVisitorGlobe();
 // Configuration can update existing links, but never creates commented social entries.
 fetch(new URL('../../data/site.json', import.meta.url))
   .then(response => { if (!response.ok) throw new Error('Site configuration unavailable'); return response.json(); })
@@ -34,11 +36,12 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && links?.classList.contains('open')) { closeMenu(); toggle.focus(); }
 });
 document.addEventListener('click', event => { if (!nav?.contains(event.target)) closeMenu(); });
-const sections = [...document.querySelectorAll('.section[id]')];
+const sections = [...document.querySelectorAll('.section[id], .visitor-section[id]')];
 function updateNav() {
   nav?.classList.toggle('scrolled', scrollY > 20);
   let current = sections[0]?.id;
   for (const section of sections) if (section.getBoundingClientRect().top <= 150) current = section.id;
+  if (scrollY > 0 && scrollY + innerHeight >= document.documentElement.scrollHeight - 3) current = sections.at(-1)?.id;
   for (const link of links?.querySelectorAll('a') || []) {
     const active = link.getAttribute('href') === '#' + current;
     link.classList.toggle('active', active);
@@ -47,18 +50,6 @@ function updateNav() {
 }
 addEventListener('scroll', updateNav, { passive: true });
 updateNav();
-
-const news = document.getElementById('news-panel');
-const newsToggle = document.getElementById('news-toggle');
-if (news && newsToggle) {
-  news.classList.remove('expanded');
-  newsToggle.hidden = false;
-  newsToggle.setAttribute('aria-expanded', 'false');
-  newsToggle.addEventListener('click', () => {
-    const expanded = news.classList.toggle('expanded');
-    newsToggle.setAttribute('aria-expanded', String(expanded));
-  });
-}
 
 function measureDescriptions() {
   for (const block of document.querySelectorAll('[data-description-collapse]')) {

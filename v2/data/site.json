@@ -53,6 +53,30 @@
       "icon": "brand-icon brand-openreview"
     },
     {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/%E4%BC%AF%E6%B6%B5-%E5%91%A8-aba0ba382/",
+      "icon": "fa-brands fa-linkedin"
+    },
+    {
+      "id": "bilibili",
+      "label": "Bilibili",
+      "url": "https://space.bilibili.com/354037031?spm_id_from=333.788.upinfo.head.click",
+      "icon": "brand-icon brand-bilibili"
+    },
+    {
+      "id": "douyin",
+      "label": "Douyin",
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAPcWvgOcfR6gZ742dBoWNrE16oVAt9-EGhvoOOK72U0-szZxfTz4gXup-nXDobQ3C",
+      "icon": "brand-icon brand-douyin"
+    },
+    {
+      "id": "huggingface",
+      "label": "Hugging Face",
+      "url": "https://huggingface.co/ZBH0",
+      "icon": "brand-icon brand-huggingface"
+    },
+    {
       "id": "x",
       "label": "X",
       "url": null,
@@ -65,22 +89,18 @@
       "icon": "fa-brands fa-instagram"
     },
     {
-      "id": "huggingface",
-      "label": "Hugging Face",
-      "url": null,
-      "icon": "brand-icon brand-huggingface"
-    },
-    {
       "id": "modelscope",
       "label": "ModelScope",
       "url": null,
       "icon": "brand-icon brand-modelscope"
-    },
-    {
-      "id": "douyin",
-      "label": "Douyin",
-      "url": null,
-      "icon": "brand-icon brand-douyin"
     }
+  ],
+  "firstAuthor": [
+    "roboaware",
+    "fetch",
+    "bidexhd",
+    "megohand",
+    "nolo",
+    "stg"
   ]
 }

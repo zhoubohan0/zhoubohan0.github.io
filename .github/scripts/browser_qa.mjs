@@ -69,8 +69,8 @@ async function screenshot(session, name) {
 }
 try {
   const page = await newPage();
-  for (const width of [1440, 1024, 768, 390]) {
-    await call('Emulation.setDeviceMetricsOverride', { width, height: 900, deviceScaleFactor: 1, mobile: width === 390 }, page);
+  for (const width of [1440, 1209, 1024, 768, 640, 390]) {
+    await call('Emulation.setDeviceMetricsOverride', { width, height: width === 1209 ? 984 : 900, deviceScaleFactor: 1, mobile: width === 390 }, page);
     await call('Emulation.setTouchEmulationEnabled', { enabled: width === 390 }, page);
     await navigate(page);
     await waitFor(page, 'document.querySelectorAll(".publication-card:not([hidden])").length === 8');
@@ -93,17 +93,22 @@ try {
     }
   }
   assert(await evaluate(page, 'document.fonts.check(\'28px "Ma Shan Zheng"\', "周伯涵")'), 'Chinese-name font loaded');
-  assert(await evaluate(page, 'document.querySelectorAll(".contact-links [data-social]").length === 7'), 'Only seven active social links');
+  assert(await evaluate(page, 'document.querySelectorAll(".contact-links [data-social]").length === 11'), 'Eleven active social links');
   assert(await evaluate(page, 'document.querySelector(\'[data-social="openreview"]\').href === "https://openreview.net/profile?id=%7EBohan_Zhou1"'), 'OpenReview URL correct');
-  assert(await evaluate(page, 'document.querySelectorAll(\'[data-social="x"],[data-social="instagram"],[data-social="huggingface"],[data-social="modelscope"],[data-social="douyin"]\').length === 0'), 'Optional social entries are comments, not elements');
+  assert(await evaluate(page, 'document.querySelectorAll(\'[data-social="x"],[data-social="instagram"],[data-social="modelscope"]\').length === 0'), 'Three optional social entries are comments, not elements');
+  assert(await evaluate(page, 'JSON.stringify([...document.querySelectorAll(".contact-links [data-social]")].slice(-4).map(e=>e.dataset.social))===JSON.stringify(["linkedin","bilibili","douyin","huggingface"])'), 'New social links follow the supplied order');
   await evaluate(page, 'document.querySelector(\'[data-filter="all"]\').click()');
   assert(await evaluate(page, 'document.querySelectorAll(".publication-card:not([hidden])").length === 19'), 'All filter shows 19 papers');
+  assert(await evaluate(page, '[...document.querySelectorAll(".publication-card")].every(e=>getComputedStyle(e).boxShadow.includes("inset") === (e.dataset.firstAuthor==="true"))'), 'All: accent rails follow first authorship, not Selected');
+  await evaluate(page, 'document.querySelector("#roboaware").scrollIntoView({behavior:"instant",block:"center"})');
+  const firstAuthorBox=await evaluate(page,'(()=>{const r=document.querySelector("#roboaware").getBoundingClientRect();return {x:r.left+r.width/2,y:Math.max(100,r.top+20)}})()');
+  await call('Input.dispatchMouseEvent',{type:'mouseMoved',...firstAuthorBox},page);
+  assert(await evaluate(page,'getComputedStyle(document.querySelector("#roboaware")).boxShadow.includes("inset")'),'First-author rail survives hover');
   await evaluate(page, 'document.querySelector(\'[data-filter="selected"]\').click()');
   assert(await evaluate(page, 'document.querySelectorAll(".publication-card:not([hidden])").length === 8'), 'Selected filter shows eight papers');
-  await evaluate(page, 'document.querySelector("#news-toggle").click()');
-  assert(await evaluate(page, '[...document.querySelectorAll(".news-item")].filter(e=>getComputedStyle(e).display!=="none").length === 13'), 'Expanded News shows exactly 13 entries');
-  await evaluate(page, 'document.querySelector("#news-toggle").click()');
-  assert(await evaluate(page, '[...document.querySelectorAll(".news-item")].filter(e=>getComputedStyle(e).display!=="none").length === 5'), 'News collapse retains template behavior');
+  assert(await evaluate(page, '[...document.querySelectorAll(".publication-card:not([hidden])")].every(e=>getComputedStyle(e).boxShadow.includes("inset") === (e.dataset.firstAuthor==="true"))'), 'Selected: first-author accent is still visible');
+  assert(await evaluate(page, '[...document.querySelectorAll(".news-item")].filter(e=>getComputedStyle(e).display!=="none").length === 13 && !document.querySelector("#news-toggle")'), 'All 13 News entries are in the scroll panel');
+  assert(await evaluate(page, '(()=>{const n=document.querySelector("#news-panel");n.scrollTop=n.scrollHeight;return getComputedStyle(n).overflowY==="auto"&&n.scrollHeight>n.clientHeight&&n.scrollTop>0})()'), 'News panel scrolls to older entries');
   await evaluate(page, 'location.hash="being-0"');
   await waitFor(page, 'document.querySelector("#publications").dataset.pubFilter === "all"');
   assert(await evaluate(page, '!document.getElementById("being-0").hidden'), 'Non-selected deep link reveals paper');
@@ -121,12 +126,46 @@ try {
   await evaluate(page, 'document.getElementById("experience").scrollIntoView({behavior:"instant"})');
   await pause(180);
   assert(await evaluate(page, '[...document.querySelectorAll(".institution-logo img")].every(img=>getComputedStyle(img).objectFit==="contain")'), 'Organization logos preserve complete aspect ratio');
+  assert(await evaluate(page, '[...document.querySelectorAll(".institution-logo")].every(e=>{const s=getComputedStyle(e);return s.borderTopWidth==="0px"&&s.borderRadius==="0px"&&s.paddingTop==="0px"})'), 'Organization logo frames and padding are removed');
+  assert(await evaluate(page, '[...document.querySelectorAll(".education-row .institution-logo")].every(e=>Math.abs(e.getBoundingClientRect().height-79.2)<1)'), 'Education logos have three text lines of height');
+  assert(await evaluate(page, '[...document.querySelectorAll(".experience-entry .institution-logo")].every(e=>Math.abs(e.getBoundingClientRect().height-61.2)<1)'), 'Experience logos have heading-plus-role height');
+  assert(await evaluate(page, 'document.querySelectorAll("#services .service-row .service-copy").length===2 && !document.querySelector("#skills") && !document.querySelector("#location")'), 'Services cards and requested section removal');
+  assert(await evaluate(page, '(()=>{const h=document.querySelector("#pku-education-description").innerHTML;return /Research:[^<]*<span class="education-gpa">GPA:/.test(h)})()'), 'PKU GPA follows Research without a hard line break');
+  assert(await evaluate(page, 'document.querySelectorAll("#friends .friend-link[href] .friend-arrow").length===3'), 'All coauthor links have distinct cards and external-link icons');
+  assert(await evaluate(page, '!document.querySelector(".design-credit")'), 'Visible footer credit removed');
+  assert(await evaluate(page, 'document.querySelector(".about-copy .cv-links")!==null && document.querySelector(".profile-aside .cv-links")===null'), 'CV downloads moved below the left biography');
+  assert(await evaluate(page, '(()=>{const r=document.querySelector(".cv-links").getBoundingClientRect(),a=[...document.querySelectorAll(".cv-links a")].map(e=>e.getBoundingClientRect());return Math.abs(a[0].left-r.left)<1&&Math.abs(a[1].right-r.right)<1})()'), 'CV links align with opposite ends of the biography column');
+  assert(await evaluate(page, 'document.querySelector(".nav-brand img").getAttribute("src")==="/_common/branding/logo.svg"'), 'Personal SVG is used in the navigation');
   const toggleId = await evaluate(page, 'document.querySelector(".description-toggle:not([hidden])")?.getAttribute("aria-controls")');
   if (toggleId) {
     await evaluate(page, `document.querySelector('[aria-controls="${toggleId}"]').click()`);
     assert(await evaluate(page, `document.querySelector('[aria-controls="${toggleId}"]').getAttribute('aria-expanded') === 'true'`), 'Long description expands');
   }
   await screenshot(page, 'experience-1440');
+  await evaluate(page, 'document.getElementById("education").scrollIntoView({behavior:"instant"})');
+  await screenshot(page, 'education-1440');
+  await evaluate(page, 'document.getElementById("services").scrollIntoView({behavior:"instant"})');
+  await screenshot(page, 'services-1440');
+  await evaluate(page, 'document.getElementById("friends").scrollIntoView({behavior:"instant"})');
+  await screenshot(page, 'friends-1440');
+  await evaluate(page, 'document.getElementById("visitors").scrollIntoView({behavior:"instant"})');
+  await waitFor(page, 'document.querySelector("#visitor-globe[data-initialized]")!==null');
+  await pause(800);
+  assert(await evaluate(page, 'document.querySelector("#visitor-globe").dataset.statistics==="disconnected"&&document.querySelector(".visitor-globe-status").textContent==="Statistics not connected"'), 'Visitor map has no fabricated statistics');
+  assert(await evaluate(page, '!document.querySelector("#visitor-globe").classList.contains("no-webgl")'), 'Visitor globe renders with WebGL');
+  assert(await evaluate(page, '!performance.getEntriesByType("resource").some(e=>e.name.includes("workers.dev"))'), 'No source-owner statistics requests');
+  await evaluate(page, 'document.querySelector(".visitor-globe-toggle").click()');
+  assert(await evaluate(page, 'document.querySelector(".visitor-globe-toggle").getAttribute("aria-expanded")==="true"&&!document.querySelector("#visitor-details").inert'), 'Visitor details expand');
+  await evaluate(page, 'document.querySelector(".visitor-globe-canvas").focus()');
+  await call('Input.dispatchKeyEvent', { type: 'keyDown', key: 'Enter', code: 'Enter', windowsVirtualKeyCode: 13 }, page);
+  assert(await evaluate(page, 'document.querySelector(".visitor-globe-toggle").getAttribute("aria-expanded")==="false"'), 'Visitor canvas keyboard toggle works');
+  const canvasBox=await evaluate(page,'(()=>{const r=document.querySelector(".visitor-globe-canvas").getBoundingClientRect();return {x:r.left+r.width/2,y:r.top+r.height/2}})()');
+  await call('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...canvasBox},page);
+  await call('Input.dispatchMouseEvent',{type:'mouseMoved',button:'left',buttons:1,x:canvasBox.x+45,y:canvasBox.y+10},page);
+  await call('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,x:canvasBox.x+45,y:canvasBox.y+10},page);
+  assert(await evaluate(page,'document.querySelector(".visitor-globe-toggle").getAttribute("aria-expanded")==="false"'),'Dragging globe does not toggle details');
+  assert(await evaluate(page,'document.querySelector(\'#nav-links a[href="#visitors"]\').classList.contains("active")'),'Navigation highlights the footer Visitor map');
+  await screenshot(page, 'visitor-map-1440');
   assert(sessionErrors.get(page).length === 0, 'No v2 JavaScript exceptions');
 
   const noJS = await newPage();
@@ -135,7 +174,7 @@ try {
   await navigate(noJS);
   assert(await evaluate(noJS, '[...document.querySelectorAll(".publication-card")].filter(e=>getComputedStyle(e).display!=="none").length === 19'), 'No-JS: all 19 papers readable');
   assert(await evaluate(noJS, '[...document.querySelectorAll(".news-item")].filter(e=>getComputedStyle(e).display!=="none").length === 13'), 'No-JS: all 13 news readable');
-  assert(await evaluate(noJS, 'document.querySelectorAll(".contact-links a[href]").length === 7'), 'No-JS: contact links work');
+  assert(await evaluate(noJS, 'document.querySelectorAll(".contact-links a[href]").length === 11'), 'No-JS: contact links work');
   await screenshot(noJS, 'no-js-1024');
 
   const legacy = await newPage();
