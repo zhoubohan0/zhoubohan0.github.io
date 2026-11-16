@@ -1,0 +1,86 @@
+{
+  "selected": [
+    "roboaware",
+    "fetch",
+    "groundingpi",
+    "bidexhd",
+    "megohand",
+    "nolo",
+    "cradle",
+    "stg"
+  ],
+  "social": [
+    {
+      "id": "email",
+      "label": "Email",
+      "url": "mailto:zhoubh@link.cuhk.edu.hk",
+      "icon": "fa-solid fa-envelope"
+    },
+    {
+      "id": "wechat",
+      "label": "WeChat",
+      "url": "/_common/assets/wechat.png",
+      "icon": "fa-brands fa-weixin"
+    },
+    {
+      "id": "scholar",
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=eHPk1wwAAAAJ",
+      "icon": "fa-solid fa-graduation-cap"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/zhoubohan0",
+      "icon": "fa-brands fa-github"
+    },
+    {
+      "id": "xiaohongshu",
+      "label": "Rednote",
+      "url": "https://www.xiaohongshu.com/user/profile/64a6ce12000000002a0367d4",
+      "icon": "brand-icon brand-xiaohongshu"
+    },
+    {
+      "id": "zhihu",
+      "label": "Zhihu",
+      "url": "https://www.zhihu.com/people/Zhoubh",
+      "icon": "fa-brands fa-zhihu"
+    },
+    {
+      "id": "openreview",
+      "label": "OpenReview",
+      "url": "https://openreview.net/profile?id=%7EBohan_Zhou1",
+      "icon": "brand-icon brand-openreview"
+    },
+    {
+      "id": "x",
+      "label": "X",
+      "url": null,
+      "icon": "brand-icon brand-x"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": null,
+      "icon": "fa-brands fa-instagram"
+    },
+    {
+      "id": "huggingface",
+      "label": "Hugging Face",
+      "url": null,
+      "icon": "brand-icon brand-huggingface"
+    },
+    {
+      "id": "modelscope",
+      "label": "ModelScope",
+      "url": null,
+      "icon": "brand-icon brand-modelscope"
+    },
+    {
+      "id": "douyin",
+      "label": "Douyin",
+      "url": null,
+      "icon": "brand-icon brand-douyin"
+    }
+  ]
+}

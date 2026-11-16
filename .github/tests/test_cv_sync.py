@@ -25,11 +25,9 @@ class CVSyncTests(unittest.TestCase):
             self.command(cv, 'git', 'init', '-b', 'master')
             for name in ('cv_en_latest.pdf', 'cv_zh_latest.pdf'):
                 (cv/name).write_bytes(b'%PDF-1.4\nfirst')
-            original = ROOT/('_common/cv' if (ROOT/'_common/cv').exists() else 'cv')
             script = cv/'.github/scripts/sync-website.sh'
             script.parent.mkdir(parents=True)
-            script.write_text((original/'.github/scripts/sync-website.sh').read_text())
-            self.command(cv, 'git', 'apply', '--unidiff-zero', str(ROOT/'.github/migration/cv-sync.patch'))
+            script.write_text((ROOT/'.github/migration/cv-sync-compat.sh').read_text())
             self.command(cv, 'git', 'add', '.')
             self.command(cv, 'git', 'commit', '-m', 'old')
             old = self.command(cv, 'git', 'rev-parse', 'HEAD').stdout.strip()

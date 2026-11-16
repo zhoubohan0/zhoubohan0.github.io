@@ -1,0 +1,31 @@
+/* Content-specific adaptations; profile typography and geometry live in template.css. */
+.profile-shell { min-height: 100svh; padding-top: 10px; }
+.cv-links { display: flex; flex-wrap: wrap; gap: 10px 20px; color: var(--muted); font-size: 15px; }
+.cv-links a { display: inline-flex; align-items: center; gap: 7px; }
+.cv-links a:hover, .supplementary-content a:hover { color: var(--accent); }
+.bio-placeholder a, .supplementary-content a, .description-text a, .news-item a { color: var(--accent); }
+.bio-placeholder a:hover, .description-text a:hover, .news-item a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.publication-group-title { margin: 8px 4px 16px; font: 600 16px/1.5 var(--sans); color: var(--muted); }
+.publication-group + .publication-group { margin-top: 28px; }
+.publication-description { margin: 0 0 16px; font-size: 16px; line-height: 1.7; color: var(--profile-text); }
+.publication-authors a { color: inherit; }
+.publication-authors a:hover { color: var(--accent); }
+.all-publications-link { display: inline-block; margin-top: 16px; color: var(--accent); font-size: 15px; }
+.supplementary-content ul { margin: 0; padding-left: 22px; }
+.supplementary-content li + li { margin-top: 8px; }
+.supplementary-content > ul + ul { margin-top: 14px; }
+.institution-logo img { width: 100%; height: 100%; object-fit: contain; }
+.site-footer a:hover { color: var(--accent); }
+html:not(.js) #publication-list { height: auto; overflow: visible; }
+html:not(.js) .news-panel .news-item { display: grid; }
+@media (max-width: 600px) {
+  .cv-links { justify-content: center; }
+  .publication-description { font-size: 15px; }
+}
+@media print {
+  .profile-nav, .theme-toggle, .nav-toggle, .news-toggle, #publication-filters { display: none !important; }
+  #publication-list { height: auto; overflow: visible; }
+  .publication-card[hidden], .publication-group[hidden] { display: block !important; }
+  .news-panel .news-item { display: grid !important; }
+  .description-block .description-text { max-height: none !important; }
+}

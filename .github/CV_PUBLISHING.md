@@ -1,28 +1,27 @@
 # CV publishing
 
-`cv/` is a private submodule. The public site exposes only
-`/cv/cv_en_latest.pdf` and `/cv/cv_zh_latest.pdf`.
+`_common/cv/` is the private submodule named `cv`. Its URL remains `git@github.com:zhoubohan0/CV-ZBH.git`. The separate `简历/cuhk` authoring checkout is unchanged.
 
-Edit and compile in the original `简历/cuhk` checkout, commit the updated PDFs,
-and push `CV-ZBH/master`. Its **Sync published CV** workflow updates only this
-repository's `cv` gitlink. That push triggers **Publish website**. Source-only
-changes do not trigger publishing, and unchanged gitlinks do not create commits.
+The public export contains exactly `cv_en_latest.pdf` and `cv_zh_latest.pdf` at both `/_common/cv/` and the compatibility `/cv/` path. Generic shared-material export skips the complete private submodule. Only the two allowlisted PDF blobs are read from the recorded gitlink; TeX files, older PDFs, hidden files and Git metadata are never copied.
 
-The website workflow reads the exact recorded CV commit using the read-only
-`CV_SUBMODULE_DEPLOY_KEY` secret. `build_site.py` exports committed website files
-into a separate directory and copies only the two allowed CV PDFs. Never upload
-the entire checkout as a Pages artifact: it contains private CV source files.
+## Migration order
 
-GitHub Pages must use **GitHub Actions** as its publishing source. Failed builds
-do not run the deployment job. Both workflows also support manual runs on master.
+1. Publish the path-aware `CV-ZBH` synchronization change before publishing the website migration. The prepared private-repository commit is `151bb7a` on `codex/cv-path-aware-sync`.
+2. That script obtains `submodule.cv.path` from the website's current `.gitmodules`, accepts `cv` and `_common/cv`, and updates only that gitlink. The isolated local-remote tests cover both layouts and no-op synchronization.
+3. Publish the website branch with `_common/cv` and the adjusted checkout/export paths. The initial PDF pin remains `22a92aaef3cf6db3f850087dac5d483ecff1d977`; its PDF bytes are unchanged.
+4. Later PDF commits on CV-ZBH/master trigger the existing Sync published CV workflow, which updates the website gitlink and triggers Pages. A code-only sync-script commit does not itself trigger the PDF path filter.
 
-After an automatic update, refresh a local website checkout with:
+The compatibility patch is `.github/migration/cv-sync.patch` (apply with `git apply --unidiff-zero` in the CV repository when needed). `.github/migration/cv-sync-compat.sh` records the tested resulting script; tests use this fixed release snapshot so future PDF-only gitlink updates do not attempt to reapply an already-applied patch.
+
+## Website build
+
+The workflow reads the exact gitlink at `_common/cv`, checks out the private repository there using `CV_SUBMODULE_DEPLOY_KEY`, then calls the public exporter. Never upload the source checkout as a Pages artifact.
+
+After receiving the migration:
 
 ```sh
-git pull --ff-only
+git submodule sync --recursive
 git submodule update --init --recursive
 ```
 
-The separate `简历/cuhk` checkout remains independent. Website collaborators need
-their own access to `CV-ZBH` to initialize its submodule locally; visitors need
-no authentication to view the published PDFs.
+Editing and compiling remains in the original `简历/cuhk` checkout. Commit the intended PDF updates there through the existing workflow; no local authoring directory is moved.
