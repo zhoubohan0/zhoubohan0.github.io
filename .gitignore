@@ -1,5 +1,6 @@
 **/*.DS_Store
 *.yml
+!.github/workflows/*.yml
 Dockerfile
 LICENSE
 .idea
