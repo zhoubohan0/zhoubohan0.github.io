@@ -16,3 +16,9 @@
 - Stopped a slow, unnecessary Playwright package download; QA uses Node built-in WebSocket + Chrome CDP, with no browser-test package dependencies.
 - Added exact SEO, paper-author-link and year-group preservation checks. Replaced CV patch-on-current-checkout tests with a fixed compatible-script snapshot so future CV updates cannot fail by reapplying the patch.
 - Production HEAD build and final acceptance remain. No push/deployment has occurred.
+
+- Final gate: production HEAD 85cf8e3 exported to /tmp/zhoubohan-production-85cf8e3 and passed static validation; fresh isolated browser context passed all 43 checks against that export. Six isolated Git/export unit tests pass. Rollback export with default v1 also passes validation.
+- Final preview: http://127.0.0.1:59766/ (local server). Public output is 578,497,210 bytes including generated legacy aliases; source media remain single copies.
+- Final release evidence is in notes/qa/results.json and public-export-sha256.json. No acceptance assertion was removed or weakened; only legacy network-readiness timeout increased after observing unchanged CDN latency.
+- Website code is committed on codex/site-v2-common; CV patch is committed as 151bb7a on codex/cv-path-aware-sync in the independent CV checkout. Publish the latter first when deploying. No push/deployment performed. The independent untracked README remains untouched.
+- All authorized local implementation and acceptance milestones are complete.
