@@ -1,0 +1,947 @@
+{
+  "baseline": "db01cc090dba11b17caa73a63dc2dec43cefd1d2",
+  "bio": "I'm currently a Ph.D. student (2026 - 2030) in the Department of Computer Science and Engineering at The Chinese University of Hong Kong (CUHK), supervised by <a href=\"https://www.cse.cuhk.edu.hk/~jcheng/\" rel=\"noopener noreferrer\" target=\"_blank\">James Cheng</a>.\n                    My current research focuses on embodied intelligence and foundation models, with interests in multimodal learning, reinforcement learning and generalizable agents.\n                    Previously, I received my master's degree from Peking University (2023 - 2026), supervised by <a href=\"https://z0ngqing.github.io/\" rel=\"noopener noreferrer\" target=\"_blank\">Zongqing Lu</a>, and my bachelor's degree from Nankai University (2019 - 2023), supervised by <a href=\"https://ai.nankai.edu.cn/info/1033/2794.htm\" rel=\"noopener noreferrer\" target=\"_blank\">Jingtai Liu</a>.\n                    Feel free to drop me an email to discuss or share wonderful ideas!\n                ",
+  "news": [
+    {
+      "date": "Nov 13, 2026",
+      "html": "<b style=\"font-weight: bold !important;\">AtmosBench / PhysicalSDC</b> is accepted by KDD 2027, focusing on physics-aligned atmospheric backscatter retrieval from spaceborne lidar! ✨\n                            "
+    },
+    {
+      "date": "Oct 14, 2026",
+      "html": "<b style=\"font-weight: bold !important;\">GroundingPI</b> reached <a href=\"https://huggingface.co/papers/2609.39601\">Hugging Face Daily Papers #1</a>, focusing on grounding for physical intelligence! ✨"
+    },
+    {
+      "date": "Jan 13, 2026",
+      "html": "<b style=\"font-weight: bold !important;\"> DARA</b> is accepted by WWW 2026, focusing on LLM RL post-training for advertising! ✨\n                            "
+    },
+    {
+      "date": "Nov 08, 2025",
+      "html": "<b style=\"font-weight: bold !important;\"> BiDexHD</b> is accepted by AAAI 2026 (oral), focusing on generalizable bimanual dexterous manipulation! ✨\n                            "
+    },
+    {
+      "date": "Sep 19, 2025",
+      "html": "<b style=\"font-weight: bold !important;\"> MEgoHand</b> is accepted by NeurIPS 2025, focusing on hand-object interaction motion generation! ✨\n                            "
+    },
+    {
+      "date": "Jun 16, 2025",
+      "html": "<b style=\"font-weight: bold !important;\"> NOLO</b> is accepted by IROS 2025 (oral), focusing on offline RGB video navigation! ✨\n                            "
+    },
+    {
+      "date": "May 01, 2025",
+      "html": "<b style=\"font-weight: bold !important;\"> Cradle v2.0</b> is accepted by ICML 2025 (Cradle v1.0 is accepted by ICLR 2024 Workshop and NeurIPS 2024 Workshop), <br/> focusing on general computer control (LMMagent)! ✨\n                            "
+    },
+    {
+      "date": "Jan 22, 2025",
+      "html": "<b style=\"font-weight: bold !important;\"> CrossDex</b> is accepted by ICLR 2025, focusing on cross-embodiment dexterous grasping! ✨\n                            "
+    },
+    {
+      "date": "Jan 20, 2025",
+      "html": "<b style=\"font-weight: bold !important;\"> AERO</b> is accepted by WWW 2025, focusing on reinforcement learning for blockchain! ✨\n                            "
+    },
+    {
+      "date": "Jul 01, 2024",
+      "html": "<b style=\"font-weight: bold !important;\"> UniCode</b> is accepted by ECCV 2024, focusing on general multimodal representation! ✨\n                            "
+    },
+    {
+      "date": "Jul 01, 2024",
+      "html": "<b style=\"font-weight: bold !important;\"> PVDR</b> is accepted by ECCV 2024, focusing on pre-trained representation for policy learning! ✨\n                            "
+    },
+    {
+      "date": "Sep 22, 2023",
+      "html": "<b style=\"font-weight: bold !important;\"> STG</b> is accepted by NeurIPS 2023, focusing on learning from visual observations! ✨\n                            "
+    },
+    {
+      "date": "Mar 04, 2023",
+      "html": "<b style=\"font-weight: bold !important;\"> GFIE</b> is accepted by CVPR 2023, focusing on human-object interaction (benchmark)! ✨\n                            "
+    }
+  ],
+  "papers": [
+    {
+      "id": "atmosbench",
+      "year": "2026",
+      "title": "The Floor Is Not the Limit: Recovering Atmospheric Backscatter from Spaceborne Lidar via Physics-Aligned Encoding",
+      "author": "\n                                    Tianchi Xu, Yuanpeng He, Jintao Xu, Kang He, Linyu Li, Huanyao Zhang, Dongming Jin, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Wenpin Jiao, Zhi Jin\n                                ",
+      "venue": "KDD 2027",
+      "summary": "Retrieving atmospheric backscatter with a parameter-free encoding derived from the lidar attenuation relation, retaining recorded low-SNR measurements below the nominal noise floor. Introduces PhysicalSDC and the paired AtmosBench benchmark to evaluate retrieval while distinguishing low-SNR measurements from invalid cells.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/AtmosBench.png",
+        "alt": "Atmospheric backscatter retrieval comparison with PhysicalSDC and baseline methods"
+      },
+      "links": [
+        {
+          "url": "https://openreview.net/pdf?id=5b9wzLyUdE",
+          "label": "Paper",
+          "title": "Read the AtmosBench and PhysicalSDC paper"
+        }
+      ]
+    },
+    {
+      "id": "roboaware",
+      "year": "2026",
+      "title": "RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes",
+      "author": "<b style=\"font-weight: bold !important;\">Bohan Zhou</b>, et al. (2026)",
+      "venue": "Under Review · ICLR 2027 submission",
+      "summary": "First author and project lead. Learning state-dependent coordination between modular skills and end-to-end policies from same-state counterfactual outcomes, with low-level executors frozen. Averaged 77.0% success across reported evaluation splits covering 100 tasks on three benchmarks, with zero-shot deployment on long-horizon real-robot tasks.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/RoboAware.png",
+        "alt": "RoboAware: state-locked counterfactual search, execution-aware Q-learning and closed-loop deployment"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2610.11480",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://zhoubohan0.github.io/RoboAware/",
+          "label": "Website",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "id": "fetch",
+      "year": "2026",
+      "title": "FETCH: Frame-grounded Evidence Topology for Embodied Spatial Planning with the Counterfactual Hypothesis",
+      "author": "<b style=\"font-weight: bold !important;\">Bohan Zhou</b>, et al. (2026)",
+      "venue": "Under Review",
+      "summary": "First author and project lead. Connecting reference-frame-grounded evidence to executable plans with counterfactual necessity checks. Typed multi-token prediction enables 3.78× faster decoding; the planner reaches 90% real-robot success on the evaluated table-clearing task with a fixed low-level executor.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/FETCH.png",
+        "alt": "FETCH overview: evidence distillation, FETCH-7B and FETCH-Bench"
+      },
+      "links": []
+    },
+    {
+      "id": "groundingpi",
+      "year": "2026",
+      "title": "GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives",
+      "author": "Qize Yu, ..., <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, et al. (2026)",
+      "venue": "Under Review",
+      "summary": "A 4B grounding model built on visual primitives, evaluated on 34 grounding benchmarks and downstream physical-intelligence tasks. Reached Hugging Face Daily Papers #1.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/GroundingPI.png",
+        "alt": "GroundingPI research preview"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2609.39601",
+          "label": "Paper",
+          "title": "Read the GroundingPI paper (PDF)"
+        },
+        {
+          "url": "https://github.com/groundingpi/GroundingPI",
+          "label": "GitHub",
+          "title": "GroundingPI official code"
+        },
+        {
+          "url": "https://groundingpi.github.io/",
+          "label": "Website",
+          "title": "GroundingPI project website"
+        },
+        {
+          "url": "https://huggingface.co/GroundingPI/GroundingPI/resolve/aca9bde34a146cf0510e7f8732d4766169105194/assets/demo.mp4",
+          "label": "Video",
+          "title": "Watch the GroundingPI demo video"
+        }
+      ]
+    },
+    {
+      "id": "affordancevla",
+      "year": "2026",
+      "title": "AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding",
+      "author": "Qize Yu, ..., <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, et al.",
+      "venue": "ECCV 2026 Workshop",
+      "summary": "Affordance-aware understanding for vision-language-action generation.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/AffordanceVLA.png",
+        "alt": "AffordanceVLA overview: progressive data curriculum, model architecture and evaluation"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2606.06155",
+          "label": "Paper",
+          "title": "Read the AffordanceVLA paper (PDF)"
+        },
+        {
+          "url": "https://github.com/Skywalker-yqz/AffordanceVLA",
+          "label": "GitHub",
+          "title": "AffordanceVLA official code"
+        },
+        {
+          "url": "https://skywalker-yqz.github.io/AffordanceVLA/",
+          "label": "Website",
+          "title": "AffordanceVLA project website"
+        },
+        {
+          "url": "https://skywalker-yqz.github.io/AffordanceVLA/#demos",
+          "label": "Video",
+          "title": "Watch all 12 AffordanceVLA robot demonstrations"
+        }
+      ]
+    },
+    {
+      "id": "dara",
+      "year": "2026",
+      "title": "DARA: Few-shot Budget Allocation in Online Advertising via In-Context Decision Making with RL-Finetuned LLMs",
+      "author": "\n                                    Mingxuan Song, Yusen Huo, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Shenglin Yin, Zhen Xiao*, Jieyi Long, Zhilin Zhang, Chuan Yu*\n                                ",
+      "venue": "WWW 2026 oral",
+      "summary": "Separating few-shot budget planning from feedback-driven numerical refinement with a dual-agent LLM framework. GRPO-Adaptive periodically refreshes the reference policy during RL post-training to improve allocation decisions under limited advertiser data.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/DARA.jpg"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2601.14711",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/mx-song/DARA",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://www.mingxuansong.com/#publications",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:YOkDOehqtUEJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        },
+        {
+          "url": "../assets/ppt/DARA-poster.pdf",
+          "label": "Poster",
+          "title": "Open DARA poster in new tab"
+        }
+      ]
+    },
+    {
+      "id": "bidexhd",
+      "year": "2026",
+      "title": "Learning Diverse Bimanual Dexterous Manipulation Skills from Human Demonstrations",
+      "author": "\n<b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Haoqi Yuan, Yuhui Fu, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a>\n",
+      "venue": "AAAI 2026 oral",
+      "summary": "Learning vision-based bimanual dexterous skills from human demonstrations with a shared reward design. Covers 141 tool-use tasks; unseen-task success reaches 51.07% on TACO and 65.99% on ARCTIC.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/BidexHD.jpg"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2410.02477",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/zhoubohan0/BiDexHD",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://sites.google.com/view/bidexhd",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:Zyzf5HmxIPcJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        },
+        {
+          "url": "../assets/ppt/BiDexHD-PPT.pdf",
+          "label": "Slides",
+          "title": "Open BiDexHD PPT in new tab"
+        }
+      ]
+    },
+    {
+      "id": "megohand",
+      "year": "2025",
+      "title": "MEgoHand: Multimodal Egocentric Hand-Object Interaction Motion Generation",
+      "author": "\n<b style=\"font-weight: bold !important;\">Bohan Zhou<span>*</span></b>, Yi Zhan<span>*</span>, Zhongbin Zhang, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a>\n",
+      "venue": "NeurIPS 2025",
+      "summary": "Generating future human hand-object interaction motions from egocentric observations and language, with 3M+ training frames and generalization to unseen objects and across datasets.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/MEgoHand.png"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2505.16602",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/zhoubohan0/MEgoHand",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://zhoubohan0.github.io/MEg0Hand/",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:J6S93qD9OogJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        },
+        {
+          "url": "../assets/ppt/MEgoHand-PPT.pdf",
+          "label": "Slides",
+          "title": "Open MEgoHand PPT in new tab"
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1uaCkBCEBZ?t=4.0",
+          "label": "Live",
+          "title": "Open Bilibili video in new tab"
+        }
+      ]
+    },
+    {
+      "id": "nolo",
+      "year": "2025",
+      "title": "NOLO: Navigate Only Look Once",
+      "author": "\n<b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Zhongbin Zhang, Jiangxing Wang, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a>\n",
+      "venue": "IROS 2025 oral",
+      "summary": "One-shot, in-context image-goal navigation from a 30-second scene video and online RGB, without maps, depth, pose inputs or retraining; validated on a Unitree Go2.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/NOLO.png"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2408.01384",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/zhoubohan0/NOLO",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://sites.google.com/view/nol0",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:VO1B5Z6HOVgJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV1dc1vBBEWH/",
+          "label": "Video",
+          "title": ""
+        },
+        {
+          "url": "../assets/ppt/NOLO-PPT.pdf",
+          "label": "Slides",
+          "title": "Open NOLO PPT in new tab"
+        },
+        {
+          "url": "https://www.bilibili.com/video/BV14yCcBsErM?t=6.5",
+          "label": "Live",
+          "title": "Open Bilibili video in new tab"
+        }
+      ]
+    },
+    {
+      "id": "cradle",
+      "year": "2025",
+      "title": "Cradle: Empowering Foundation Agents towards General Computer Control",
+      "author": "\n                                    Weihao Tan, Wentao Zhang, Xinrun Xu, Haochong Xia, Ziluo Ding, Boyu Li, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Junpeng Yue, Jiechuan Jiang, Yewen Li, Ruyi An, Molei Qin, Chuqiao Zong, Longtao Zheng, YuJie Wu, Xiaoqiang Chai, Yifei Bi, Tianbao Xie, Pengjie Gu, Xiyun Li, Ceyao Zhang, Long Tian, Chaojie Wang, Xinrun Wang, Börje F. Karlsson, Bo An, Shuicheng Yan, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a>\n",
+      "venue": "ICML 2025",
+      "summary": "General computer control through screenshots and keyboard/mouse actions. Contributed low-level interaction and an evolving skill library; demonstrated approximately 40-minute storyline missions in Red Dead Redemption 2.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/Cradle2.png"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2403.03186.pdf",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/BAAI-Agents/Cradle",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://baai-agents.github.io/Cradle/",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:XqonjPO7fmoJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=Oa4Ese8mMD0",
+          "label": "Video",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "id": "being-0",
+      "year": "2025",
+      "title": "Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills",
+      "author": "Haoqi Yuan, Yu Bai, Yuhui Fu, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Yicheng Feng, Xinrun Xu, Yi Zhan, Börje F. Karlsson, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a> (2025)",
+      "venue": "Under Review · arXiv 2025",
+      "summary": "Hierarchical humanoid control combining vision-language planning, navigation and dexterous skills, with tens-of-meters navigation and coffee delivery on Unitree H1.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/Being-0.png",
+        "alt": "Being-0 research preview"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2503.12533",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://beingbeyond.github.io/Being-0/",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/beingbeyond/Being-0",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:5wy5egSvANwJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "id": "crossdex",
+      "year": "2025",
+      "title": "Cross-Embodiment Dexterous Grasping with Reinforcement Learning",
+      "author": "\n                                    Haoqi Yuan, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Yuhui Fu, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a>\n",
+      "venue": "ICLR 2025",
+      "summary": "Learning one vision-based grasping policy across dexterous hands through human eigengrasp actions, embodiment-specific retargeting and a shared fingertip/palm observation space. The learned policy transfers zero-shot to two unseen hand embodiments in simulation.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/CrossDex.png"
+      },
+      "links": [
+        {
+          "url": "https://openreview.net/pdf?id=twIPSx9qHn",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/PKU-RL/CrossDex/",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://sites.google.com/view/crossdex",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:t6IATNCyx_8J:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "id": "aero",
+      "year": "2025",
+      "title": "AERO: Enhancing Sharding Blockchain via Deep Reinforcement Learning for Account Migration",
+      "author": "\n                                    Mingxuan Song, Pengze Li, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Shenglin Yin, Zhen Xiao, Jieyi Long\n                                ",
+      "venue": "WWW 2025 oral",
+      "summary": "Reducing account-migration complexity by grouping blockchain accounts by address prefix and learning group-level migration decisions with reinforcement learning. AEROChain integrates this policy into decentralized shard reconfiguration to reduce cross-shard transactions and balance workloads.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/AERO.png"
+      },
+      "links": [
+        {
+          "url": "http://zhenxiao.com/papers/WWW_AERO_camera_ready.pdf",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:s42PHRi1bRwJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=Oa4Ese8mMD0",
+          "label": "Main",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "id": "unicode",
+      "year": "2024",
+      "title": "UniCode: Learning a Unified Codebook for Multimodal Large Language Models",
+      "author": "\n                                    Sipeng Zheng, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Yicheng Feng, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a>\n",
+      "venue": "ECCV 2024",
+      "summary": "Learning a shared visual-text codebook through language-driven iterative training, enabling image generation beyond text-only vocabularies. In-context image decompression and stacked quantization support compact visual tokens for multimodal understanding and generation.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/Unicode.png"
+      },
+      "links": [
+        {
+          "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01331.pdf",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:t6IATNCyx_8J:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "id": "pvdr",
+      "year": "2024",
+      "title": "Pre-trained Visual Dynamics Representations for Efficient Policy Learning",
+      "author": "\n                                    Hao Luo, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a>\n",
+      "venue": "ECCV 2024",
+      "summary": "Pretraining visual dynamics from action-free video with a Transformer-based conditional VAE. Online adaptation aligns the learned dynamics with executable robot actions, addressing the domain gap between pretraining videos and downstream visual control.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/I2A.png"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2411.03169",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:qMYhZAqLSEEJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "id": "cradle-v1",
+      "year": "2024",
+      "title": "Towards General Computer Control: A Multi Modal Agent For Red Dead Redemption II As A Case Study",
+      "author": "\n                                    Weihao Tan, Ziluo Ding, Wentao Zhang, Boyu Li, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Junpeng Yue, Haochong Xia, Jiechuan Jiang, Longtao Zheng, Xinrun Xu, Yifei Bi, Pengjie Gu, Xinrun Wang, Börje F. Karlsson, Bo An, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a>\n",
+      "venue": "ICLR / NeurIPS 2024 Workshop",
+      "summary": "Introducing General Computer Control through screenshot observations and keyboard/mouse actions, without game-specific control APIs. Combines self-reflection, task inference, skill curation and memory to complete storyline missions in Red Dead Redemption II.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/Cradle.png"
+      },
+      "links": [
+        {
+          "url": "https://arxiv.org/pdf/2403.03186.pdf",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/BAAI-Agents/Cradle",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://baai-agents.github.io/Cradle/",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:ie36dGetpiIJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=Oa4Ese8mMD0",
+          "label": "Main",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "id": "stg",
+      "year": "2023",
+      "title": "Learning from Visual Observation via Offline Pretrained State-to-Go Transformer",
+      "author": "\n<b style=\"font-weight: bold !important;\">Bohan Zhou</b>,\n                                    Ke Li, Jiechuan Jiang, <a href=\"https://z0ngqing.github.io/\">Zongqing Lu</a>\n",
+      "venue": "NeurIPS 2023",
+      "summary": "Learning behavioral priors from offline video and converting them into intrinsic rewards for online reinforcement learning without environment rewards.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/STG.jpg"
+      },
+      "links": [
+        {
+          "url": "https://papers.nips.cc/paper_files/paper/2023/file/bb203e938836544655996d1bb94a0fd7-Paper-Conference.pdf",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/zhoubohan0/STG-Transformer",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://sites.google.com/view/stgtransformer",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:-gJIysA5OakJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        },
+        {
+          "url": "../assets/ppt/STG-PPT.pdf",
+          "label": "Slides",
+          "title": "Open STG PPT in new tab"
+        }
+      ]
+    },
+    {
+      "id": "gfie",
+      "year": "2023",
+      "title": "GFIE: A Dataset and Baseline for Gaze-Following from 2D to 3D in Indoor Environments",
+      "author": "\n                                    Zhengxi Hu, Yuxue Yang, Xiaolin Zhai, Dingye Yang, <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Jingtai Liu\n                                ",
+      "venue": "CVPR 2023",
+      "summary": "Collecting 2D/3D gaze targets with Azure Kinect and a laser rangefinder, using laser-spot localization and removal to obtain labels without subjective annotation or wearable eye trackers. Introduces a stereo field-of-view baseline for indoor gaze following.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/GFIE.png"
+      },
+      "links": [
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/nkuhzx/GFIE",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://sites.google.com/view/gfie",
+          "label": "Website",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:lksOisjd5nYJ:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "id": "vsg-ia",
+      "year": "2022",
+      "title": "Gaze Target Estimation Inspired by Interactive Attention",
+      "author": "\n                                    Zhengxi Hu , Kunxu Zhao , <b style=\"font-weight: bold !important;\">Bohan Zhou</b>, Hang Guo , Shichao Wu , Yuxue Yang, Jingtai Liu\n                                ",
+      "venue": "TCSVT 2022",
+      "summary": "Inferring human-object interaction probabilities with a visual-spatial graph attention network and converting them into an interactive attention map. A Transformer integrates scene and head features to localize gaze targets with this interaction cue.",
+      "image": {
+        "class": [
+          "preview",
+          "z-depth-1",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "../assets/zbh-publications/VSG-IA.png"
+      },
+      "links": [
+        {
+          "url": "https://ieeexplore.ieee.org/abstract/document/9828503",
+          "label": "Paper",
+          "title": ""
+        },
+        {
+          "url": "https://github.com/nkuhzx/VSG-IA",
+          "label": "GitHub",
+          "title": ""
+        },
+        {
+          "url": "https://scholar.googleusercontent.com/scholar.bib?q=info:k_K7GLF1Fa0J:scholar.google.com",
+          "label": "Bibtex",
+          "title": ""
+        }
+      ]
+    }
+  ],
+  "home_order": [
+    "roboaware",
+    "fetch",
+    "groundingpi",
+    "being-0",
+    "atmosbench",
+    "affordancevla",
+    "dara",
+    "bidexhd",
+    "megohand",
+    "nolo",
+    "cradle",
+    "crossdex",
+    "aero",
+    "unicode",
+    "pvdr",
+    "cradle-v1",
+    "stg",
+    "gfie",
+    "vsg-ia"
+  ],
+  "home_preprints": [
+    "roboaware",
+    "fetch",
+    "groundingpi",
+    "being-0"
+  ],
+  "education": [
+    {
+      "id": "cuhk-education",
+      "title": "Department of Computer Science and Engineering, The Chinese University of Hong Kong",
+      "date": "",
+      "body": "\n<b style=\"font-weight: bold !important;\">Ph.D. in Computer Science and Engineering</b> (2026.08 - Present).<br/>\n                            Research: embodied intelligence and foundation models.<br/>\n                            Advisor: Prof. <a href=\"https://www.cse.cuhk.edu.hk/~jcheng/\" rel=\"noopener noreferrer\" target=\"_blank\"><b style=\"font-weight: bold !important;\">James Cheng</b></a>.\n                        ",
+      "description": "",
+      "image": {
+        "class": [
+          "preview",
+          "rounded"
+        ],
+        "width": "80%",
+        "src": "assets/organizations/cuhk.png",
+        "alt": "The Chinese University of Hong Kong emblem"
+      }
+    },
+    {
+      "id": "pku-education",
+      "title": "National Engineering Research Center of Visual Technology, Peking University",
+      "date": "",
+      "body": "\n<b style=\"font-weight: bold !important;\">Master's degree in Computer Applied Technology</b> (2023.09 - 2026.07).<br/>\n                            GPA: <b style=\"font-weight: bold !important;\">3.88/4.0</b>.<br/>\n                            Research: multimodal learning, reinforcement learning and agents.<br/>\n                            Advisor: Prof. <a href=\"https://z0ngqing.github.io/\" rel=\"noopener noreferrer\" target=\"_blank\"><b style=\"font-weight: bold !important;\">Zongqing Lu</b></a>.\n                        ",
+      "description": "",
+      "image": {
+        "class": [
+          "preview",
+          "rounded"
+        ],
+        "width": "80%",
+        "src": "assets/organizations/pku.png",
+        "alt": "Peking University"
+      }
+    },
+    {
+      "id": "nku-education",
+      "title": "College of Artificial Intelligence, Nankai University",
+      "date": "",
+      "body": "\n<b style=\"font-weight: bold !important;\">Bachelor's degree in Intelligent Science and Technology</b> (2019.09 - 2023.07).<br/>\n                            GPA: <b style=\"font-weight: bold !important;\">3.95/4.0</b>; rank: <b style=\"font-weight: bold !important;\">2/98</b>. Recipient of seven undergraduate scholarships.<br/>Advisor: Prof. <a href=\"https://ai.nankai.edu.cn/info/1033/2794.htm\" rel=\"noopener noreferrer\" target=\"_blank\"><b style=\"font-weight: bold !important;\">Jingtai Liu</b></a>.\n                        ",
+      "description": "",
+      "image": {
+        "class": [
+          "preview",
+          "rounded"
+        ],
+        "width": "80%",
+        "src": "assets/organizations/nku.jpeg",
+        "alt": "Nankai University"
+      }
+    }
+  ],
+  "experience": [
+    {
+      "id": "knowinai",
+      "title": "KnowinAI",
+      "date": "2026.03 - 2026.08",
+      "body": "Robot Deployment and Embodied Skill Coordination.",
+      "description": "Delivered Astra simulation/real-robot evaluations and dual-arm dexterous systems, integrating perception, control and hardware. Led <a href=\"https://zhoubohan0.github.io/RoboAware/\"><b style=\"font-weight: bold !important;\">RoboAware</b></a>, learning state-dependent coordination from same-state counterfactual branches with MCTS and Q-learning while keeping low-level executors frozen.",
+      "image": {
+        "class": [
+          "preview",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "assets/organizations/knowin.png",
+        "alt": "KnowinAI logo"
+      }
+    },
+    {
+      "id": "beingbeyond",
+      "title": "BeingBeyond",
+      "date": "2025.12 - 2026.02",
+      "body": "Embodied Foundation Models and Dexterous Systems.",
+      "description": "Contributed the human-video data pipeline for <a href=\"https://arxiv.org/abs/2507.15597\"><b style=\"font-weight: bold !important;\">Being-H0</b></a>, combining MEgoHand, TASTE-Rob and EgoDex for robot-policy transfer. Helped develop <a href=\"https://arxiv.org/abs/2606.06033\"><b style=\"font-weight: bold !important;\">RealDexUMI</b></a>, a wearable dexterous data-collection system with isomorphic control and integrated vision-tactile end effectors.",
+      "image": {
+        "class": [
+          "preview",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "assets/organizations/beingbeyond.png",
+        "alt": "BeingBeyond logo"
+      }
+    },
+    {
+      "id": "momenta",
+      "title": "Momenta",
+      "date": "2025.08 - 2025.11",
+      "body": "M-star Talent Program.",
+      "description": "Built a scenario-mining and cleaning loop, raising intersection-action recognition from about 70% to 97% and reducing annotation costs by 51%–62%. Coordinated <b style=\"font-weight: bold !important;\">R6 post-training at the 100-GPU scale</b> and led Flow Matching trajectory generation with FPO safety enhancement, with 30 km of IM LS6 road testing at &gt;10 Hz; the approach entered current products.",
+      "image": {
+        "class": [
+          "preview",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "assets/organizations/momenta.jpg",
+        "alt": "Momenta logo"
+      }
+    },
+    {
+      "id": "jd",
+      "title": "JD Explore Academy",
+      "date": "2025.05 - 2025.07",
+      "body": "TGT Talent Program.",
+      "description": "Helped build <b style=\"font-weight: bold !important;\">EgoLive</b>: 1,680 hours, 65K episodes and 346 manipulation tasks in unconstrained real environments, with stereo RGB/IMU, hand reconstruction, 3D reconstruction and semantic annotation. Transferred MEgoHand pretraining to <b style=\"font-weight: bold !important;\">VLA-H2</b> dexterous policies through object modeling, cross-embodiment retargeting and trajectory optimization.",
+      "image": {
+        "class": [
+          "preview",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "assets/organizations/jd-explore.png",
+        "alt": "JD Explore Academy logo"
+      }
+    },
+    {
+      "id": "baai",
+      "title": "Beijing Academy of Artificial Intelligence (BAAI)",
+      "date": "2022.09 - 2025.04",
+      "body": "Research Intern · Generalist and Embodied Agents.",
+      "description": "Worked on video-driven policy learning, visual navigation and multimodal dexterous manipulation: <b style=\"font-weight: bold !important;\">STG, NOLO, MEgoHand and BiDexHD</b>. Produced four first-author papers; STG, NOLO and MEgoHand were featured by Prof. Zongqing Lu at the <a href=\"https://www.bilibili.com/video/BV1YmsW6REQm/\">BAAI Conference in three consecutive years, 2023–2025</a>.",
+      "image": {
+        "class": [
+          "preview",
+          "rounded"
+        ],
+        "width": "100%",
+        "src": "assets/organizations/baai-text.png",
+        "alt": "Beijing Academy of Artificial Intelligence (BAAI)"
+      }
+    }
+  ],
+  "extras": {
+    "Honors": "\n\n<ul>\n<li>3rd Prize, Gripper Track, the third X Square–Tsinghua Embodied AI Challenge.</li>\n<li>Beijing Outstanding Graduate, Peking University, 2026.</li>\n<li>National Scholarship; Outstanding Student Award, Peking University, 2025.</li>\n<li>Tianjin Municipal Outstanding Graduate, Nankai University, 2023.</li>\n<li>Tianjin Municipal People's Government Scholarship (top 2%), 2021.</li>\n<li>Gongneng Scholarship (top 5%), Nankai University, 2020 and 2022.</li>\n<li>2nd Prize, National College Student Mathematical Modeling Competition, 2021.</li>\n<li>Honorable Mention, American College Mathematical Contest in Modeling, 2021.</li>\n</ul>\n",
+    "Skills": "\n\n<ul>\n<li>PyTorch, distributed training at the 100-GPU scale, hands-on coding and AI-assisted development.</li>\n<li>Project planning, team coordination, technical communication and on-time delivery.</li>\n<li>English: CET-6 score 622; speaking grade A.</li>\n</ul>\n",
+    "Services": "\n\n<!-- <h1 id=\"Academic Services\" style=\"font-size: 1.3em;line-height: 1.2;\">Academic Services</h1> -->\n<ul>\n<li>Teaching Assistant: \n                        <ul>\n                            Introduction to Computing, 2025 Autumn. (by Prof. Rui Gan of Peking University Mathematics Department).\n                        </ul>\n</li>\n</ul>\n<ul>\n<li>Reviewer:\n                        <ul>\n<li>Conference: ICLR 2025, ICML 2025</li>\n<!-- <li> Journal: None</li> -->\n</ul>\n</li>\n</ul>\n",
+    "Friends": "\n\n<a href=\"https://www.songmingxuan.com\" rel=\"noopener noreferrer\" target=\"_blank\">Mingxuan Song</a>,\n                <a href=\"https://yhqpkueecs.github.io\" rel=\"noopener noreferrer\" target=\"_blank\">Haoqi Yuan</a>,\n                <a href=\"https://skywalker-yqz.github.io/\" rel=\"noopener noreferrer\" target=\"_blank\">Qize Yu</a>.\n            ",
+    "Location": "\n\n                The Chinese University of Hong Kong (CUHK), Sha Tin, Hong Kong\n                <!--                    <div class=\"iframe-container\">-->\n<!--                        <iframe-->\n<!--                            src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8660498837125!2d114.13283187529197!3d22.283063379698937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403ff85af39ecbb%3A0xea1597b626ef3c1e!2sChow%20Yei%20Ching%20Building%2C%20Pok%20Fu%20Lam%20Rd%2C%20Lung%20Fu%20Shan!5e0!3m2!1sen!2shk!4v1708320695144!5m2!1sen!2shk\"-->\n<!--                            width=\"900\" height=\"500\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"-->\n<!--                            referrerpolicy=\"no-referrer-when-downgrade\"></iframe>-->\n<!--                    </div>-->\n"
+  }
+}

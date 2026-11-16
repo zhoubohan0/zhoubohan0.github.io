@@ -3,7 +3,7 @@
     position: relative; /* 定义一个相对定位的容器 */
     width: 65%; /* 根据需求调整宽度 */
     height: 450px; /* 根据需求调整高度 */
-    background-image: url('../banner-bg.jpg'); /* 设置背景图像 */
+    background-image: url('/_common/assets/banner-bg.jpg'); /* 设置背景图像 */
     background-size: cover; /* 覆盖整个容器 */
     background-position: center; /* 中心对齐背景图像 */
 

@@ -1,4 +1,4 @@
 [submodule "cv"]
-	path = cv
+	path = _common/cv
 	url = git@github.com:zhoubohan0/CV-ZBH.git
 	branch = master

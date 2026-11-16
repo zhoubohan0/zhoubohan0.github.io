@@ -1,0 +1,1214 @@
+{
+  "baseline": "db01cc090dba11b17caa73a63dc2dec43cefd1d2",
+  "cv_commit": "22a92aaef3cf6db3f850087dac5d483ecff1d977",
+  "files": [
+    {
+      "old": "404.html",
+      "new": "v1/404.html",
+      "shared": false,
+      "sha256": "ad2ed12646b90b49a806170f6747d3d87d14e4d6af4ce7e72b135d891c9ad1fd",
+      "size": 6283,
+      "migrated_sha256": "f85cf47134208a5731c216599424b1cd199683be8cdd749b41af900efd8c58e8"
+    },
+    {
+      "old": "_pages/dropdown/index.html",
+      "new": "v1/_pages/dropdown/index.html",
+      "shared": false,
+      "sha256": "fc5596860d4952df9f382ef00a285eefecf94628334bf382edb8374635130cb2",
+      "size": 5630,
+      "migrated_sha256": "f771c27861ba03a007c40467f4c347a7d6dc9e39b88906b59789a59aa5a663d1"
+    },
+    {
+      "old": "assets/banner-bg.jpg",
+      "new": "_common/assets/banner-bg.jpg",
+      "shared": true,
+      "sha256": "c5e195e9b9c1903572eba9b9a2cb1b9b00a5cbaf16c971bdfd0948ba04fe0e5a",
+      "size": 402630,
+      "migrated_sha256": "c5e195e9b9c1903572eba9b9a2cb1b9b00a5cbaf16c971bdfd0948ba04fe0e5a"
+    },
+    {
+      "old": "assets/bibliography/2018-12-22-distill.bib",
+      "new": "_common/assets/bibliography/2018-12-22-distill.bib",
+      "shared": true,
+      "sha256": "900cea810093195e82387bb6b7cc484e35fbcf2310f3cbe9084c4b57bcc05e1a",
+      "size": 307,
+      "migrated_sha256": "900cea810093195e82387bb6b7cc484e35fbcf2310f3cbe9084c4b57bcc05e1a"
+    },
+    {
+      "old": "assets/css/bootstrap.css",
+      "new": "v1/assets/css/bootstrap.css",
+      "shared": false,
+      "sha256": "c4c4bfd2f8b2f5bd59a4d0551d7ec7062f4aae27269ae4259e2f40475ad2d084",
+      "size": 122161,
+      "migrated_sha256": "c4c4bfd2f8b2f5bd59a4d0551d7ec7062f4aae27269ae4259e2f40475ad2d084"
+    },
+    {
+      "old": "assets/css/image.css",
+      "new": "v1/assets/css/image.css",
+      "shared": false,
+      "sha256": "d91c0b1573bbbca5a048e2ad7f513059631e6496d02a8e73f9fd251a4001f1d7",
+      "size": 1024,
+      "migrated_sha256": "dd70989670bd096aebee987c16d4dff9f2bc5d1248876d8a98aec8670f32d62d"
+    },
+    {
+      "old": "assets/css/main.css",
+      "new": "v1/assets/css/main.css",
+      "shared": false,
+      "sha256": "d462d9e347f2b1f4157a1eea026a3e8ab837a25b3ec871ba942da881f53796e7",
+      "size": 21324,
+      "migrated_sha256": "d462d9e347f2b1f4157a1eea026a3e8ab837a25b3ec871ba942da881f53796e7"
+    },
+    {
+      "old": "assets/css/main.css.map",
+      "new": "v1/assets/css/main.css.map",
+      "shared": false,
+      "sha256": "417c0ebcea3a51eaf8a03f984d7f9d3ef257cc162ae2766f5f9a9f0719b4d7e8",
+      "size": 28016,
+      "migrated_sha256": "417c0ebcea3a51eaf8a03f984d7f9d3ef257cc162ae2766f5f9a9f0719b4d7e8"
+    },
+    {
+      "old": "assets/css/main.map",
+      "new": "v1/assets/css/main.map",
+      "shared": false,
+      "sha256": "beb41ce2b9113ba4dc803310289460a086a66b038d24eae98a81a1aaebf8a446",
+      "size": 129727,
+      "migrated_sha256": "beb41ce2b9113ba4dc803310289460a086a66b038d24eae98a81a1aaebf8a446"
+    },
+    {
+      "old": "assets/img/al-folio-preview-1400.webp",
+      "new": "_common/assets/img/al-folio-preview-1400.webp",
+      "shared": true,
+      "sha256": "8eed381a4ff44f1a648e1953c298f1197b60b5c8af7f84242396fb7b64617f16",
+      "size": 20624,
+      "migrated_sha256": "8eed381a4ff44f1a648e1953c298f1197b60b5c8af7f84242396fb7b64617f16"
+    },
+    {
+      "old": "assets/img/al-folio-preview-480.webp",
+      "new": "_common/assets/img/al-folio-preview-480.webp",
+      "shared": true,
+      "sha256": "b9b08da835a0610ec3017a053c72818584eeb8cada2fea793473bcb02f2a1eff",
+      "size": 8004,
+      "migrated_sha256": "b9b08da835a0610ec3017a053c72818584eeb8cada2fea793473bcb02f2a1eff"
+    },
+    {
+      "old": "assets/img/al-folio-preview-800.webp",
+      "new": "_common/assets/img/al-folio-preview-800.webp",
+      "shared": true,
+      "sha256": "8eed381a4ff44f1a648e1953c298f1197b60b5c8af7f84242396fb7b64617f16",
+      "size": 20624,
+      "migrated_sha256": "8eed381a4ff44f1a648e1953c298f1197b60b5c8af7f84242396fb7b64617f16"
+    },
+    {
+      "old": "assets/img/al-folio-preview.png",
+      "new": "_common/assets/img/al-folio-preview.png",
+      "shared": true,
+      "sha256": "6a8debc22125566d6834666f19d9f61e97bf608a2a3b68ef21475bfcdf4ea894",
+      "size": 818713,
+      "migrated_sha256": "6a8debc22125566d6834666f19d9f61e97bf608a2a3b68ef21475bfcdf4ea894"
+    },
+    {
+      "old": "assets/img/code-screenshot-1400.webp",
+      "new": "_common/assets/img/code-screenshot-1400.webp",
+      "shared": true,
+      "sha256": "5045335bbd9d33d6c32feee23d3545a6fb277778724abc8ddfde38d95c1d432b",
+      "size": 25418,
+      "migrated_sha256": "5045335bbd9d33d6c32feee23d3545a6fb277778724abc8ddfde38d95c1d432b"
+    },
+    {
+      "old": "assets/img/code-screenshot-480.webp",
+      "new": "_common/assets/img/code-screenshot-480.webp",
+      "shared": true,
+      "sha256": "d78a451456653f9677f090854249e97c93cdef67783a8ed8f64606e654d79482",
+      "size": 13630,
+      "migrated_sha256": "d78a451456653f9677f090854249e97c93cdef67783a8ed8f64606e654d79482"
+    },
+    {
+      "old": "assets/img/code-screenshot-800.webp",
+      "new": "_common/assets/img/code-screenshot-800.webp",
+      "shared": true,
+      "sha256": "5045335bbd9d33d6c32feee23d3545a6fb277778724abc8ddfde38d95c1d432b",
+      "size": 25418,
+      "migrated_sha256": "5045335bbd9d33d6c32feee23d3545a6fb277778724abc8ddfde38d95c1d432b"
+    },
+    {
+      "old": "assets/img/code-screenshot.png",
+      "new": "_common/assets/img/code-screenshot.png",
+      "shared": true,
+      "sha256": "cfcd6c217b184fb1862620169aa12569799da83e89634b0f60b9c44fa2710184",
+      "size": 186000,
+      "migrated_sha256": "cfcd6c217b184fb1862620169aa12569799da83e89634b0f60b9c44fa2710184"
+    },
+    {
+      "old": "assets/img/distill-screenshot-1400.webp",
+      "new": "_common/assets/img/distill-screenshot-1400.webp",
+      "shared": true,
+      "sha256": "1acdcc52f6725f9552516f412ec96771e27fe92ba01af3969e804f5c070beccd",
+      "size": 26622,
+      "migrated_sha256": "1acdcc52f6725f9552516f412ec96771e27fe92ba01af3969e804f5c070beccd"
+    },
+    {
+      "old": "assets/img/distill-screenshot-480.webp",
+      "new": "_common/assets/img/distill-screenshot-480.webp",
+      "shared": true,
+      "sha256": "808f23cc3b9e386f3b8d969294749f15e5e45d2f6d8a9374f2cd4b0c8e1420b6",
+      "size": 14676,
+      "migrated_sha256": "808f23cc3b9e386f3b8d969294749f15e5e45d2f6d8a9374f2cd4b0c8e1420b6"
+    },
+    {
+      "old": "assets/img/distill-screenshot-800.webp",
+      "new": "_common/assets/img/distill-screenshot-800.webp",
+      "shared": true,
+      "sha256": "1acdcc52f6725f9552516f412ec96771e27fe92ba01af3969e804f5c070beccd",
+      "size": 26622,
+      "migrated_sha256": "1acdcc52f6725f9552516f412ec96771e27fe92ba01af3969e804f5c070beccd"
+    },
+    {
+      "old": "assets/img/distill-screenshot.png",
+      "new": "_common/assets/img/distill-screenshot.png",
+      "shared": true,
+      "sha256": "9286c48e46b1269ed7efbd05285ea71158a15e5b3afd79a7a33a5d2f313e4cd4",
+      "size": 190635,
+      "migrated_sha256": "9286c48e46b1269ed7efbd05285ea71158a15e5b3afd79a7a33a5d2f313e4cd4"
+    },
+    {
+      "old": "assets/img/favicon-1400.webp",
+      "new": "_common/assets/img/favicon-1400.webp",
+      "shared": true,
+      "sha256": "fe2a58ff2157116ed827166495759b00b12605abb4feeb9c49397a4972ecbd5b",
+      "size": 43222,
+      "migrated_sha256": "fe2a58ff2157116ed827166495759b00b12605abb4feeb9c49397a4972ecbd5b"
+    },
+    {
+      "old": "assets/img/favicon-480.webp",
+      "new": "_common/assets/img/favicon-480.webp",
+      "shared": true,
+      "sha256": "295bb9ff2ab1e838fea36ecc8008e7d3b48fb852df3d634b295ca1cc41a963ef",
+      "size": 20370,
+      "migrated_sha256": "295bb9ff2ab1e838fea36ecc8008e7d3b48fb852df3d634b295ca1cc41a963ef"
+    },
+    {
+      "old": "assets/img/favicon-800.webp",
+      "new": "_common/assets/img/favicon-800.webp",
+      "shared": true,
+      "sha256": "fe2a58ff2157116ed827166495759b00b12605abb4feeb9c49397a4972ecbd5b",
+      "size": 43222,
+      "migrated_sha256": "fe2a58ff2157116ed827166495759b00b12605abb4feeb9c49397a4972ecbd5b"
+    },
+    {
+      "old": "assets/img/favicon.png",
+      "new": "_common/assets/img/favicon.png",
+      "shared": true,
+      "sha256": "cad36cf74fd7ecfcf23168e13c0c8531aba1f2c544358b66d8fc3c438530d394",
+      "size": 1339,
+      "migrated_sha256": "cad36cf74fd7ecfcf23168e13c0c8531aba1f2c544358b66d8fc3c438530d394"
+    },
+    {
+      "old": "assets/img/math-screenshot-1400.webp",
+      "new": "_common/assets/img/math-screenshot-1400.webp",
+      "shared": true,
+      "sha256": "f6f802826459db21e479296a4e126e5f5e1448a5688e860a96cb922216b30a3f",
+      "size": 27084,
+      "migrated_sha256": "f6f802826459db21e479296a4e126e5f5e1448a5688e860a96cb922216b30a3f"
+    },
+    {
+      "old": "assets/img/math-screenshot-480.webp",
+      "new": "_common/assets/img/math-screenshot-480.webp",
+      "shared": true,
+      "sha256": "6423aedf12a9b52c9fffdeae0ceb19a1382ae99bed7e0f3459827daa653c5ea1",
+      "size": 14160,
+      "migrated_sha256": "6423aedf12a9b52c9fffdeae0ceb19a1382ae99bed7e0f3459827daa653c5ea1"
+    },
+    {
+      "old": "assets/img/math-screenshot-800.webp",
+      "new": "_common/assets/img/math-screenshot-800.webp",
+      "shared": true,
+      "sha256": "f6f802826459db21e479296a4e126e5f5e1448a5688e860a96cb922216b30a3f",
+      "size": 27084,
+      "migrated_sha256": "f6f802826459db21e479296a4e126e5f5e1448a5688e860a96cb922216b30a3f"
+    },
+    {
+      "old": "assets/img/math-screenshot.png",
+      "new": "_common/assets/img/math-screenshot.png",
+      "shared": true,
+      "sha256": "ff7379c78c3f00d7563ca90d1ffb36b9c7ec413a3e59b7750cf071958993fa29",
+      "size": 192374,
+      "migrated_sha256": "ff7379c78c3f00d7563ca90d1ffb36b9c7ec413a3e59b7750cf071958993fa29"
+    },
+    {
+      "old": "assets/img/pagespeed.svg",
+      "new": "_common/assets/img/pagespeed.svg",
+      "shared": true,
+      "sha256": "e48c8e64029358ac7406222bb98cc378e8c050ec9ae6c31e5136bb915451b253",
+      "size": 6211,
+      "migrated_sha256": "e48c8e64029358ac7406222bb98cc378e8c050ec9ae6c31e5136bb915451b253"
+    },
+    {
+      "old": "assets/img/photos-screenshot-1400.webp",
+      "new": "_common/assets/img/photos-screenshot-1400.webp",
+      "shared": true,
+      "sha256": "30ae01c7173c1bffdbf877d3254c85e5b38a0b765bbf7a682ce305224f09b0b9",
+      "size": 26808,
+      "migrated_sha256": "30ae01c7173c1bffdbf877d3254c85e5b38a0b765bbf7a682ce305224f09b0b9"
+    },
+    {
+      "old": "assets/img/photos-screenshot-480.webp",
+      "new": "_common/assets/img/photos-screenshot-480.webp",
+      "shared": true,
+      "sha256": "df735eea0e202509605623854270f5ba13953e7ff09cf1549f313f437b3c2e2c",
+      "size": 14090,
+      "migrated_sha256": "df735eea0e202509605623854270f5ba13953e7ff09cf1549f313f437b3c2e2c"
+    },
+    {
+      "old": "assets/img/photos-screenshot-800.webp",
+      "new": "_common/assets/img/photos-screenshot-800.webp",
+      "shared": true,
+      "sha256": "30ae01c7173c1bffdbf877d3254c85e5b38a0b765bbf7a682ce305224f09b0b9",
+      "size": 26808,
+      "migrated_sha256": "30ae01c7173c1bffdbf877d3254c85e5b38a0b765bbf7a682ce305224f09b0b9"
+    },
+    {
+      "old": "assets/img/photos-screenshot.png",
+      "new": "_common/assets/img/photos-screenshot.png",
+      "shared": true,
+      "sha256": "6a15230aef1dc3ea55635ceccc54d9e9d7700980ae011cc7f1caae9b1d14f50a",
+      "size": 972431,
+      "migrated_sha256": "6a15230aef1dc3ea55635ceccc54d9e9d7700980ae011cc7f1caae9b1d14f50a"
+    },
+    {
+      "old": "assets/img/prof_pic-1400.webp",
+      "new": "_common/assets/img/prof_pic-1400.webp",
+      "shared": true,
+      "sha256": "f2400abf12808fc5957d07f7be6ccdb8b95a1542b52299c60b0f1ba42a52f3fa",
+      "size": 157430,
+      "migrated_sha256": "f2400abf12808fc5957d07f7be6ccdb8b95a1542b52299c60b0f1ba42a52f3fa"
+    },
+    {
+      "old": "assets/img/prof_pic-480.webp",
+      "new": "_common/assets/img/prof_pic-480.webp",
+      "shared": true,
+      "sha256": "42d5bb02b8d2a749eb080636c0e54da0a8b2eb1969ef8bb7352d6f2551589052",
+      "size": 78440,
+      "migrated_sha256": "42d5bb02b8d2a749eb080636c0e54da0a8b2eb1969ef8bb7352d6f2551589052"
+    },
+    {
+      "old": "assets/img/prof_pic-800.webp",
+      "new": "_common/assets/img/prof_pic-800.webp",
+      "shared": true,
+      "sha256": "f2400abf12808fc5957d07f7be6ccdb8b95a1542b52299c60b0f1ba42a52f3fa",
+      "size": 157430,
+      "migrated_sha256": "f2400abf12808fc5957d07f7be6ccdb8b95a1542b52299c60b0f1ba42a52f3fa"
+    },
+    {
+      "old": "assets/img/prof_pic.jpg",
+      "new": "_common/assets/img/prof_pic.jpg",
+      "shared": true,
+      "sha256": "855317ee9e69adf8fe7ae6428bf286515baa4afc77fe31a260564998ee8571f8",
+      "size": 2309396,
+      "migrated_sha256": "855317ee9e69adf8fe7ae6428bf286515baa4afc77fe31a260564998ee8571f8"
+    },
+    {
+      "old": "assets/img/project_preview/face-detection-1400.webp",
+      "new": "_common/assets/img/project_preview/face-detection-1400.webp",
+      "shared": true,
+      "sha256": "59bed6eda4f507155a1554db3f98d12af439c30d86cee54c6901513853e00712",
+      "size": 152986,
+      "migrated_sha256": "59bed6eda4f507155a1554db3f98d12af439c30d86cee54c6901513853e00712"
+    },
+    {
+      "old": "assets/img/project_preview/face-detection-480.webp",
+      "new": "_common/assets/img/project_preview/face-detection-480.webp",
+      "shared": true,
+      "sha256": "dacd361dd88ffdaa364cc5a715a1552a24897b09a8d7fc66563447b1c056e610",
+      "size": 81390,
+      "migrated_sha256": "dacd361dd88ffdaa364cc5a715a1552a24897b09a8d7fc66563447b1c056e610"
+    },
+    {
+      "old": "assets/img/project_preview/face-detection-800.webp",
+      "new": "_common/assets/img/project_preview/face-detection-800.webp",
+      "shared": true,
+      "sha256": "59bed6eda4f507155a1554db3f98d12af439c30d86cee54c6901513853e00712",
+      "size": 152986,
+      "migrated_sha256": "59bed6eda4f507155a1554db3f98d12af439c30d86cee54c6901513853e00712"
+    },
+    {
+      "old": "assets/img/project_preview/face-detection.jpg",
+      "new": "_common/assets/img/project_preview/face-detection.jpg",
+      "shared": true,
+      "sha256": "3142b47a2386cf7f2a8c26cffba31ddc1148408335ea7685d68a2fffbb996026",
+      "size": 187461,
+      "migrated_sha256": "3142b47a2386cf7f2a8c26cffba31ddc1148408335ea7685d68a2fffbb996026"
+    },
+    {
+      "old": "assets/img/projects-screenshot-1400.webp",
+      "new": "_common/assets/img/projects-screenshot-1400.webp",
+      "shared": true,
+      "sha256": "3acd53cf24a6ef33635990ddcf0e467ca8c81c975805ea336c250712ab12ce69",
+      "size": 24838,
+      "migrated_sha256": "3acd53cf24a6ef33635990ddcf0e467ca8c81c975805ea336c250712ab12ce69"
+    },
+    {
+      "old": "assets/img/projects-screenshot-480.webp",
+      "new": "_common/assets/img/projects-screenshot-480.webp",
+      "shared": true,
+      "sha256": "4a81ed3cbfb3b1764e7e160195e4c26b70876d3556d1780d92b52182d644daba",
+      "size": 14244,
+      "migrated_sha256": "4a81ed3cbfb3b1764e7e160195e4c26b70876d3556d1780d92b52182d644daba"
+    },
+    {
+      "old": "assets/img/projects-screenshot-800.webp",
+      "new": "_common/assets/img/projects-screenshot-800.webp",
+      "shared": true,
+      "sha256": "3acd53cf24a6ef33635990ddcf0e467ca8c81c975805ea336c250712ab12ce69",
+      "size": 24838,
+      "migrated_sha256": "3acd53cf24a6ef33635990ddcf0e467ca8c81c975805ea336c250712ab12ce69"
+    },
+    {
+      "old": "assets/img/projects-screenshot.png",
+      "new": "_common/assets/img/projects-screenshot.png",
+      "shared": true,
+      "sha256": "2f28fc0ade0d3a9af128ef217d0712c79b701651dbe416130820c4b27b9cf608",
+      "size": 862044,
+      "migrated_sha256": "2f28fc0ade0d3a9af128ef217d0712c79b701651dbe416130820c4b27b9cf608"
+    },
+    {
+      "old": "assets/img/publication_preview/brownian-motion.gif",
+      "new": "_common/assets/img/publication_preview/brownian-motion.gif",
+      "shared": true,
+      "sha256": "653bfa3535f1d9231bbfe0404424cecd2e0431414f19be8e2a7fb5abe95e5cc2",
+      "size": 154817,
+      "migrated_sha256": "653bfa3535f1d9231bbfe0404424cecd2e0431414f19be8e2a7fb5abe95e5cc2"
+    },
+    {
+      "old": "assets/img/publication_preview/point_teaching_arch-1400.webp",
+      "new": "_common/assets/img/publication_preview/point_teaching_arch-1400.webp",
+      "shared": true,
+      "sha256": "0befc153f885e5e87c45966c1a216651fd438996bad44d87b45da720cf232f89",
+      "size": 24388,
+      "migrated_sha256": "0befc153f885e5e87c45966c1a216651fd438996bad44d87b45da720cf232f89"
+    },
+    {
+      "old": "assets/img/publication_preview/point_teaching_arch-480.webp",
+      "new": "_common/assets/img/publication_preview/point_teaching_arch-480.webp",
+      "shared": true,
+      "sha256": "7763096305c4a2a2829b68946575c9b7dd3cd3c5f9c61085c00b9adbc517fde5",
+      "size": 11370,
+      "migrated_sha256": "7763096305c4a2a2829b68946575c9b7dd3cd3c5f9c61085c00b9adbc517fde5"
+    },
+    {
+      "old": "assets/img/publication_preview/point_teaching_arch-800.webp",
+      "new": "_common/assets/img/publication_preview/point_teaching_arch-800.webp",
+      "shared": true,
+      "sha256": "0befc153f885e5e87c45966c1a216651fd438996bad44d87b45da720cf232f89",
+      "size": 24388,
+      "migrated_sha256": "0befc153f885e5e87c45966c1a216651fd438996bad44d87b45da720cf232f89"
+    },
+    {
+      "old": "assets/img/publication_preview/point_teaching_arch.jpg",
+      "new": "_common/assets/img/publication_preview/point_teaching_arch.jpg",
+      "shared": true,
+      "sha256": "a34a230a4d6da35c5927b16f213b5b8f69896d4a89cdc7e8ffd030a585e86299",
+      "size": 1249459,
+      "migrated_sha256": "a34a230a4d6da35c5927b16f213b5b8f69896d4a89cdc7e8ffd030a585e86299"
+    },
+    {
+      "old": "assets/img/publication_preview/poseur_arch-1400.webp",
+      "new": "_common/assets/img/publication_preview/poseur_arch-1400.webp",
+      "shared": true,
+      "sha256": "96de1da223410bf155cc1f11b1c71472ff1431ea34a4681087c5152037e5d9f8",
+      "size": 22266,
+      "migrated_sha256": "96de1da223410bf155cc1f11b1c71472ff1431ea34a4681087c5152037e5d9f8"
+    },
+    {
+      "old": "assets/img/publication_preview/poseur_arch-480.webp",
+      "new": "_common/assets/img/publication_preview/poseur_arch-480.webp",
+      "shared": true,
+      "sha256": "7960649c3abf0e6ba3f3cefca0a40f59fd24c7c6290c58e33e345f21cf9d7ffb",
+      "size": 11390,
+      "migrated_sha256": "7960649c3abf0e6ba3f3cefca0a40f59fd24c7c6290c58e33e345f21cf9d7ffb"
+    },
+    {
+      "old": "assets/img/publication_preview/poseur_arch-800.webp",
+      "new": "_common/assets/img/publication_preview/poseur_arch-800.webp",
+      "shared": true,
+      "sha256": "96de1da223410bf155cc1f11b1c71472ff1431ea34a4681087c5152037e5d9f8",
+      "size": 22266,
+      "migrated_sha256": "96de1da223410bf155cc1f11b1c71472ff1431ea34a4681087c5152037e5d9f8"
+    },
+    {
+      "old": "assets/img/publication_preview/poseur_arch.jpg",
+      "new": "_common/assets/img/publication_preview/poseur_arch.jpg",
+      "shared": true,
+      "sha256": "37412cb9e9225d056e1fee851284ae5b1dbe525881eaf08e261b8a4e5c4876a6",
+      "size": 464622,
+      "migrated_sha256": "37412cb9e9225d056e1fee851284ae5b1dbe525881eaf08e261b8a4e5c4876a6"
+    },
+    {
+      "old": "assets/img/publication_preview/poseur_arch.pdf",
+      "new": "_common/assets/img/publication_preview/poseur_arch.pdf",
+      "shared": true,
+      "sha256": "7acb29fc50de4e3089ea1f0a02d055ff0b8b56b13426ed80eb6262047926c64d",
+      "size": 189229,
+      "migrated_sha256": "7acb29fc50de4e3089ea1f0a02d055ff0b8b56b13426ed80eb6262047926c64d"
+    },
+    {
+      "old": "assets/img/publication_preview/wave-mechanics.gif",
+      "new": "_common/assets/img/publication_preview/wave-mechanics.gif",
+      "shared": true,
+      "sha256": "577eea90a77b075cb05b5c4c0796fb468f07281373eeb9cae3c06e717356b8c8",
+      "size": 27517,
+      "migrated_sha256": "577eea90a77b075cb05b5c4c0796fb468f07281373eeb9cae3c06e717356b8c8"
+    },
+    {
+      "old": "assets/img/publication_preview/zolly-1400.webp",
+      "new": "_common/assets/img/publication_preview/zolly-1400.webp",
+      "shared": true,
+      "sha256": "2bb14d03e35b3fee265b48ca2483a47674cf2d9b7c48d4ba925c4cc66c176f90",
+      "size": 30316,
+      "migrated_sha256": "2bb14d03e35b3fee265b48ca2483a47674cf2d9b7c48d4ba925c4cc66c176f90"
+    },
+    {
+      "old": "assets/img/publication_preview/zolly-480.webp",
+      "new": "_common/assets/img/publication_preview/zolly-480.webp",
+      "shared": true,
+      "sha256": "e81a63054184105861ad84db32ffe45e14644d73a99c2ebf06a7e37d21506e30",
+      "size": 15206,
+      "migrated_sha256": "e81a63054184105861ad84db32ffe45e14644d73a99c2ebf06a7e37d21506e30"
+    },
+    {
+      "old": "assets/img/publication_preview/zolly-800.webp",
+      "new": "_common/assets/img/publication_preview/zolly-800.webp",
+      "shared": true,
+      "sha256": "2bb14d03e35b3fee265b48ca2483a47674cf2d9b7c48d4ba925c4cc66c176f90",
+      "size": 30316,
+      "migrated_sha256": "2bb14d03e35b3fee265b48ca2483a47674cf2d9b7c48d4ba925c4cc66c176f90"
+    },
+    {
+      "old": "assets/img/publication_preview/zolly.png",
+      "new": "_common/assets/img/publication_preview/zolly.png",
+      "shared": true,
+      "sha256": "8cee2f3b455723c98f162ef31589bdb9306d4e00f0cc104a46a8179add2095db",
+      "size": 235025,
+      "migrated_sha256": "8cee2f3b455723c98f162ef31589bdb9306d4e00f0cc104a46a8179add2095db"
+    },
+    {
+      "old": "assets/img/publications-screenshot-1400.webp",
+      "new": "_common/assets/img/publications-screenshot-1400.webp",
+      "shared": true,
+      "sha256": "2d33918d7167f6a76e4729a0bab93f2ec30ac1c59d41dfca1722b8b8a791af1b",
+      "size": 21604,
+      "migrated_sha256": "2d33918d7167f6a76e4729a0bab93f2ec30ac1c59d41dfca1722b8b8a791af1b"
+    },
+    {
+      "old": "assets/img/publications-screenshot-480.webp",
+      "new": "_common/assets/img/publications-screenshot-480.webp",
+      "shared": true,
+      "sha256": "534ff701ff52fe603f020044102d537f9e9d06b8c14f9857e5fb147a71d8234e",
+      "size": 11546,
+      "migrated_sha256": "534ff701ff52fe603f020044102d537f9e9d06b8c14f9857e5fb147a71d8234e"
+    },
+    {
+      "old": "assets/img/publications-screenshot-800.webp",
+      "new": "_common/assets/img/publications-screenshot-800.webp",
+      "shared": true,
+      "sha256": "2d33918d7167f6a76e4729a0bab93f2ec30ac1c59d41dfca1722b8b8a791af1b",
+      "size": 21604,
+      "migrated_sha256": "2d33918d7167f6a76e4729a0bab93f2ec30ac1c59d41dfca1722b8b8a791af1b"
+    },
+    {
+      "old": "assets/img/publications-screenshot.png",
+      "new": "_common/assets/img/publications-screenshot.png",
+      "shared": true,
+      "sha256": "5f4b3b21668d82d935435ab02a4cdfec0b94728a2038eecda49d6869870d390e",
+      "size": 215861,
+      "migrated_sha256": "5f4b3b21668d82d935435ab02a4cdfec0b94728a2038eecda49d6869870d390e"
+    },
+    {
+      "old": "assets/js/common-footer.js",
+      "new": "v1/assets/js/common-footer.js",
+      "shared": false,
+      "sha256": "b1a97a3a1bd1c1dc094816e4c8944fcac3bdaad75918bad87d6058fcd906bb1a",
+      "size": 162,
+      "migrated_sha256": "b1a97a3a1bd1c1dc094816e4c8944fcac3bdaad75918bad87d6058fcd906bb1a"
+    },
+    {
+      "old": "assets/js/common.js",
+      "new": "v1/assets/js/common.js",
+      "shared": false,
+      "sha256": "da4366e69a45025a0005a592e44f6b66917798fa0240681194e3eaed99f799b4",
+      "size": 286,
+      "migrated_sha256": "da4366e69a45025a0005a592e44f6b66917798fa0240681194e3eaed99f799b4"
+    },
+    {
+      "old": "assets/js/dark_mode.js",
+      "new": "v1/assets/js/dark_mode.js",
+      "shared": false,
+      "sha256": "770d9a5de8cc98e0f20c2bc98d571309a036b1fec256a7fd1ec2e65fc19fb7fa",
+      "size": 179,
+      "migrated_sha256": "770d9a5de8cc98e0f20c2bc98d571309a036b1fec256a7fd1ec2e65fc19fb7fa"
+    },
+    {
+      "old": "assets/js/distillpub/overrides.js",
+      "new": "v1/assets/js/distillpub/overrides.js",
+      "shared": false,
+      "sha256": "2e0ab6af5d5e8e66e6980d48fbff5937f994c628261cfea38210692f27b810a9",
+      "size": 1233,
+      "migrated_sha256": "2e0ab6af5d5e8e66e6980d48fbff5937f994c628261cfea38210692f27b810a9"
+    },
+    {
+      "old": "assets/js/distillpub/template.v2.js",
+      "new": "v1/assets/js/distillpub/template.v2.js",
+      "shared": false,
+      "sha256": "be538c4ae563982bf78695ac4d3a978bb1b68e6fe13d831924350938838cc1ee",
+      "size": 154608,
+      "migrated_sha256": "be538c4ae563982bf78695ac4d3a978bb1b68e6fe13d831924350938838cc1ee"
+    },
+    {
+      "old": "assets/js/distillpub/template.v2.js.map",
+      "new": "v1/assets/js/distillpub/template.v2.js.map",
+      "shared": false,
+      "sha256": "2e7902dfeb45cbd76749e8222377545d71e5ca16b45a2827e0d4a36bbd70d89d",
+      "size": 602453,
+      "migrated_sha256": "2e7902dfeb45cbd76749e8222377545d71e5ca16b45a2827e0d4a36bbd70d89d"
+    },
+    {
+      "old": "assets/js/distillpub/transforms.v2.js",
+      "new": "v1/assets/js/distillpub/transforms.v2.js",
+      "shared": false,
+      "sha256": "a6d77e44a2109b7210f81317d3cdb79761f0a3e1183e1895e2ce568351cd829f",
+      "size": 227817,
+      "migrated_sha256": "a6d77e44a2109b7210f81317d3cdb79761f0a3e1183e1895e2ce568351cd829f"
+    },
+    {
+      "old": "assets/js/distillpub/transforms.v2.js.map",
+      "new": "v1/assets/js/distillpub/transforms.v2.js.map",
+      "shared": false,
+      "sha256": "f4c4cbd4167209a706c0750b48dc01cb87a19b5d60c756863b056afaa92b48a6",
+      "size": 1024816,
+      "migrated_sha256": "f4c4cbd4167209a706c0750b48dc01cb87a19b5d60c756863b056afaa92b48a6"
+    },
+    {
+      "old": "assets/js/masonry.js",
+      "new": "v1/assets/js/masonry.js",
+      "shared": false,
+      "sha256": "dc5f2b0aff21e3ddff781f90383f7fa8fc9c98210277cf698cb91db643a092bd",
+      "size": 173,
+      "migrated_sha256": "dc5f2b0aff21e3ddff781f90383f7fa8fc9c98210277cf698cb91db643a092bd"
+    },
+    {
+      "old": "assets/js/theme.js",
+      "new": "v1/assets/js/theme.js",
+      "shared": false,
+      "sha256": "7bbd357aa127e91d275915d2ffb3a0efe7cac5c33d3a1b6d2b77008e0c406875",
+      "size": 993,
+      "migrated_sha256": "7bbd357aa127e91d275915d2ffb3a0efe7cac5c33d3a1b6d2b77008e0c406875"
+    },
+    {
+      "old": "assets/js/zoom.js",
+      "new": "v1/assets/js/zoom.js",
+      "shared": false,
+      "sha256": "31c23aec69db7b3cd0df5929c88d287a1390b343aa19ef438f1f0c6a79caee66",
+      "size": 183,
+      "migrated_sha256": "31c23aec69db7b3cd0df5929c88d287a1390b343aa19ef438f1f0c6a79caee66"
+    },
+    {
+      "old": "assets/letter-w.png",
+      "new": "_common/assets/letter-w.png",
+      "shared": true,
+      "sha256": "4d8bd3eb8e5df62dc9379eb8adb4275e62703a1579086d93dfdc7a8ec6e0e1cc",
+      "size": 15298,
+      "migrated_sha256": "4d8bd3eb8e5df62dc9379eb8adb4275e62703a1579086d93dfdc7a8ec6e0e1cc"
+    },
+    {
+      "old": "assets/organizations/baai-color.svg",
+      "new": "_common/assets/organizations/baai-color.svg",
+      "shared": true,
+      "sha256": "d856e016bf3fa8807fe014482d0370deee698ca1c78e2c00f9c9b6f431b8ce24",
+      "size": 92,
+      "migrated_sha256": "d856e016bf3fa8807fe014482d0370deee698ca1c78e2c00f9c9b6f431b8ce24"
+    },
+    {
+      "old": "assets/organizations/baai-text.png",
+      "new": "_common/assets/organizations/baai-text.png",
+      "shared": true,
+      "sha256": "702ef20e5cc6e3b4c4c0256bf5240d936402e0e97e0db70e7bf35d5f5289d6b7",
+      "size": 92823,
+      "migrated_sha256": "702ef20e5cc6e3b4c4c0256bf5240d936402e0e97e0db70e7bf35d5f5289d6b7"
+    },
+    {
+      "old": "assets/organizations/beingbeyond.png",
+      "new": "_common/assets/organizations/beingbeyond.png",
+      "shared": true,
+      "sha256": "faba49e6db3043d84d8fb007efadcb05169d868e7a863c353a5fbb98679ef877",
+      "size": 5225,
+      "migrated_sha256": "faba49e6db3043d84d8fb007efadcb05169d868e7a863c353a5fbb98679ef877"
+    },
+    {
+      "old": "assets/organizations/cuhk.png",
+      "new": "_common/assets/organizations/cuhk.png",
+      "shared": true,
+      "sha256": "c0508fa91b04728068fa7db4340854122af826d4c2ee43e29dbe6c5e245a8ab3",
+      "size": 198859,
+      "migrated_sha256": "c0508fa91b04728068fa7db4340854122af826d4c2ee43e29dbe6c5e245a8ab3"
+    },
+    {
+      "old": "assets/organizations/jd-explore.png",
+      "new": "_common/assets/organizations/jd-explore.png",
+      "shared": true,
+      "sha256": "bc6b95e47aebc9c8aeb065f0e2733f8aa9944b18557cce72daa77d92b49ce097",
+      "size": 96633,
+      "migrated_sha256": "bc6b95e47aebc9c8aeb065f0e2733f8aa9944b18557cce72daa77d92b49ce097"
+    },
+    {
+      "old": "assets/organizations/knowin.png",
+      "new": "_common/assets/organizations/knowin.png",
+      "shared": true,
+      "sha256": "6f06e87939411debef47941cd6261a7b2eb5e4f35c7d54665c079fde84bd6fbc",
+      "size": 217130,
+      "migrated_sha256": "6f06e87939411debef47941cd6261a7b2eb5e4f35c7d54665c079fde84bd6fbc"
+    },
+    {
+      "old": "assets/organizations/knowin.svg",
+      "new": "_common/assets/organizations/knowin.svg",
+      "shared": true,
+      "sha256": "33f48f132a0c9c737fcdf85ec98a470c334176f4af0c786925564f8dd5275bed",
+      "size": 726,
+      "migrated_sha256": "33f48f132a0c9c737fcdf85ec98a470c334176f4af0c786925564f8dd5275bed"
+    },
+    {
+      "old": "assets/organizations/momenta.jpg",
+      "new": "_common/assets/organizations/momenta.jpg",
+      "shared": true,
+      "sha256": "6996bc91db5c2368d778ad5ee381f6c87cb11de11a3237ea82652cb7640caae4",
+      "size": 484122,
+      "migrated_sha256": "6996bc91db5c2368d778ad5ee381f6c87cb11de11a3237ea82652cb7640caae4"
+    },
+    {
+      "old": "assets/organizations/momenta.png",
+      "new": "_common/assets/organizations/momenta.png",
+      "shared": true,
+      "sha256": "79d72c9369e005b20387ce81e6295bad3a7503de5efa7148273a467fe5d3cb10",
+      "size": 23211,
+      "migrated_sha256": "79d72c9369e005b20387ce81e6295bad3a7503de5efa7148273a467fe5d3cb10"
+    },
+    {
+      "old": "assets/organizations/nku.jpeg",
+      "new": "_common/assets/organizations/nku.jpeg",
+      "shared": true,
+      "sha256": "9867f87ee2fe318230fa671ecc1fe7c7d8f49dd161b4d726e6071bb1ec69fa24",
+      "size": 601771,
+      "migrated_sha256": "9867f87ee2fe318230fa671ecc1fe7c7d8f49dd161b4d726e6071bb1ec69fa24"
+    },
+    {
+      "old": "assets/organizations/pku.png",
+      "new": "_common/assets/organizations/pku.png",
+      "shared": true,
+      "sha256": "b328ed3c9e579ec8c2031ad8a5b6c244994fba5d1e93cc98901d1fcc3c306bdb",
+      "size": 25869,
+      "migrated_sha256": "b328ed3c9e579ec8c2031ad8a5b6c244994fba5d1e93cc98901d1fcc3c306bdb"
+    },
+    {
+      "old": "assets/organizations/source/knowin-logo-dark.png",
+      "new": "_common/assets/organizations/source/knowin-logo-dark.png",
+      "shared": true,
+      "sha256": "6f06e87939411debef47941cd6261a7b2eb5e4f35c7d54665c079fde84bd6fbc",
+      "size": 217130,
+      "migrated_sha256": "6f06e87939411debef47941cd6261a7b2eb5e4f35c7d54665c079fde84bd6fbc"
+    },
+    {
+      "old": "assets/personal-website/1.png",
+      "new": "_common/assets/personal-website/1.png",
+      "shared": true,
+      "sha256": "e9599d5e943aef1d6abe013b0c7335c207c54da01180ecc987a1cda6f70f051c",
+      "size": 107910,
+      "migrated_sha256": "e9599d5e943aef1d6abe013b0c7335c207c54da01180ecc987a1cda6f70f051c"
+    },
+    {
+      "old": "assets/personal-website/2.png",
+      "new": "_common/assets/personal-website/2.png",
+      "shared": true,
+      "sha256": "aa63bfb72f038dbaafdf6b133de4a2f9987880fc3ed1b69ac9f18160a0cff6f8",
+      "size": 18684,
+      "migrated_sha256": "aa63bfb72f038dbaafdf6b133de4a2f9987880fc3ed1b69ac9f18160a0cff6f8"
+    },
+    {
+      "old": "assets/ppt/BiDexHD-PPT.pdf",
+      "new": "_common/assets/ppt/BiDexHD-PPT.pdf",
+      "shared": true,
+      "sha256": "1a7bb2e187689b5e53418d7a2dfe8d1ab49ca5150196ac49b205863f603e168b",
+      "size": 7225972,
+      "migrated_sha256": "1a7bb2e187689b5e53418d7a2dfe8d1ab49ca5150196ac49b205863f603e168b"
+    },
+    {
+      "old": "assets/ppt/DARA-poster.pdf",
+      "new": "_common/assets/ppt/DARA-poster.pdf",
+      "shared": true,
+      "sha256": "0ae8f8932733199bd77114a9715f7e46e05eedd103efade2931d1e4f18eb55a0",
+      "size": 1111966,
+      "migrated_sha256": "0ae8f8932733199bd77114a9715f7e46e05eedd103efade2931d1e4f18eb55a0"
+    },
+    {
+      "old": "assets/ppt/MEgoHand-PPT.pdf",
+      "new": "_common/assets/ppt/MEgoHand-PPT.pdf",
+      "shared": true,
+      "sha256": "c5e41c12efff3ab18cb4d7359069001f1657cf97900058c23371ff1e5d5c752d",
+      "size": 7642778,
+      "migrated_sha256": "c5e41c12efff3ab18cb4d7359069001f1657cf97900058c23371ff1e5d5c752d"
+    },
+    {
+      "old": "assets/ppt/NOLO-PPT.pdf",
+      "new": "_common/assets/ppt/NOLO-PPT.pdf",
+      "shared": true,
+      "sha256": "126e1cd279ab0d1276aabc01d7439f174fcea02461bdaffebadb2f8a281a4734",
+      "size": 5392574,
+      "migrated_sha256": "126e1cd279ab0d1276aabc01d7439f174fcea02461bdaffebadb2f8a281a4734"
+    },
+    {
+      "old": "assets/ppt/STG-PPT.pdf",
+      "new": "_common/assets/ppt/STG-PPT.pdf",
+      "shared": true,
+      "sha256": "5f9b24a4b1df32726b14990df75d44cec59fdc486c5a719d491eb471b1d1d1cf",
+      "size": 8666577,
+      "migrated_sha256": "5f9b24a4b1df32726b14990df75d44cec59fdc486c5a719d491eb471b1d1d1cf"
+    },
+    {
+      "old": "assets/profile.jpg",
+      "new": "_common/assets/profile.jpg",
+      "shared": true,
+      "sha256": "5f2a5dccda2f588e5f6d5c266bcbdc4a398fa0b33d9cea6f388904c7538e0615",
+      "size": 51189,
+      "migrated_sha256": "5f2a5dccda2f588e5f6d5c266bcbdc4a398fa0b33d9cea6f388904c7538e0615"
+    },
+    {
+      "old": "assets/profile.png",
+      "new": "_common/assets/profile.png",
+      "shared": true,
+      "sha256": "53a07a9e52b6d047c4e1e7e589540c55c5f6324268d483dccb351e31a0eda51d",
+      "size": 201842,
+      "migrated_sha256": "53a07a9e52b6d047c4e1e7e589540c55c5f6324268d483dccb351e31a0eda51d"
+    },
+    {
+      "old": "assets/wechat.png",
+      "new": "_common/assets/wechat.png",
+      "shared": true,
+      "sha256": "e5a5340e369b7333088abd7c4c04574c8a0429020992707cbc8e5e51d3165289",
+      "size": 303053,
+      "migrated_sha256": "e5a5340e369b7333088abd7c4c04574c8a0429020992707cbc8e5e51d3165289"
+    },
+    {
+      "old": "assets/zbh-publications/AERO.png",
+      "new": "_common/assets/zbh-publications/AERO.png",
+      "shared": true,
+      "sha256": "555383bb9988795d0124f1980e17c1b418f771d5e82facff90e319df8afe55e8",
+      "size": 372326,
+      "migrated_sha256": "555383bb9988795d0124f1980e17c1b418f771d5e82facff90e319df8afe55e8"
+    },
+    {
+      "old": "assets/zbh-publications/AffordanceVLA.png",
+      "new": "_common/assets/zbh-publications/AffordanceVLA.png",
+      "shared": true,
+      "sha256": "b423c80640ae9cc950e87300d6038e59b62b12ab88925ad853975eb41be544f4",
+      "size": 490142,
+      "migrated_sha256": "b423c80640ae9cc950e87300d6038e59b62b12ab88925ad853975eb41be544f4"
+    },
+    {
+      "old": "assets/zbh-publications/AtmosBench.png",
+      "new": "_common/assets/zbh-publications/AtmosBench.png",
+      "shared": true,
+      "sha256": "07ff8302ffbe1599f80849796af5578fe3aedeb76746578434b5b23f2fe675b8",
+      "size": 1428084,
+      "migrated_sha256": "07ff8302ffbe1599f80849796af5578fe3aedeb76746578434b5b23f2fe675b8"
+    },
+    {
+      "old": "assets/zbh-publications/Being-0.png",
+      "new": "_common/assets/zbh-publications/Being-0.png",
+      "shared": true,
+      "sha256": "14d917f3336aad8104c0217b4b10d9d4f017d723bdb2f8c23fee02bb0aa0eed2",
+      "size": 769360,
+      "migrated_sha256": "14d917f3336aad8104c0217b4b10d9d4f017d723bdb2f8c23fee02bb0aa0eed2"
+    },
+    {
+      "old": "assets/zbh-publications/BidexHD.jpg",
+      "new": "_common/assets/zbh-publications/BidexHD.jpg",
+      "shared": true,
+      "sha256": "839b135c3b57e9d88039d8f5496133e5f220154441e0c2e61fc7dea8a1eaed5f",
+      "size": 564801,
+      "migrated_sha256": "839b135c3b57e9d88039d8f5496133e5f220154441e0c2e61fc7dea8a1eaed5f"
+    },
+    {
+      "old": "assets/zbh-publications/Cradle.png",
+      "new": "_common/assets/zbh-publications/Cradle.png",
+      "shared": true,
+      "sha256": "6608c293e295bdc5f79b2965ad6d86e03c4f5e01eef3f23f2003bba18b0a9f7e",
+      "size": 4544088,
+      "migrated_sha256": "6608c293e295bdc5f79b2965ad6d86e03c4f5e01eef3f23f2003bba18b0a9f7e"
+    },
+    {
+      "old": "assets/zbh-publications/Cradle2.png",
+      "new": "_common/assets/zbh-publications/Cradle2.png",
+      "shared": true,
+      "sha256": "1549637fec04a321e679bf0ba1f388fa804f6b7c1d4cf8a31f93dabff92a962e",
+      "size": 973276,
+      "migrated_sha256": "1549637fec04a321e679bf0ba1f388fa804f6b7c1d4cf8a31f93dabff92a962e"
+    },
+    {
+      "old": "assets/zbh-publications/CrossDex.png",
+      "new": "_common/assets/zbh-publications/CrossDex.png",
+      "shared": true,
+      "sha256": "e07532a90a6820370403af9c0b4231b4cab14a361cda316d0b2d4d638f477d00",
+      "size": 520425,
+      "migrated_sha256": "e07532a90a6820370403af9c0b4231b4cab14a361cda316d0b2d4d638f477d00"
+    },
+    {
+      "old": "assets/zbh-publications/DARA.jpg",
+      "new": "_common/assets/zbh-publications/DARA.jpg",
+      "shared": true,
+      "sha256": "f4fabb0c352fb7fd4f16da3b2c3cc38ede700044447f0f86064e076db2961df2",
+      "size": 976912,
+      "migrated_sha256": "f4fabb0c352fb7fd4f16da3b2c3cc38ede700044447f0f86064e076db2961df2"
+    },
+    {
+      "old": "assets/zbh-publications/FETCH.png",
+      "new": "_common/assets/zbh-publications/FETCH.png",
+      "shared": true,
+      "sha256": "4f9c8c602f5cadd33e04471953494daa043d7962936133a8c6e09dfa27c79b23",
+      "size": 1326629,
+      "migrated_sha256": "4f9c8c602f5cadd33e04471953494daa043d7962936133a8c6e09dfa27c79b23"
+    },
+    {
+      "old": "assets/zbh-publications/GFIE.png",
+      "new": "_common/assets/zbh-publications/GFIE.png",
+      "shared": true,
+      "sha256": "5d8d3968203ec43424fb641efff5c1f50592a1d665fee94265ee2223ee16e995",
+      "size": 453956,
+      "migrated_sha256": "5d8d3968203ec43424fb641efff5c1f50592a1d665fee94265ee2223ee16e995"
+    },
+    {
+      "old": "assets/zbh-publications/GroundingPI.png",
+      "new": "_common/assets/zbh-publications/GroundingPI.png",
+      "shared": true,
+      "sha256": "b7f972087b9895bd0f166cdddcda7c5fdf6e35a1e8be339d2b94c08edefc80fe",
+      "size": 573717,
+      "migrated_sha256": "b7f972087b9895bd0f166cdddcda7c5fdf6e35a1e8be339d2b94c08edefc80fe"
+    },
+    {
+      "old": "assets/zbh-publications/I2A.png",
+      "new": "_common/assets/zbh-publications/I2A.png",
+      "shared": true,
+      "sha256": "81f519818ab0f4ad51d15e0b24c1351d4076c6fd8cab03a0994de4cddd1fead2",
+      "size": 276797,
+      "migrated_sha256": "81f519818ab0f4ad51d15e0b24c1351d4076c6fd8cab03a0994de4cddd1fead2"
+    },
+    {
+      "old": "assets/zbh-publications/MEgoHand.png",
+      "new": "_common/assets/zbh-publications/MEgoHand.png",
+      "shared": true,
+      "sha256": "089d3163a32417a74e55a153626d2ba74b191ed050100b0994a5566b581a18b4",
+      "size": 1908710,
+      "migrated_sha256": "089d3163a32417a74e55a153626d2ba74b191ed050100b0994a5566b581a18b4"
+    },
+    {
+      "old": "assets/zbh-publications/NOLO.png",
+      "new": "_common/assets/zbh-publications/NOLO.png",
+      "shared": true,
+      "sha256": "d0ca0dde2d16810bcace4f14f5c86c67748c58973498549c8854c317a7636aea",
+      "size": 3469782,
+      "migrated_sha256": "d0ca0dde2d16810bcace4f14f5c86c67748c58973498549c8854c317a7636aea"
+    },
+    {
+      "old": "assets/zbh-publications/RoboAware.png",
+      "new": "_common/assets/zbh-publications/RoboAware.png",
+      "shared": true,
+      "sha256": "4d5ee59721537c534b499d44ee389461ccf42c0b7c45952f370f38e1bd6e79c2",
+      "size": 693497,
+      "migrated_sha256": "4d5ee59721537c534b499d44ee389461ccf42c0b7c45952f370f38e1bd6e79c2"
+    },
+    {
+      "old": "assets/zbh-publications/RoboAware.svg",
+      "new": "_common/assets/zbh-publications/RoboAware.svg",
+      "shared": true,
+      "sha256": "817d029e67938d9f06f2be58500d53e8efefe0c881b97e9b5ea040f79e92a55b",
+      "size": 42406,
+      "migrated_sha256": "817d029e67938d9f06f2be58500d53e8efefe0c881b97e9b5ea040f79e92a55b"
+    },
+    {
+      "old": "assets/zbh-publications/STG.jpg",
+      "new": "_common/assets/zbh-publications/STG.jpg",
+      "shared": true,
+      "sha256": "c9fa2771590512084f287ff56d7ddcaf202df1e2a2f9b0fb5ade7a2c010ea123",
+      "size": 156288,
+      "migrated_sha256": "c9fa2771590512084f287ff56d7ddcaf202df1e2a2f9b0fb5ade7a2c010ea123"
+    },
+    {
+      "old": "assets/zbh-publications/Unicode.png",
+      "new": "_common/assets/zbh-publications/Unicode.png",
+      "shared": true,
+      "sha256": "aff08860fd93a3e29dc002d00e34799077c89f2b60334b809ff1d0334f135671",
+      "size": 211606,
+      "migrated_sha256": "aff08860fd93a3e29dc002d00e34799077c89f2b60334b809ff1d0334f135671"
+    },
+    {
+      "old": "assets/zbh-publications/VSG-IA.png",
+      "new": "_common/assets/zbh-publications/VSG-IA.png",
+      "shared": true,
+      "sha256": "d14077de66fdcc590cb4fb3413a00af63c616f7c3b3b127f43518407d9ceea28",
+      "size": 616617,
+      "migrated_sha256": "d14077de66fdcc590cb4fb3413a00af63c616f7c3b3b127f43518407d9ceea28"
+    },
+    {
+      "old": "assets/zydh/卢宗青_智源大会2023_STG.mp4",
+      "new": "_common/assets/zydh/卢宗青_智源大会2023_STG.mp4",
+      "shared": true,
+      "sha256": "2dc22f41fc7ac7479d69dc269f381261a099b39dfed7c2a8af5ac988002a3e00",
+      "size": 32634017,
+      "migrated_sha256": "2dc22f41fc7ac7479d69dc269f381261a099b39dfed7c2a8af5ac988002a3e00"
+    },
+    {
+      "old": "assets/zydh/卢宗青_智源大会2024_NOLO.mp4",
+      "new": "_common/assets/zydh/卢宗青_智源大会2024_NOLO.mp4",
+      "shared": true,
+      "sha256": "b9ffab128665f819f8adc8068c848dd6626eb21689cb47c46a29928694c04cce",
+      "size": 53667221,
+      "migrated_sha256": "b9ffab128665f819f8adc8068c848dd6626eb21689cb47c46a29928694c04cce"
+    },
+    {
+      "old": "assets/zydh/卢宗青_智源大会2025_MEgoHand.mp4",
+      "new": "_common/assets/zydh/卢宗青_智源大会2025_MEgoHand.mp4",
+      "shared": true,
+      "sha256": "757d6488f9377ed4df8053c0e78b66cc829675757b7d0a73a09eee1eaf3c4983",
+      "size": 28362831,
+      "migrated_sha256": "757d6488f9377ed4df8053c0e78b66cc829675757b7d0a73a09eee1eaf3c4983"
+    },
+    {
+      "old": "assets/zydh/智源大会2023-2025_卢宗青老师讲述周伯涵工作.mp4",
+      "new": "_common/assets/zydh/智源大会2023-2025_卢宗青老师讲述周伯涵工作.mp4",
+      "shared": true,
+      "sha256": "a091ce45e31b447cfcff56c9446772e9520582094f591d3e83de80143dea11da",
+      "size": 104135522,
+      "migrated_sha256": "a091ce45e31b447cfcff56c9446772e9520582094f591d3e83de80143dea11da"
+    },
+    {
+      "old": "assets/zydh/智源大会2023-2025_简介与章节.md",
+      "new": "_common/assets/zydh/智源大会2023-2025_简介与章节.md",
+      "shared": true,
+      "sha256": "a16fbc67a60b46b36332c16803fbd01fcce164e622fe0c29facac29d828181b0",
+      "size": 4580,
+      "migrated_sha256": "a16fbc67a60b46b36332c16803fbd01fcce164e622fe0c29facac29d828181b0"
+    },
+    {
+      "old": "blog/index.html",
+      "new": "v1/blog/index.html",
+      "shared": false,
+      "sha256": "572066a4a314173e7332a6bcc120c02ef1a6faddbb924805965bcc687936e357",
+      "size": 6159,
+      "migrated_sha256": "df3617c6ab6b866fb21b398e5eb4f56792923b6d1839e9eb867165ba2f0a9157"
+    },
+    {
+      "old": "css/bulma-carousel.min.css",
+      "new": "v1/css/bulma-carousel.min.css",
+      "shared": false,
+      "sha256": "9d586b0d953f9dedc8ff3e8b5d611bc943849afefdb0f18a11bb0fed258b9072",
+      "size": 3645,
+      "migrated_sha256": "9d586b0d953f9dedc8ff3e8b5d611bc943849afefdb0f18a11bb0fed258b9072"
+    },
+    {
+      "old": "css/bulma-slider.min.css",
+      "new": "v1/css/bulma-slider.min.css",
+      "shared": false,
+      "sha256": "9bd5f05ad71360d0e87f21dd3d07d94c080486342f335ff041f5394c6aa6dac9",
+      "size": 13782,
+      "migrated_sha256": "9bd5f05ad71360d0e87f21dd3d07d94c080486342f335ff041f5394c6aa6dac9"
+    },
+    {
+      "old": "css/bulma.css.map.txt",
+      "new": "v1/css/bulma.css.map.txt",
+      "shared": false,
+      "sha256": "2dd7317e7daa3390397b28665ad4398be313b93114747cb9e0052030b771143f",
+      "size": 96528,
+      "migrated_sha256": "2dd7317e7daa3390397b28665ad4398be313b93114747cb9e0052030b771143f"
+    },
+    {
+      "old": "css/bulma.min.css",
+      "new": "v1/css/bulma.min.css",
+      "shared": false,
+      "sha256": "58b28659220961ead137cb5b346b5759562750ce703094d70fc786e0db467033",
+      "size": 204030,
+      "migrated_sha256": "58b28659220961ead137cb5b346b5759562750ce703094d70fc786e0db467033"
+    },
+    {
+      "old": "css/fontawesome.all.min.css",
+      "new": "v1/css/fontawesome.all.min.css",
+      "shared": false,
+      "sha256": "af1e6edc875a382b338bb25bd7c5c3f474a7f1b36212002a5896dd06f2186325",
+      "size": 59344,
+      "migrated_sha256": "af1e6edc875a382b338bb25bd7c5c3f474a7f1b36212002a5896dd06f2186325"
+    },
+    {
+      "old": "css/index.css",
+      "new": "v1/css/index.css",
+      "shared": false,
+      "sha256": "747bae5899d9a93f21caa423e264b2b7ed7ec2b12e1f57be1a715f8103c5c744",
+      "size": 2118,
+      "migrated_sha256": "747bae5899d9a93f21caa423e264b2b7ed7ec2b12e1f57be1a715f8103c5c744"
+    },
+    {
+      "old": "feed.xml",
+      "new": "v1/feed.xml",
+      "shared": false,
+      "sha256": "35fbe735d91272fddf9a03d503c00acae86be69dab651be6f5fc274194fa7206",
+      "size": 615,
+      "migrated_sha256": "35fbe735d91272fddf9a03d503c00acae86be69dab651be6f5fc274194fa7206"
+    },
+    {
+      "old": "index.html",
+      "new": "v1/index.html",
+      "shared": false,
+      "sha256": "656a053cf69cf0bd6be69cddba9cbbad40695bc1bafc6eb2007180201a397b03",
+      "size": 76308,
+      "migrated_sha256": "edfacc101be84668a473800c5fd82c6fb1b4e1299f0d671374a56a9b44d06d4d"
+    },
+    {
+      "old": "js/bulma-carousel.js",
+      "new": "v1/js/bulma-carousel.js",
+      "shared": false,
+      "sha256": "ee6667c8ae6dabe1bb14d8792b32687fb9d130c31f3dcf582b03c611c2f0edf1",
+      "size": 82823,
+      "migrated_sha256": "ee6667c8ae6dabe1bb14d8792b32687fb9d130c31f3dcf582b03c611c2f0edf1"
+    },
+    {
+      "old": "js/bulma-carousel.min.js",
+      "new": "v1/js/bulma-carousel.min.js",
+      "shared": false,
+      "sha256": "a8a47bef2cd50640d82aea128360690086ccb6617c6858ee4c71559c88e4a732",
+      "size": 40723,
+      "migrated_sha256": "a8a47bef2cd50640d82aea128360690086ccb6617c6858ee4c71559c88e4a732"
+    },
+    {
+      "old": "js/bulma-slider.js",
+      "new": "v1/js/bulma-slider.js",
+      "shared": false,
+      "sha256": "a77efa04a36ff2815e057a0bf0ee911216f3c03904b94726018d636057f1e723",
+      "size": 16404,
+      "migrated_sha256": "a77efa04a36ff2815e057a0bf0ee911216f3c03904b94726018d636057f1e723"
+    },
+    {
+      "old": "js/bulma-slider.min.js",
+      "new": "v1/js/bulma-slider.min.js",
+      "shared": false,
+      "sha256": "e520e9ef6e3223ecfbb50b4649d238af5a85af9161800ad1d003dac80d748f24",
+      "size": 6926,
+      "migrated_sha256": "e520e9ef6e3223ecfbb50b4649d238af5a85af9161800ad1d003dac80d748f24"
+    },
+    {
+      "old": "js/fontawesome.all.min.js",
+      "new": "v1/js/fontawesome.all.min.js",
+      "shared": false,
+      "sha256": "20a3ef6979bbe5e4de1afaecc703e1d34cbc5e3ceab36d378539506327692d72",
+      "size": 1194960,
+      "migrated_sha256": "20a3ef6979bbe5e4de1afaecc703e1d34cbc5e3ceab36d378539506327692d72"
+    },
+    {
+      "old": "js/index.js",
+      "new": "v1/js/index.js",
+      "shared": false,
+      "sha256": "e3bfc9cf8875689f97ef1a79cafd61f00c0bb25e4a89ba151113b4e990db3f5a",
+      "size": 2344,
+      "migrated_sha256": "e3bfc9cf8875689f97ef1a79cafd61f00c0bb25e4a89ba151113b4e990db3f5a"
+    },
+    {
+      "old": "projects/index.html",
+      "new": "v1/projects/index.html",
+      "shared": false,
+      "sha256": "040cdd0f10990097cb8d9a152a4d288697d63d4de316653aebaaca29618499f2",
+      "size": 10303,
+      "migrated_sha256": "0ce672792cffbeeab316fc1ca583488cf52864ad894ede38377dfe80b826b8a0"
+    },
+    {
+      "old": "projects/zolly/index.html",
+      "new": "v1/projects/zolly/index.html",
+      "shared": false,
+      "sha256": "add859866d05e3be294df2fb0ee425470c0209d0582f177f0f16037b81fdf0be",
+      "size": 13264,
+      "migrated_sha256": "00ee4269b82be407cdbff89376c149436110a597fd57a4b2b2fd371d65bc6213"
+    },
+    {
+      "old": "projects/zolly/zolly_poster_compressed.pdf",
+      "new": "_common/projects/zolly/zolly_poster_compressed.pdf",
+      "shared": true,
+      "sha256": "8265492e6ac42d982bb437fc63b97a47d718340b0149129ad08a4c9f67ff9505",
+      "size": 1061192,
+      "migrated_sha256": "8265492e6ac42d982bb437fc63b97a47d718340b0149129ad08a4c9f67ff9505"
+    },
+    {
+      "old": "projects/zolly/zolly_teaser.png",
+      "new": "_common/projects/zolly/zolly_teaser.png",
+      "shared": true,
+      "sha256": "4b7a2c3eb868feefcee0ed3e240bfc14cda89880385b7c7efba962a6637e9c93",
+      "size": 720107,
+      "migrated_sha256": "4b7a2c3eb868feefcee0ed3e240bfc14cda89880385b7c7efba962a6637e9c93"
+    },
+    {
+      "old": "publications/index.html",
+      "new": "v1/publications/index.html",
+      "shared": false,
+      "sha256": "11b6b4cbeb03aed8b09c371b08d7ef9fb56a57b01bbcd07031407d266eb15bd8",
+      "size": 55501,
+      "migrated_sha256": "445af11f0b54517c0f0f7881a964580d134439475a9cce03a5e1b0387153249d"
+    },
+    {
+      "old": "services/index.html",
+      "new": "v1/services/index.html",
+      "shared": false,
+      "sha256": "129947b30233b38924e56a385aada8a4948e2c397bae476920810f49a0f5bb55",
+      "size": 7358,
+      "migrated_sha256": "5ba770bcb2e8b66b041f15f3998b6741c0b4da613f3cd8d7b97835f76129be57"
+    },
+    {
+      "old": "sitemap.xml",
+      "new": "v1/sitemap.xml",
+      "shared": false,
+      "sha256": "ab8c5a423048d3f58e14df95bc42f5421dbfeefce108ad9fed82bf42dfe63e5e",
+      "size": 289,
+      "migrated_sha256": "ab8c5a423048d3f58e14df95bc42f5421dbfeefce108ad9fed82bf42dfe63e5e"
+    },
+    {
+      "old": "teaching/index.html",
+      "new": "v1/teaching/index.html",
+      "shared": false,
+      "sha256": "5d46d855dc69680a99349bb2cf33b748e149bb041fac885fab182ef74e412878",
+      "size": 6497,
+      "migrated_sha256": "be6e31f061a59c20f0ab4c9a4c3cc98f5f2648f77573adc00c28840f24fcb989"
+    },
+    {
+      "old": "website-QRcode/doggy.png",
+      "new": "_common/website-QRcode/doggy.png",
+      "shared": true,
+      "sha256": "80a053ac5955748d2f3d53c7b6cfaee0758afb09110b14fc233f59fb6b96c907",
+      "size": 241039,
+      "migrated_sha256": "80a053ac5955748d2f3d53c7b6cfaee0758afb09110b14fc233f59fb6b96c907"
+    },
+    {
+      "old": "website-QRcode/personal_website_01.png",
+      "new": "_common/website-QRcode/personal_website_01.png",
+      "shared": true,
+      "sha256": "aa31c38ca9581f14e37f291e134edc34b1a7f0218fe20c99bc5650f24b5492ab",
+      "size": 92903,
+      "migrated_sha256": "aa31c38ca9581f14e37f291e134edc34b1a7f0218fe20c99bc5650f24b5492ab"
+    },
+    {
+      "old": "website-QRcode/personal_website_02.png",
+      "new": "_common/website-QRcode/personal_website_02.png",
+      "shared": true,
+      "sha256": "aa63bfb72f038dbaafdf6b133de4a2f9987880fc3ed1b69ac9f18160a0cff6f8",
+      "size": 18684,
+      "migrated_sha256": "aa63bfb72f038dbaafdf6b133de4a2f9987880fc3ed1b69ac9f18160a0cff6f8"
+    },
+    {
+      "old": "website-QRcode/personal_website_03.png",
+      "new": "_common/website-QRcode/personal_website_03.png",
+      "shared": true,
+      "sha256": "e9599d5e943aef1d6abe013b0c7335c207c54da01180ecc987a1cda6f70f051c",
+      "size": 107910,
+      "migrated_sha256": "e9599d5e943aef1d6abe013b0c7335c207c54da01180ecc987a1cda6f70f051c"
+    }
+  ]
+}

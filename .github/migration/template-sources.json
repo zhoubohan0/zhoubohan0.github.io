@@ -1,0 +1,87 @@
+[
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/site.bundle.css?v=18e5d9ccd664",
+    "file": "site.bundle.css",
+    "sha256": "18e5d9ccd66414c860a79a950bc09a0622f70278b3dfe07e57f684e22f9af111"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/gallery.bundle.js?v=313828fe02c9",
+    "file": "gallery.bundle.js",
+    "sha256": "313828fe02c96371bea8a17c6b6e9e94a6a55461d6205fef84bf8685c2e049a9"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/app.bundle.js?v=cbf262cd02ad",
+    "file": "app.bundle.js",
+    "sha256": "cbf262cd02ad85f6487d1027c907960639b40883e7dcb3b69f10fbc3e22b0d2a"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/date-editor.js?v=20261016-r1",
+    "file": "date-editor.js",
+    "sha256": "85307a117923d911ed46134360d20eb7179238e3582a304da2543d2382df4ca0"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/fonts/Lato-latin-300.woff2",
+    "file": "_common/fonts/Lato-latin-300.woff2",
+    "sha256": "115f6a626ca115d4ad5581b59275327e0e860b30330a52b0f785561332dd2429"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/fonts/Lato-latin-400.woff2",
+    "file": "_common/fonts/Lato-latin-400.woff2",
+    "sha256": "918b7dc3e2e2d015c16ce08b57bcb64d2253bafc1707658f361e72865498e537"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/fonts/Lato-latin-700.woff2",
+    "file": "_common/fonts/Lato-latin-700.woff2",
+    "sha256": "c447dd7677b419db7b21dbdfc6277c7816a913ffda76fd2e52702df538de0e49"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/fonts/PlayfairDisplay-latin-700.woff2",
+    "file": "_common/fonts/PlayfairDisplay-latin-700.woff2",
+    "sha256": "28453852ea165c47b5a941be00e418402e1407002ed87507f062a1e316328fe6"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/vendor/brands/douyin.svg",
+    "file": "_common/icons/douyin.svg",
+    "sha256": "338c740fd3a36a7dd32e2c98f30246d8510fbe0dd6a28602418c072751df155f"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/vendor/brands/huggingface.svg",
+    "file": "_common/icons/huggingface.svg",
+    "sha256": "87ac947dc4f0a9146fcd42aad52b657909bef9860eb284c651a6690e935e0595"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/vendor/brands/modelscope.svg",
+    "file": "_common/icons/modelscope.svg",
+    "sha256": "f1d7da398dca7d016dd77908b7b8b4e597b14c2f2297701c2a8af46cdc9164d9"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/vendor/brands/openreview-monochrome.svg",
+    "file": "_common/icons/openreview-monochrome.svg",
+    "sha256": "8329e453422a7296f8938eb9a1c147222d9f1d1fbe264ead7cbf3d053215ebb3"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/vendor/brands/x-twitter.svg",
+    "file": "_common/icons/x-twitter.svg",
+    "sha256": "d8cc9e7c9a70573422297556bd03c6d7e349cb84696fc50b042d0c2c342f52c4"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/vendor/brands/xiaohongshu.svg",
+    "file": "_common/icons/xiaohongshu.svg",
+    "sha256": "847cacc807f5c236031a7477381daa67fd829d89f3f80c16a547ff2efe050794"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/vendor/fontawesome/fa-brands-400.woff2",
+    "file": "_common/fonts/fa-brands-400.woff2",
+    "sha256": "33a252d6393cbd6debe0ac517229c7aa258a0ee68fc0253f8be6a7cee8b65ee9"
+  },
+  {
+    "url": "https://skywalker-yqz.github.io/assets/personal/vendor/fontawesome/fa-solid-900.woff2",
+    "file": "_common/fonts/fa-solid-900.woff2",
+    "sha256": "94e1bbc1c2a41ebc73fa5253fd563256c0035b4d69181e48f9aef9e474a11251"
+  },
+  {
+    "url": "https://fonts.gstatic.com/l/font?kit=NaPecZTRCLxvwo41b4gvzkXaRMT0AWjvyVkIGYSIcA&skey=13c999d73b164fc8&v=v18",
+    "file": "_common/fonts/MaShanZheng-bohan-400.woff2",
+    "sha256": "5390bc01fd16a6f3e5e2daab181e0b51f52f2c44f6201086692f464beebd5a8a"
+  }
+]

@@ -32,10 +32,11 @@ jobs:
         run: |
           set -euo pipefail
           test "$(git config -f .gitmodules --get submodule.cv.url)" = 'git@github.com:zhoubohan0/CV-ZBH.git'
-          read -r mode type sha path < <(git ls-tree HEAD -- cv)
+          test "$(git config -f .gitmodules --get submodule.cv.path)" = '_common/cv'
+          read -r mode type sha path < <(git ls-tree -r HEAD -- _common/cv)
           test "$mode" = 160000
           test "$type" = commit
-          test "$path" = cv
+          test "$path" = _common/cv
           printf 'sha=%s\n' "$sha" >> "$GITHUB_OUTPUT"
 
       - name: Check out private CV at pinned commit
@@ -43,12 +44,15 @@ jobs:
         with:
           repository: zhoubohan0/CV-ZBH
           ref: ${{ steps.cv.outputs.sha }}
-          path: cv
+          path: _common/cv
           ssh-key: ${{ secrets.CV_SUBMODULE_DEPLOY_KEY }}
           persist-credentials: false
 
       - name: Prepare public files only
-        run: python3 .github/scripts/build_site.py "$RUNNER_TEMP/public-site"
+        run: |
+          python3 -m unittest discover -s .github/tests -v
+          python3 .github/scripts/build_site.py "$RUNNER_TEMP/public-site" --source head --default-version v2
+          python3 .github/scripts/validate_site.py "$RUNNER_TEMP/public-site"
 
       - name: Configure Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5

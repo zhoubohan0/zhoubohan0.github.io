@@ -6,3 +6,5 @@ LICENSE
 .idea
 website-template.txt
 .specstory/
+__pycache__/
+*.pyc
