@@ -775,16 +775,16 @@
       "new": "_common/assets/profile.jpg",
       "shared": true,
       "sha256": "5f2a5dccda2f588e5f6d5c266bcbdc4a398fa0b33d9cea6f388904c7538e0615",
-      "size": 51189,
-      "migrated_sha256": "5f2a5dccda2f588e5f6d5c266bcbdc4a398fa0b33d9cea6f388904c7538e0615"
+      "size": 84865,
+      "migrated_sha256": "ef545013f8d9bb4117b9d6deac1e5f78e585c4966d3e76b5261659d48136bfcb"
     },
     {
       "old": "assets/profile.png",
       "new": "_common/assets/profile.png",
       "shared": true,
       "sha256": "53a07a9e52b6d047c4e1e7e589540c55c5f6324268d483dccb351e31a0eda51d",
-      "size": 201842,
-      "migrated_sha256": "53a07a9e52b6d047c4e1e7e589540c55c5f6324268d483dccb351e31a0eda51d"
+      "size": 688820,
+      "migrated_sha256": "f49840acb75e78f04d7d67443a755ac821d7324f51416f9fe6862f09417203e6"
     },
     {
       "old": "assets/wechat.png",

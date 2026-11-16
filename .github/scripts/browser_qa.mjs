@@ -78,14 +78,12 @@ try {
     await call('Emulation.setTouchEmulationEnabled', { enabled: width === 390 }, page);
     await navigate(page);
     await waitFor(page, 'document.querySelectorAll(".publication-card:not([hidden])").length === 8');
-    for (const theme of ['light', 'dark']) {
-      if (await evaluate(page, 'document.documentElement.dataset.theme') !== theme) await evaluate(page, 'document.querySelector(".theme-toggle").click()');
-      assert(await evaluate(page, `document.documentElement.dataset.theme === '${theme}'`), `${width}: ${theme} theme toggle`);
-      await pause(280);
-      const layout = await evaluate(page, `({viewport:innerWidth,width:document.documentElement.scrollWidth,nav:document.querySelector('.profile-nav').getBoundingClientRect().right})`);
-      assert(layout.width <= layout.viewport + 1 && layout.nav <= layout.viewport + 1, `${width}/${theme}: no horizontal overflow`);
-      await screenshot(page, `home-${width}-${theme}`);
-    }
+    assert(await evaluate(page, 'document.documentElement.dataset.theme === "light"'), `${width}: default light theme`);
+    assert(await evaluate(page, '!document.querySelector(".theme-toggle")'), `${width}: theme toggle stays commented out`);
+    await pause(280);
+    const layout = await evaluate(page, `({viewport:innerWidth,width:document.documentElement.scrollWidth,nav:document.querySelector('.profile-nav').getBoundingClientRect().right})`);
+    assert(layout.width <= layout.viewport + 1 && layout.nav <= layout.viewport + 1, `${width}/light: no horizontal overflow`);
+    await screenshot(page, `home-${width}-light`);
     if (width <= 1024) {
       await evaluate(page, 'document.querySelector("#nav-toggle").click()');
       assert(await evaluate(page, 'document.querySelector("#nav-toggle").getAttribute("aria-expanded") === "true"'), `${width}: mobile menu opens`);
@@ -121,12 +119,10 @@ try {
   await navigate(page, '/publications/');
   await waitFor(page, 'document.querySelectorAll(".publication-card:not([hidden])").length === 19');
   assert(await evaluate(page, 'document.querySelectorAll(".publication-description").length === 19'), 'Full publication page retains 19 descriptions');
-  await evaluate(page, 'document.documentElement.dataset.theme==="dark" && document.querySelector(".theme-toggle").click()');
   const images = await evaluate(page, `Promise.all([...document.images].map(img=>{img.loading='eager';return img.decode().then(()=>({src:img.getAttribute('src'),ok:true})).catch(()=>({src:img.getAttribute('src'),ok:false}));}))`);
   assert(images.every(image => image.ok), 'All publication images decode');
   await screenshot(page, 'publications-1440');
   await navigate(page, '/');
-  await evaluate(page, 'document.documentElement.dataset.theme==="dark" && document.querySelector(".theme-toggle").click()');
   await evaluate(page, 'document.getElementById("experience").scrollIntoView({behavior:"instant"})');
   await pause(180);
   assert(await evaluate(page, '[...document.querySelectorAll(".institution-logo img")].every(img=>getComputedStyle(img).objectFit==="contain")'), 'Organization logos preserve complete aspect ratio');
@@ -134,16 +130,18 @@ try {
   assert(await evaluate(page, '[...document.querySelectorAll(".education-row .institution-logo")].every(e=>Math.abs(e.getBoundingClientRect().height-79.2)<1)'), 'Education logos have three text lines of height');
   assert(await evaluate(page, '[...document.querySelectorAll(".experience-entry .institution-logo")].every(e=>Math.abs(e.getBoundingClientRect().height-61.2)<1)'), 'Experience logos have heading-plus-role height');
   assert(await evaluate(page, '(()=>{const p=document.querySelector(".reviewer-copy"),a=p.querySelector("strong").getBoundingClientRect(),b=p.querySelector(".reviewer-venues").getBoundingClientRect();return b.top>a.top&&b.top>=a.bottom})()'), 'Reviewer title and venues are on separate lines');
-  assert(await evaluate(page, 'document.querySelectorAll("#services .service-row .service-copy").length===2 && !document.querySelector("#skills") && !document.querySelector("#location")'), 'Services cards and requested section removal');
+  assert(await evaluate(page, 'document.querySelectorAll("#services .service-row .service-copy").length===3 && !document.querySelector("#skills") && !document.querySelector("#location")'), 'Services cards and requested section removal');
   assert(await evaluate(page, 'document.querySelectorAll(".teaching-list li").length===2&&document.querySelector(".teaching-list").textContent.includes("Fundamental Computing with C++")&&document.querySelector(".teaching-list").textContent.includes("2026 Fall")&&document.querySelector(".teaching-list").textContent.includes("Senior Lecturer")'), 'Teaching lists two courses with term, instructor and background');
   assert(await evaluate(page, '(()=>{const t=document.querySelectorAll(".service-copy")[1].textContent;return !t.includes("Conference:")&&["ICLR 2025","ICML 2025","NeurIPS 2025","AAAI 2026","AAAI 2027","ICLR 2027"].every(v=>t.includes(v))})()'), 'Reviewer venues reflect the supplied update');
+  assert(await evaluate(page, '(()=>{const icons=[...document.querySelectorAll("#services .service-row .honor-icon svg")].map(s=>s.innerHTML);return icons.length===3&&new Set(icons).size===3})()'), 'Services cards use distinct icons');
+  assert(await evaluate(page, '(()=>{const a=[...document.querySelectorAll(".service-copy")[2].querySelectorAll("a")];return a.map(n=>n.textContent).join("|")==="NOLO|MEgoHand|BAAI Conference 2023–2025"&&a.map(n=>n.href).join("|")==="https://www.bilibili.com/video/BV14yCcBsErM?t=6.5|https://www.bilibili.com/video/BV1uaCkBCEBZ?t=4.0|https://www.bilibili.com/video/BV1YmsW6REQm/"})()'), 'Invited Talks links match the CV entries');
   assert(await evaluate(page, 'document.querySelector(".friend-link .friend-name").textContent==="Qize Yu"'), 'Qize Yu is the first coauthor link');
   const logoAlpha=await evaluate(page, `Promise.all([...document.querySelectorAll('.institution-logo img')].map(async img=>{img.loading='eager';await img.decode();const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);const d=ctx.getImageData(0,0,c.width,c.height).data;let clear=0,ink=0;for(let i=3;i<d.length;i+=4){if(d[i]===0)clear++;if(d[i]>200)ink++;}return {src:img.getAttribute('src'),clear,ink,total:c.width*c.height}}))`);
   assert(logoAlpha.every(logo=>logo.clear>0&&logo.ink>0), 'Every organization logo has genuine transparency and visible artwork');
-  await evaluate(page, 'document.querySelector(".theme-toggle").click()');
+  await evaluate(page, 'document.documentElement.dataset.theme="dark"');
   assert(await evaluate(page, '["knowinai","beingbeyond"].every(id=>getComputedStyle(document.querySelector("#"+id+" .institution-logo img")).filter.includes("invert"))'), 'Monochrome cutout logos stay visible in the dark theme');
   await screenshot(page, 'experience-dark-1440');
-  await evaluate(page, 'document.querySelector(".theme-toggle").click()');
+  await evaluate(page, 'document.documentElement.dataset.theme="light"');
   assert(await evaluate(page, '(()=>{const h=document.querySelector("#pku-education-description").innerHTML;return /Research:[^<]*<span class="education-gpa">GPA:/.test(h)})()'), 'PKU GPA follows Research without a hard line break');
   assert(await evaluate(page, 'document.querySelectorAll("#friends .friend-link[href] .friend-arrow").length===3'), 'All coauthor links have distinct cards and external-link icons');
   assert(await evaluate(page, '!document.querySelector(".design-credit")'), 'Visible footer credit removed');

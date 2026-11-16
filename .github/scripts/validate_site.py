@@ -127,7 +127,7 @@ def validate(directory, repo=ROOT, default_version='v2'):
     check(home.by_id('skills') is None and home.by_id('location') is None, 'Removed sections returned')
     check(home.by_id('visitors') is not None and home.by_id('visitor-globe') is not None, 'Visitor map missing')
     check(home.by_id('news-toggle') is None, 'News must use scrolling, not an expand button')
-    check(len(home.by_class('service-row')) == 2, 'Expected two reference-style service cards')
+    check(len(home.by_class('service-row')) == 3, 'Expected three reference-style service cards')
     cv = home.by_class('cv-links')
     about_copy = home.by_class('about-copy')[0]
     check(len(cv) == 1 and cv[0] in list(about_copy.walk()), 'CV links must be below the left biography')
@@ -141,6 +141,15 @@ def validate(directory, repo=ROOT, default_version='v2'):
     expected_teaching=[f"{t['course']}, {t['term']}, {t['instructor']}, {t['background']}." for t in updates['teaching']]
     check(teaching is not None and [re.sub(r'\s+,', ',', n.text()) for n in teaching.children if isinstance(n,Node) and n.tag=='li']==expected_teaching, 'Teaching entries differ from approved course/term/instructor/background format')
     check(service_rows[1].text()=='Reviewer: '+', '.join(updates['reviewer']), 'Reviewer list differs from user update')
+    invited=service_rows[2]
+    invited_links=[n for n in invited.walk() if n.tag=='a']
+    check(invited.text().startswith('Invited Talks:'), 'Invited Talks card missing')
+    check([n.text() for n in invited_links]==['NOLO','MEgoHand','BAAI Conference 2023–2025'], 'Invited Talks labels differ from CV links')
+    check([n.attrs['href'] for n in invited_links]==[
+        'https://www.bilibili.com/video/BV14yCcBsErM?t=6.5',
+        'https://www.bilibili.com/video/BV1uaCkBCEBZ?t=4.0',
+        'https://www.bilibili.com/video/BV1YmsW6REQm/',
+    ], 'Invited Talks destinations differ from CV links')
     original_friends=Document(content['extras']['Friends'])
     expected_friends=[(n.text(),n.attrs['href']) for n in original_friends.root.walk() if n.tag=='a']
     expected_friends.sort(key=lambda item:updates['friend_order'].index(item[0]))
