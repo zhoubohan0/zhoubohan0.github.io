@@ -177,13 +177,15 @@ def validate(directory, repo=ROOT, default_version='v2'):
         year=group.find(lambda n:n.has_class('publication-group-title')).text()
         check([n.attrs['id'] for n in group.walk() if n.has_class('publication-card')]==[p['id'] for p in content['papers'] if p['year']==year], 'Publication year grouping changed')
     active=[n.attrs['data-social'] for n in home.root.walk() if 'data-social' in n.attrs]
-    check(active==['email','wechat','scholar','github','xiaohongshu','zhihu','openreview','linkedin','bilibili','douyin','huggingface'], 'Social links/order differ from user request')
+    check(active==['email','wechat','scholar','github','xiaohongshu','zhihu','openreview','linkedin','bilibili','douyin'], 'Social links/order differ from user request')
     config=json.loads((out/'v2/data/site.json').read_text())
     for item in config['social']:
         link=home.root.find(lambda n:n.attrs.get('data-social')==item['id'])
-        if item['url']:
+        if item['url'] and item['id'] != 'huggingface':
             check(link is not None and link.attrs.get('href')==item['url'], 'Static/config social link mismatch: '+item['id'])
-    for id in ('x','instagram','modelscope'):
+    check(any('data-social="huggingface"' in c and 'https://huggingface.co/ZBH0' in c for c in home.comments), 'Hugging Face URL must remain in commented HTML')
+    check(home.by_class('reviewer-copy')[0].find(lambda n:n.tag=='br') is not None, 'Reviewer title and venues must use two lines')
+    for id in ('x','instagram','modelscope','huggingface'):
         check(any('data-social="'+id+'"' in c for c in home.comments),'Missing commented social entry: '+id)
     for name in ['v2/index.html','v2/publications/index.html','v2/404.html','v1/index.html','v1/publications/index.html']:
         doc=Document((out/name).read_text())
@@ -221,7 +223,7 @@ def validate(directory, repo=ROOT, default_version='v2'):
     check('workers.dev' not in visitor_config, 'Source-owner analytics endpoint copied')
     if errors:
         raise AssertionError('\n'.join(errors))
-    print('PASS: frozen v1/assets; 13 news; 19 papers/descriptions; 8 selected / 6 first-author; 11 active / 3 commented social links; Services, globe, CV and legacy URLs.')
+    print('PASS: frozen v1/assets; 13 news; 19 papers/descriptions; 8 selected / 6 first-author; 10 active / 4 commented social links; Services, globe, CV and legacy URLs.')
 
 
 if __name__=='__main__':

@@ -93,10 +93,10 @@ try {
     }
   }
   assert(await evaluate(page, 'document.fonts.check(\'28px "Ma Shan Zheng"\', "周伯涵")'), 'Chinese-name font loaded');
-  assert(await evaluate(page, 'document.querySelectorAll(".contact-links [data-social]").length === 11'), 'Eleven active social links');
+  assert(await evaluate(page, 'document.querySelectorAll(".contact-links [data-social]").length === 10'), 'Ten active social links');
   assert(await evaluate(page, 'document.querySelector(\'[data-social="openreview"]\').href === "https://openreview.net/profile?id=%7EBohan_Zhou1"'), 'OpenReview URL correct');
-  assert(await evaluate(page, 'document.querySelectorAll(\'[data-social="x"],[data-social="instagram"],[data-social="modelscope"]\').length === 0'), 'Three optional social entries are comments, not elements');
-  assert(await evaluate(page, 'JSON.stringify([...document.querySelectorAll(".contact-links [data-social]")].slice(-4).map(e=>e.dataset.social))===JSON.stringify(["linkedin","bilibili","douyin","huggingface"])'), 'New social links follow the supplied order');
+  assert(await evaluate(page, 'document.querySelectorAll(\'[data-social="x"],[data-social="instagram"],[data-social="modelscope"],[data-social="huggingface"]\').length === 0'), 'Four optional social entries are comments, not elements');
+  assert(await evaluate(page, 'JSON.stringify([...document.querySelectorAll(".contact-links [data-social]")].slice(-3).map(e=>e.dataset.social))===JSON.stringify(["linkedin","bilibili","douyin"])'), 'New social links follow the supplied order');
   await evaluate(page, 'document.querySelector(\'[data-filter="all"]\').click()');
   assert(await evaluate(page, 'document.querySelectorAll(".publication-card:not([hidden])").length === 19'), 'All filter shows 19 papers');
   assert(await evaluate(page, '[...document.querySelectorAll(".publication-card")].every(e=>getComputedStyle(e).boxShadow.includes("inset") === (e.dataset.firstAuthor==="true"))'), 'All: accent rails follow first authorship, not Selected');
@@ -129,6 +129,7 @@ try {
   assert(await evaluate(page, '[...document.querySelectorAll(".institution-logo")].every(e=>{const s=getComputedStyle(e);return s.borderTopWidth==="0px"&&s.borderRadius==="0px"&&s.paddingTop==="0px"})'), 'Organization logo frames and padding are removed');
   assert(await evaluate(page, '[...document.querySelectorAll(".education-row .institution-logo")].every(e=>Math.abs(e.getBoundingClientRect().height-79.2)<1)'), 'Education logos have three text lines of height');
   assert(await evaluate(page, '[...document.querySelectorAll(".experience-entry .institution-logo")].every(e=>Math.abs(e.getBoundingClientRect().height-61.2)<1)'), 'Experience logos have heading-plus-role height');
+  assert(await evaluate(page, '(()=>{const p=document.querySelector(".reviewer-copy"),a=p.querySelector("strong").getBoundingClientRect(),b=p.querySelector(".reviewer-venues").getBoundingClientRect();return b.top>a.top&&b.top>=a.bottom})()'), 'Reviewer title and venues are on separate lines');
   assert(await evaluate(page, 'document.querySelectorAll("#services .service-row .service-copy").length===2 && !document.querySelector("#skills") && !document.querySelector("#location")'), 'Services cards and requested section removal');
   assert(await evaluate(page, 'document.querySelectorAll(".teaching-list li").length===2&&document.querySelector(".teaching-list").textContent.includes("Fundamental Computing with C++")&&document.querySelector(".teaching-list").textContent.includes("2026 Fall")&&document.querySelector(".teaching-list").textContent.includes("Senior Lecturer")'), 'Teaching lists two courses with term, instructor and background');
   assert(await evaluate(page, '(()=>{const t=document.querySelectorAll(".service-copy")[1].textContent;return !t.includes("Conference:")&&["ICLR 2025","ICML 2025","NeurIPS 2025","AAAI 2026","AAAI 2027","ICLR 2027"].every(v=>t.includes(v))})()'), 'Reviewer venues reflect the supplied update');
@@ -143,7 +144,7 @@ try {
   assert(await evaluate(page, 'document.querySelectorAll("#friends .friend-link[href] .friend-arrow").length===3'), 'All coauthor links have distinct cards and external-link icons');
   assert(await evaluate(page, '!document.querySelector(".design-credit")'), 'Visible footer credit removed');
   assert(await evaluate(page, 'document.querySelector(".about-copy .cv-links")!==null && document.querySelector(".profile-aside .cv-links")===null'), 'CV downloads moved below the left biography');
-  assert(await evaluate(page, '(()=>{const r=document.querySelector(".cv-links").getBoundingClientRect(),a=[...document.querySelectorAll(".cv-links a")].map(e=>e.getBoundingClientRect());return Math.abs(a[0].left-r.left)<1&&Math.abs(a[1].right-r.right)<1})()'), 'CV links align with opposite ends of the biography column');
+  assert(await evaluate(page, '(()=>{const r=document.querySelector(".cv-links").getBoundingClientRect(),a=[...document.querySelectorAll(".cv-links a")].map(e=>e.getBoundingClientRect());return Math.abs(a[0].left-r.left)<1&&Math.abs(a[1].left-a[0].right-20)<1&&Math.abs(a[1].top-a[0].top)<1})()'), 'CV links sit together at the left of the biography column');
   assert(await evaluate(page, 'document.querySelector(".nav-brand img").getAttribute("src")==="/_common/branding/logo.svg"'), 'Personal SVG is used in the navigation');
   const toggleId = await evaluate(page, 'document.querySelector(".description-toggle:not([hidden])")?.getAttribute("aria-controls")');
   if (toggleId) {
@@ -183,7 +184,7 @@ try {
   await navigate(noJS);
   assert(await evaluate(noJS, '[...document.querySelectorAll(".publication-card")].filter(e=>getComputedStyle(e).display!=="none").length === 19'), 'No-JS: all 19 papers readable');
   assert(await evaluate(noJS, '[...document.querySelectorAll(".news-item")].filter(e=>getComputedStyle(e).display!=="none").length === 13'), 'No-JS: all 13 news readable');
-  assert(await evaluate(noJS, 'document.querySelectorAll(".contact-links a[href]").length === 11'), 'No-JS: contact links work');
+  assert(await evaluate(noJS, 'document.querySelectorAll(".contact-links a[href]").length === 10'), 'No-JS: contact links work');
   await screenshot(noJS, 'no-js-1024');
 
   const legacy = await newPage();

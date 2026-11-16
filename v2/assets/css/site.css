@@ -1,6 +1,6 @@
 /* Content-specific adaptations; profile typography and geometry live in template.css. */
 .profile-shell { min-height: 100svh; padding-top: 10px; }
-.cv-links { display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%; margin-top: 26px; gap: 10px 20px; color: var(--muted); font-size: 15px; }
+.cv-links { display: flex; justify-content: flex-start; flex-wrap: wrap; width: 100%; margin-top: 26px; gap: 10px 20px; color: var(--muted); font-size: 15px; }
 .cv-links a { display: inline-flex; align-items: center; gap: 7px; }
 .cv-links a:hover, .supplementary-content a:hover { color: var(--accent); }
 .bio-placeholder a, .supplementary-content a, .description-text a, .news-item a { color: var(--accent); }

@@ -36,3 +36,8 @@
 
 - Final browser-review release: committed application a5216e5 passed the revised static validator and 81 browser checks across 1440/1209/1024/768/640/390, including 1209x984 review geometry, all alpha logos, both themes, six first-author rails, service list, social/CV placement, coauthor order and the disconnected interactive globe. Six Git/export tests remain passing.
 - Live local preview remains http://127.0.0.1:59766/. Current screenshots, check results and public export hashes are under notes/qa/browser-feedback/. Original v1 and original media still match the frozen baseline. No push/deployment performed.
+
+## CV alignment / social visibility / Reviewer layout
+- Both CV downloads now sit together left-aligned under the biography. Hugging Face is commented out with its original URL retained in HTML and config; the frontend shows 10 active contacts and four commented entries.
+- Reviewer label and venue list are explicitly separated into two lines at desktop widths, with natural wrapping on mobile.
+- Static validation and 82 browser checks passed, including no-JavaScript hiding and download-row geometry. Existing local preview URL updated in place.
