@@ -135,6 +135,10 @@ try {
   assert(await evaluate(page, 'document.querySelector(".friend-link .friend-name").textContent==="Qize Yu"'), 'Qize Yu is the first coauthor link');
   const logoAlpha=await evaluate(page, `Promise.all([...document.querySelectorAll('.institution-logo img')].map(async img=>{img.loading='eager';await img.decode();const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);const d=ctx.getImageData(0,0,c.width,c.height).data;let clear=0,ink=0;for(let i=3;i<d.length;i+=4){if(d[i]===0)clear++;if(d[i]>200)ink++;}return {src:img.getAttribute('src'),clear,ink,total:c.width*c.height}}))`);
   assert(logoAlpha.every(logo=>logo.clear>0&&logo.ink>0), 'Every organization logo has genuine transparency and visible artwork');
+  await evaluate(page, 'document.querySelector(".theme-toggle").click()');
+  assert(await evaluate(page, '["knowinai","beingbeyond"].every(id=>getComputedStyle(document.querySelector("#"+id+" .institution-logo img")).filter.includes("invert"))'), 'Monochrome cutout logos stay visible in the dark theme');
+  await screenshot(page, 'experience-dark-1440');
+  await evaluate(page, 'document.querySelector(".theme-toggle").click()');
   assert(await evaluate(page, '(()=>{const h=document.querySelector("#pku-education-description").innerHTML;return /Research:[^<]*<span class="education-gpa">GPA:/.test(h)})()'), 'PKU GPA follows Research without a hard line break');
   assert(await evaluate(page, 'document.querySelectorAll("#friends .friend-link[href] .friend-arrow").length===3'), 'All coauthor links have distinct cards and external-link icons');
   assert(await evaluate(page, '!document.querySelector(".design-credit")'), 'Visible footer credit removed');
