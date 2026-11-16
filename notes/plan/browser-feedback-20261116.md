@@ -13,3 +13,5 @@ Apply all user comments to v2 only; preserve v1 and the baseline media.
 Acceptance: updated content validator and meaningful browser checks at 1209x984 plus 1440/1024/768/390, light/dark, logo geometry, news scroll, first-author styling, cards, CV/social order, globe keyboard/drag/details. Rebuild the existing local preview URL after checks; no production push.
 
 Additional user comments: move PKU GPA after Research without a separate hard break; remove the visible footer credit/old-version link; turn the three coauthor links into obvious external-link cards.
+
+Further feedback: two TA bullets in course/term/instructor/background order, add Fundamental Computing with C++ (2026 Fall, Dr. Yat Chiu Law / Senior Lecturer, CUHK CSE, verified via official faculty page); remove Conference prefix, append specified reviewer venues; Qize first among coauthors; make all white-background organization logos transparent PNG derivatives while retaining originals.

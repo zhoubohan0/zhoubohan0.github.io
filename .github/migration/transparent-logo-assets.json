@@ -1,0 +1,43 @@
+{
+  "tool": "built-in image_gen",
+  "use_case": "background-extraction",
+  "transparent_background": true,
+  "prompt": "Edit the supplied official logo only. Replace white/off-white paper background and open white negative space with actual transparency; preserve complete artwork, colors, proportions, letters and internal details. Keep the CUHK pale cream ribbon. No redesign, crop, extra text, outline, glow or checkerboard. Each logo was processed separately.",
+  "files": [
+    {
+      "name": "beingbeyond",
+      "generated_file": "/Users/zbh/.codex/generated_images/01a1e2aa-30fe-7490-9592-b964f67f38e6/exec-468fee32-3ce3-48ca-bdd3-aae26aac9f0f.png",
+      "workspace_file": "_common/assets/organizations/transparent/beingbeyond.png",
+      "sha256": "5fcc5334d2c192208de27267bfa767f36514cf35d88729ec93c7d2a184661732",
+      "prompt": "Use case: background-extraction. Edit the supplied image only. This is an existing official organization logo for an academic homepage, not a new logo design. Remove the white/off-white paper background to true alpha transparency and deliver one transparent PNG. Preserve the single black BeingBeyond symbol; no text. Preserve the complete logo, original composition, relative scale, aspect ratio, colors, edges, typography, and all details. Do not redraw, redesign, add, replace, misspell, or crop any part of the artwork. No shadow, outline, glow, checkerboard texture, extra text, or backdrop. The only permitted visual change is replacing the background with transparent pixels. Make open white negative-space areas transparent too, while retaining intentional colored/cream artwork. Asset identifier: beingbeyond."
+    },
+    {
+      "name": "momenta",
+      "generated_file": "/Users/zbh/.codex/generated_images/01a1e2aa-30fe-7490-9592-b964f67f38e6/exec-2cb41498-17c4-41c8-b582-431afa9dc117.png",
+      "workspace_file": "_common/assets/organizations/transparent/momenta.png",
+      "sha256": "caf9ad57083299662df6451be9ceeec09a522282839b3ab61ef4153294500b6d",
+      "prompt": "Use case: background-extraction. Edit the supplied image only. This is an existing official organization logo for an academic homepage, not a new logo design. Remove the white/off-white paper background to true alpha transparency and deliver one transparent PNG. Preserve the exact blue Momenta symbol and exact dark wordmark as pictured; preserve the stylized wordmark letter shapes. Preserve the complete logo, original composition, relative scale, aspect ratio, colors, edges, typography, and all details. Do not redraw, redesign, add, replace, misspell, or crop any part of the artwork. No shadow, outline, glow, checkerboard texture, extra text, or backdrop. The only permitted visual change is replacing the background with transparent pixels. Make open white negative-space areas transparent too, while retaining intentional colored/cream artwork. Asset identifier: momenta."
+    },
+    {
+      "name": "jd-explore",
+      "generated_file": "/Users/zbh/.codex/generated_images/01a1e2aa-30fe-7490-9592-b964f67f38e6/exec-9467809b-8c76-4813-8f17-3ec75c548124.png",
+      "workspace_file": "_common/assets/organizations/transparent/jd-explore.png",
+      "sha256": "68f0737f8409049d796e92281e2b20ffe7e9339885b3aef7796d7990a700be51",
+      "prompt": "Use case: background-extraction. Edit the supplied image only. This is an existing official organization logo for an academic homepage, not a new logo design. Remove the white/off-white paper background to true alpha transparency and deliver one transparent PNG. Preserve the exact red Chinese text 京东探索研究院 and the exact black text JD EXPLORE ACADEMY. Preserve the complete logo, original composition, relative scale, aspect ratio, colors, edges, typography, and all details. Do not redraw, redesign, add, replace, misspell, or crop any part of the artwork. No shadow, outline, glow, checkerboard texture, extra text, or backdrop. The only permitted visual change is replacing the background with transparent pixels. Make open white negative-space areas transparent too, while retaining intentional colored/cream artwork. Asset identifier: jd-explore."
+    },
+    {
+      "name": "cuhk",
+      "generated_file": "/Users/zbh/.codex/generated_images/01a1e2aa-30fe-7490-9592-b964f67f38e6/exec-f653bbbf-0d3f-488d-a4e8-c234c71541c2.png",
+      "workspace_file": "_common/assets/organizations/transparent/cuhk.png",
+      "sha256": "4cdaa2c9df4e2b8d777c2ca1b7f3caf60e0e3425ac6e91cd1ce4da490a5e9e6b",
+      "prompt": "Use case: background-extraction. Edit the supplied image only. This is an existing official organization logo for an academic homepage, not a new logo design. Remove the white/off-white paper background to true alpha transparency and deliver one transparent PNG. Preserve the exact CUHK purple-and-gold crest, all internal details, and the pale cream ribbon with its Chinese lettering; the cream ribbon is part of the logo, not background. Preserve the complete logo, original composition, relative scale, aspect ratio, colors, edges, typography, and all details. Do not redraw, redesign, add, replace, misspell, or crop any part of the artwork. No shadow, outline, glow, checkerboard texture, extra text, or backdrop. The only permitted visual change is replacing the background with transparent pixels. Make open white negative-space areas transparent too, while retaining intentional colored/cream artwork. Asset identifier: cuhk."
+    },
+    {
+      "name": "nku",
+      "generated_file": "/Users/zbh/.codex/generated_images/01a1e2aa-30fe-7490-9592-b964f67f38e6/exec-f66e83c3-a4f2-4c7f-8e63-e96698bfe850.png",
+      "workspace_file": "_common/assets/organizations/transparent/nku.png",
+      "sha256": "99d5121424cda7a1deb3b0f617afcd1f606fc05ddc4765f550cc3d716516aeea",
+      "prompt": "Use case: background-extraction. Edit the supplied image only. This is an existing official organization logo for an academic homepage, not a new logo design. Remove the white/off-white paper background to true alpha transparency and deliver one transparent PNG. Preserve the exact purple Nankai University circular emblem, all lettering 南开大学, NANKAI UNIVERSITY and 1919, all line shapes and positions. Preserve the complete logo, original composition, relative scale, aspect ratio, colors, edges, typography, and all details. Do not redraw, redesign, add, replace, misspell, or crop any part of the artwork. No shadow, outline, glow, checkerboard texture, extra text, or backdrop. The only permitted visual change is replacing the background with transparent pixels. Make open white negative-space areas transparent too, while retaining intentional colored/cream artwork. Asset identifier: nku."
+    }
+  ]
+}

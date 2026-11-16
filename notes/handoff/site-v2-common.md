@@ -29,3 +29,7 @@
 - Visitor statistics intentionally remain disconnected, as explicitly chosen by the user. No source-owner counters, snapshots, location adjustments or tracking endpoint were copied.
 - Six export/Git tests and revised static validation pass. A 69-check browser run passed including logo geometry, author highlighting/hover, CV and social layout, Services/cards and WebGL/drag/keyboard behavior. Original preview URL was updated in place so review can continue.
 - A final committed build and six-width browser verification are next.
+
+- Subsequent Services request: two TA bullets with course/term/instructor/background; added Fundamental Computing with C++ (2026 Fall) and Dr. Yat Chiu Law (Senior Lecturer, CUHK CSE), verified from official faculty/course pages. Removed Conference prefix; included all six requested reviewer entries. Reordered coauthor links to Qize Yu, Mingxuan Song, Haoqi Yuan.
+- Generated five transparent PNG derivatives with the built-in image_gen background-extraction tool, retaining originals. All eight rendered organization logos have genuine alpha and visible artwork. Exact prompts/paths are recorded in .github/migration/transparent-logo-assets.json. Added CSS contrast for pure-black logos in dark mode.
+- Latest in-browser acceptance: 80 checks passed. A static assertion initially failed because the inspection parser inserted spaces before inline-span commas; normalization now ignores only that parser-added comma spacing and still checks every requested teaching field.

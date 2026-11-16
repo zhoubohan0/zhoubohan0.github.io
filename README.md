@@ -34,7 +34,7 @@ Browser acceptance uses Node 22+ and an isolated Chrome debugging connection. Fo
 node .github/scripts/browser_qa.mjs CDP_WEBSOCKET http://127.0.0.1:8000 /tmp/zhoubohan-browser-qa
 ```
 
-The runner creates and disposes its own browser context. It checks 1440/1024/768/390 widths, both themes, mobile menus, filters, deep links, no-JavaScript readability and v1 navigation. The preserved v1 has external CDN dependencies and can take longer to initialize.
+The runner creates and disposes its own browser context. It checks 1440/1209/1024/768/640/390 widths, both themes, mobile menus, filters, deep links, no-JavaScript readability and v1 navigation. The preserved v1 has external CDN dependencies and can take longer to initialize.
 
 ## Editing v2
 
@@ -45,6 +45,8 @@ The runner creates and disposes its own browser context. It checks 1440/1024/768
 - OpenReview, Zhihu, Xiaohongshu, email, WeChat, Google Scholar and GitHub are active. LinkedIn, Bilibili, Douyin and Hugging Face follow them in the user-supplied order. The CV row sits below the left biography with its links at opposite ends.
 - News uses a fixed-height scroll region containing all 13 entries. The six first-author papers have an accent rail in both Selected and All; this is independent of Selected membership. Organization logos have no framing tiles. Skills was removed by user request, and Location was replaced by the Visitor map; v1 preserves both original sections.
 - Services uses the reference's icon-card layout while retaining Bohan's actual service text. Coauthor names are external-link cards. PKU's GPA follows Research without a separate hard line break. The personal SVG logo is in `_common/branding/`.
+- The latest Services update lists both teaching-assistant courses in course/term/instructor/background order, adds the user-supplied reviewing venues, and puts Qize Yu first among coauthor links. Yat Chiu Law's name and Senior Lecturer role were checked against the linked CUHK faculty page.
+- White-background organization logos use transparent PNG derivatives under `_common/assets/organizations/transparent/`; original source images remain unchanged. They were produced with the built-in image-generation tool's background-extraction edit. `.github/migration/transparent-logo-assets.json` records the prompts and asset paths. CSS provides contrast for monochrome logos in dark mode without changing their PNG files.
 - The Visitor map uses the reference's COBE rendering and interaction. Statistics are **intentionally disconnected**: `v2/assets/js/visitor-config.js` has an empty endpoint and no snapshot, locations, counts or tracking collector. The UI says “Statistics not connected”. To connect a future owned aggregate endpoint, supply `{totalVisitors, updatedAt, markers: [{country, location: [latitude, longitude], visitors, city?}]}`; never reuse the reference author's service/data.
 - Add reusable media to `_common`; use root-relative `/_common/...` URLs. Keep full organization logos (`object-fit: contain`). Version-specific scripts/styles stay in their version directory.
 - Changes to intended content require updating the explicit baseline/acceptance expectations together; do not weaken checks to conceal accidental content loss.

@@ -1,0 +1,37 @@
+{
+  "teaching": [
+    {
+      "course": "Introduction to Computing",
+      "term": "2025 Fall",
+      "instructor": "Prof. Rui Gan",
+      "background": "Department of Mathematics, Peking University",
+      "url": null
+    },
+    {
+      "course": "Fundamental Computing with C++",
+      "term": "2026 Fall",
+      "instructor": "Dr. Yat Chiu Law",
+      "background": "Senior Lecturer, Department of Computer Science and Engineering, The Chinese University of Hong Kong",
+      "url": "https://www.cse.cuhk.edu.hk/people/faculty/yat-chiu-law/"
+    }
+  ],
+  "reviewer": [
+    "ICLR 2025",
+    "ICML 2025",
+    "NeurIPS 2025",
+    "AAAI 2026",
+    "AAAI 2027",
+    "ICLR 2027"
+  ],
+  "friend_order": [
+    "Qize Yu",
+    "Mingxuan Song",
+    "Haoqi Yuan"
+  ],
+  "sources": {
+    "new_course": "https://www.cse.cuhk.edu.hk/wp-content/uploads/academics/ug/Courses/CSCI1540.pdf",
+    "new_instructor": "https://www.cse.cuhk.edu.hk/people/faculty/yat-chiu-law/",
+    "existing_course_and_instructor": "Existing website / user instructions",
+    "terms_and_reviewer_service": "User instructions"
+  }
+}

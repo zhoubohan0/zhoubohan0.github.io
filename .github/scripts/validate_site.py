@@ -76,6 +76,7 @@ def validate(directory, repo=ROOT, default_version='v2'):
     out, repo = Path(directory).resolve(), Path(repo)
     inv = json.loads((repo/'.github/migration/inventory.json').read_text())
     content = json.loads((repo/'.github/migration/content.json').read_text())
+    updates = json.loads((repo/'.github/migration/browser-feedback-content.json').read_text())
     mapping = {e['old']: '/'+e['new'] for e in inv['files'] if e['shared']}
     errors = []
 
@@ -130,13 +131,19 @@ def validate(directory, repo=ROOT, default_version='v2'):
     cv = home.by_class('cv-links')
     about_copy = home.by_class('about-copy')[0]
     check(len(cv) == 1 and cv[0] in list(about_copy.walk()), 'CV links must be below the left biography')
-    for key,id in [('Honors','honors'),('Services','services')]:
+    for key,id in [('Honors','honors')]:
         node = home.by_id(id)
         # Compare section contents after the heading, including all existing links/text.
         body = ' '.join(n.text() for n in node.children if isinstance(n,Node) and not n.has_class('section-heading'))
         check(body == text(content['extras'][key]), 'Section content changed: '+id)
+    service_rows=home.by_class('service-copy')
+    teaching=service_rows[0].find(lambda n:n.has_class('teaching-list'))
+    expected_teaching=[f"{t['course']}, {t['term']}, {t['instructor']}, {t['background']}." for t in updates['teaching']]
+    check(teaching is not None and [re.sub(r'\s+,', ',', n.text()) for n in teaching.children if isinstance(n,Node) and n.tag=='li']==expected_teaching, 'Teaching entries differ from approved course/term/instructor/background format')
+    check(service_rows[1].text()=='Reviewer: '+', '.join(updates['reviewer']), 'Reviewer list differs from user update')
     original_friends=Document(content['extras']['Friends'])
     expected_friends=[(n.text(),n.attrs['href']) for n in original_friends.root.walk() if n.tag=='a']
+    expected_friends.sort(key=lambda item:updates['friend_order'].index(item[0]))
     check([(n.text(),n.attrs['href']) for n in home.by_class('friend-link')]==expected_friends, 'Coauthor link labels or destinations changed')
     for doc,detail in [(home,False),(full,True)]:
         cards = doc.by_class('publication-card')
