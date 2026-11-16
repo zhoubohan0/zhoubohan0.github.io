@@ -1064,7 +1064,7 @@
       "shared": false,
       "sha256": "656a053cf69cf0bd6be69cddba9cbbad40695bc1bafc6eb2007180201a397b03",
       "size": 76308,
-      "migrated_sha256": "edfacc101be84668a473800c5fd82c6fb1b4e1299f0d671374a56a9b44d06d4d"
+      "migrated_sha256": "730341be9a0f9893d8885085d1d67c8de0ca1a7517b331262b7d4199ecace24e"
     },
     {
       "old": "js/bulma-carousel.js",
