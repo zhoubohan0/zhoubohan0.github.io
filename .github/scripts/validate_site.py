@@ -144,6 +144,7 @@ def validate(directory, repo=ROOT, default_version='v2'):
     invited=service_rows[2]
     invited_links=[n for n in invited.walk() if n.tag=='a']
     check(invited.text().startswith('Invited Talks:'), 'Invited Talks card missing')
+    check(invited.find(lambda n:n.tag=='br') is not None, 'Invited Talks title and links must use two lines')
     check([n.text() for n in invited_links]==['NOLO','MEgoHand','BAAI Conference 2023–2025'], 'Invited Talks labels differ from CV links')
     check([n.attrs['href'] for n in invited_links]==[
         'https://www.bilibili.com/video/BV14yCcBsErM?t=6.5',

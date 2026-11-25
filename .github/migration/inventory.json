@@ -815,8 +815,8 @@
       "new": "_common/assets/zbh-publications/AtmosBench.png",
       "shared": true,
       "sha256": "07ff8302ffbe1599f80849796af5578fe3aedeb76746578434b5b23f2fe675b8",
-      "size": 1428084,
-      "migrated_sha256": "07ff8302ffbe1599f80849796af5578fe3aedeb76746578434b5b23f2fe675b8"
+      "size": 879319,
+      "migrated_sha256": "f98b74942883277edd7f7e607e5dc34a72ba3457a87b6a33d87259420100149a"
     },
     {
       "old": "assets/zbh-publications/Being-0.png",
@@ -955,40 +955,40 @@
       "migrated_sha256": "d14077de66fdcc590cb4fb3413a00af63c616f7c3b3b127f43518407d9ceea28"
     },
     {
-      "old": "assets/zydh/卢宗青_智源大会2023_STG.mp4",
-      "new": "_common/assets/zydh/卢宗青_智源大会2023_STG.mp4",
+      "old": "assets/zydh/\u5362\u5b97\u9752_\u667a\u6e90\u5927\u4f1a2023_STG.mp4",
+      "new": "_common/assets/zydh/\u5362\u5b97\u9752_\u667a\u6e90\u5927\u4f1a2023_STG.mp4",
       "shared": true,
       "sha256": "2dc22f41fc7ac7479d69dc269f381261a099b39dfed7c2a8af5ac988002a3e00",
       "size": 32634017,
       "migrated_sha256": "2dc22f41fc7ac7479d69dc269f381261a099b39dfed7c2a8af5ac988002a3e00"
     },
     {
-      "old": "assets/zydh/卢宗青_智源大会2024_NOLO.mp4",
-      "new": "_common/assets/zydh/卢宗青_智源大会2024_NOLO.mp4",
+      "old": "assets/zydh/\u5362\u5b97\u9752_\u667a\u6e90\u5927\u4f1a2024_NOLO.mp4",
+      "new": "_common/assets/zydh/\u5362\u5b97\u9752_\u667a\u6e90\u5927\u4f1a2024_NOLO.mp4",
       "shared": true,
       "sha256": "b9ffab128665f819f8adc8068c848dd6626eb21689cb47c46a29928694c04cce",
       "size": 53667221,
       "migrated_sha256": "b9ffab128665f819f8adc8068c848dd6626eb21689cb47c46a29928694c04cce"
     },
     {
-      "old": "assets/zydh/卢宗青_智源大会2025_MEgoHand.mp4",
-      "new": "_common/assets/zydh/卢宗青_智源大会2025_MEgoHand.mp4",
+      "old": "assets/zydh/\u5362\u5b97\u9752_\u667a\u6e90\u5927\u4f1a2025_MEgoHand.mp4",
+      "new": "_common/assets/zydh/\u5362\u5b97\u9752_\u667a\u6e90\u5927\u4f1a2025_MEgoHand.mp4",
       "shared": true,
       "sha256": "757d6488f9377ed4df8053c0e78b66cc829675757b7d0a73a09eee1eaf3c4983",
       "size": 28362831,
       "migrated_sha256": "757d6488f9377ed4df8053c0e78b66cc829675757b7d0a73a09eee1eaf3c4983"
     },
     {
-      "old": "assets/zydh/智源大会2023-2025_卢宗青老师讲述周伯涵工作.mp4",
-      "new": "_common/assets/zydh/智源大会2023-2025_卢宗青老师讲述周伯涵工作.mp4",
+      "old": "assets/zydh/\u667a\u6e90\u5927\u4f1a2023-2025_\u5362\u5b97\u9752\u8001\u5e08\u8bb2\u8ff0\u5468\u4f2f\u6db5\u5de5\u4f5c.mp4",
+      "new": "_common/assets/zydh/\u667a\u6e90\u5927\u4f1a2023-2025_\u5362\u5b97\u9752\u8001\u5e08\u8bb2\u8ff0\u5468\u4f2f\u6db5\u5de5\u4f5c.mp4",
       "shared": true,
       "sha256": "a091ce45e31b447cfcff56c9446772e9520582094f591d3e83de80143dea11da",
       "size": 104135522,
       "migrated_sha256": "a091ce45e31b447cfcff56c9446772e9520582094f591d3e83de80143dea11da"
     },
     {
-      "old": "assets/zydh/智源大会2023-2025_简介与章节.md",
-      "new": "_common/assets/zydh/智源大会2023-2025_简介与章节.md",
+      "old": "assets/zydh/\u667a\u6e90\u5927\u4f1a2023-2025_\u7b80\u4ecb\u4e0e\u7ae0\u8282.md",
+      "new": "_common/assets/zydh/\u667a\u6e90\u5927\u4f1a2023-2025_\u7b80\u4ecb\u4e0e\u7ae0\u8282.md",
       "shared": true,
       "sha256": "a16fbc67a60b46b36332c16803fbd01fcce164e622fe0c29facac29d828181b0",
       "size": 4580,
@@ -1064,7 +1064,7 @@
       "shared": false,
       "sha256": "656a053cf69cf0bd6be69cddba9cbbad40695bc1bafc6eb2007180201a397b03",
       "size": 76308,
-      "migrated_sha256": "730341be9a0f9893d8885085d1d67c8de0ca1a7517b331262b7d4199ecace24e"
+      "migrated_sha256": "3d073fd2bcd3de90da7763a886bd4fae2cd30866fc6900f4f51c0a15b6207674"
     },
     {
       "old": "js/bulma-carousel.js",
@@ -1152,7 +1152,7 @@
       "shared": false,
       "sha256": "11b6b4cbeb03aed8b09c371b08d7ef9fb56a57b01bbcd07031407d266eb15bd8",
       "size": 55501,
-      "migrated_sha256": "445af11f0b54517c0f0f7881a964580d134439475a9cce03a5e1b0387153249d"
+      "migrated_sha256": "9cb470fa24a9d767616efe68f9bc1b3529e0490070d65a2cd4fe64ed228dfd4e"
     },
     {
       "old": "services/index.html",
